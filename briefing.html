@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Orçamento - Agzap</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/ico.png" type="image/png">
+    <link rel="shortcut icon" href="img/ico.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="briefing-container">
+        <a href="index.html" class="home-button">
+            <i class="fas fa-home"></i>
+            <span>Voltar ao Início</span>
+        </a>
+        
+        <div class="briefing-card">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            
+            <div class="question-container">
+                <div class="question" data-step="1">
+                    <h2>Qual solução tecnológica você precisa?</h2>
+                    <div class="options">
+                        <button class="option-btn" data-value="Site">Site</button>
+                        <button class="option-btn" data-value="Aplicativo Web">Aplicativo Web</button>
+                        <button class="option-btn" data-value="Chatbot com IA">Chatbot com IA no WhatsApp</button>
+                        <button class="option-btn" data-value="Múltiplos projetos">Múltiplas Soluções</button>
+                    </div>
+                </div>
+
+                <div class="question hidden" data-step="2" id="site-question">
+                    <button class="back-btn" onclick="previousStep()">
+                        <i class="fas fa-arrow-left"></i>
+                        Voltar
+                    </button>
+                    <h2>Qual tipo de site você precisa?</h2>
+                    <div class="options">
+                        <button class="option-btn" data-value="Site Institucional">Site Institucional</button>
+                        <button class="option-btn" data-value="E-commerce">E-commerce</button>
+                        <button class="option-btn" data-value="Landing Page">Landing Page</button>
+                        <button class="option-btn" data-value="Blog / Portal">Blog / Portal de Conteúdo</button>
+                        <button class="option-btn" data-value="Site Personalizado">Personalizado</button>
+                    </div>
+                </div>
+
+                <div class="question hidden" data-step="2" id="app-question">
+                    <button class="back-btn" onclick="previousStep()">
+                        <i class="fas fa-arrow-left"></i>
+                        Voltar
+                    </button>
+                    <h2>Qual tipo de aplicativo web você precisa?</h2>
+                    <div class="options">
+                        <button class="option-btn" data-value="Sistema de Gestão">Sistema de Gestão</button>
+                        <button class="option-btn" data-value="Sistema CRM">CRM / Relacionamento com Cliente</button>
+                        <button class="option-btn" data-value="Plataforma Web">Plataforma / Sistema Web</button>
+                        <button class="option-btn" data-value="Painel Administrativo">Painel Administrativo</button>
+                        <button class="option-btn" data-value="Sistema de Delivery">Sistema de Delivery</button>
+                        <button class="option-btn" data-value="Aplicativo Web Personalizado">Personalizado</button>
+                    </div>
+                </div>
+
+                <div class="question hidden" data-step="2" id="chatbot-question">
+                    <button class="back-btn" onclick="previousStep()">
+                        <i class="fas fa-arrow-left"></i>
+                        Voltar
+                    </button>
+                    <h2>Qual tipo de automação com IA você precisa?</h2>
+                    <div class="options">
+                        <button class="option-btn" data-value="Chatbot de Atendimento ao Cliente">Atendimento ao Cliente via WhatsApp</button>
+                        <button class="option-btn" data-value="Chatbot de Vendas e Conversão">Vendas e Conversão Automatizadas</button>
+                        <button class="option-btn" data-value="Chatbot de Suporte Técnico">Suporte Técnico com IA</button>
+                        <button class="option-btn" data-value="Chatbot de Agendamento">Agendamento Inteligente</button>
+                        <button class="option-btn" data-value="Chatbot Personalizado">Solução Personalizada</button>
+                    </div>
+                </div>
+
+                <div class="question hidden" data-step="2" id="both-question">
+                    <button class="back-btn" onclick="previousStep()">
+                        <i class="fas fa-arrow-left"></i>
+                        Voltar
+                    </button>
+                    <h2>Quais soluções você deseja combinar?</h2>
+                    <div class="options">
+                        <button class="option-btn" data-value="Aplicativo Web + Sistema">Aplicativo Web + Sistema</button>
+                        <button class="option-btn" data-value="Aplicativo Web + Chatbot IA">Aplicativo Web + IA no WhatsApp</button>
+                        <button class="option-btn" data-value="Sistema + Chatbot IA">Sistema + IA no WhatsApp</button>
+                        <button class="option-btn" data-value="Solução Completa">Solução Completa (Web + Sistema + IA)</button>
+                    </div>
+                </div>
+
+                <div class="question hidden" data-step="3">
+                    <button class="back-btn" onclick="previousStep()">
+                        <i class="fas fa-arrow-left"></i>
+                        Voltar
+                    </button>
+                    <h2>Quando você pretende iniciar o projeto?</h2>
+                    <div class="options">
+                        <button class="option-btn" data-value="Imediatamente">Imediatamente</button>
+                        <button class="option-btn" data-value="Em 15 dias">Em 15 dias</button>
+                        <button class="option-btn" data-value="Em 30 dias">Em 30 dias</button>
+                        <button class="option-btn" data-value="Em 60 dias ou mais">Em 60 dias ou mais</button>
+                    </div>
+                </div>
+
+                <div class="question hidden" data-step="4">
+                    <button class="back-btn" onclick="previousStep()">
+                        <i class="fas fa-arrow-left"></i>
+                        Voltar
+                    </button>
+                    <h2>Qual é o nome da sua empresa?</h2>
+                    <input type="text" class="text-input" id="companyName" placeholder="Digite o nome da sua empresa">
+                    <button class="next-btn" onclick="handleTextInput(this)">Continuar</button>
+                </div>
+
+                <div class="question hidden" data-step="5">
+                    <button class="back-btn" onclick="previousStep()">
+                        <i class="fas fa-arrow-left"></i>
+                        Voltar
+                    </button>
+                    <h2>Qual é o seu cargo na empresa?</h2>
+                    <input type="text" class="text-input" id="role" placeholder="Digite seu cargo">
+                    <button class="next-btn" onclick="handleTextInput(this)">Continuar</button>
+                </div>
+
+                <div class="question hidden" data-step="6">
+                    <button class="back-btn" onclick="previousStep()">
+                        <i class="fas fa-arrow-left"></i>
+                        Voltar
+                    </button>
+                    <h2>Como podemos te chamar?</h2>
+                    <input type="text" class="text-input" id="name" placeholder="Digite seu nome">
+                    <button class="next-btn" onclick="handleTextInput(this)">Continuar</button>
+                </div>
+
+                <div class="question hidden" data-step="7">
+                    <button class="back-btn" onclick="previousStep()">
+                        <i class="fas fa-arrow-left"></i>
+                        Voltar
+                    </button>
+                    <h2>Qual é o seu WhatsApp?</h2>
+                    <input type="tel" class="text-input" id="phone" placeholder="(00) 00000-0000">
+                    <button class="next-btn" id="btnSubmitBriefing" onclick="handleTextInput(this)">Continuar</button>
+                </div>
+
+                <div class="question hidden loading-screen" id="loadingScreen">
+                    <div class="loading-content">
+                        <div class="loading-spinner">
+                            <div class="spinner-ring"></div>
+                        </div>
+                        <h2>Enviando seu briefing...</h2>
+                        <p>Aguarde enquanto processamos suas informações</p>
+                        <div class="loading-bar-container">
+                            <div class="loading-bar" id="loadingBar"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question hidden thank-you" data-step="8">
+                    <div class="success-animation">
+                        <div class="success-circle">
+                            <i class="fas fa-check"></i>
+                        </div>
+                    </div>
+                    <h2>🎉 Briefing Enviado com Sucesso!</h2>
+                    <div class="success-message">
+                        <p><strong>Obrigado pelo seu interesse!</strong></p>
+                        <p>✅ Recebemos todas as informações do seu projeto</p>
+                        <p>📞 <strong>Nossa equipe entrará em contato em breve</strong></p>
+                        <p>⏰ Tempo estimado de resposta: <strong>até 24 horas</strong></p>
+                        <p style="font-size: 0.9em; color: #666; margin-top: 10px;">
+                            📅 <em>De segunda a sexta-feira. Nos finais de semana o tempo de resposta pode ser maior.</em>
+                        </p>
+                    </div>
+                    <div class="success-actions">
+                        <a href="index.html" class="home-link primary">Voltar ao Início</a>
+                        <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá! Acabei de enviar um briefing pelo site e gostaria de acelerar o contato." target="_blank" class="whatsapp-link">
+                            <i class="fab fa-whatsapp"></i>
+                            Falar no WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const formData = {};
+        let currentStep = 1;
+        const totalSteps = 7;
+
+        async function getClientIP() {
+            try {
+                const response = await fetch('https://api.ipify.org?format=json');
+                const data = await response.json();
+                return data.ip;
+            } catch (error) {
+                console.log('Não foi possível obter o IP:', error);
+                return 'N/A';
+            }
+        }
+
+        async function sendFormData(data) {
+            try {
+                const clientIP = await getClientIP();
+                const now = new Date();
+
+                const payload = {
+                    solucao: data.step1,
+                    detalhamento: data.step2,
+                    prazoInicio: data.step3,
+                    empresa: data.step4,
+                    cargo: data.step5,
+                    nomeContato: data.step6,
+                    whatsapp: data.step7,
+                    dataEnvio: now.toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }),
+                    timestamp: now.toISOString(),
+                    origem: 'site-agzap-briefing',
+                    ip: clientIP,
+                    navegador: navigator.userAgent
+                };
+
+                console.log('Enviando briefing para webhook:', JSON.stringify(payload, null, 2));
+
+                const response = await fetch('https://webhook.agzap.com.br/webhook/breefing', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error('Erro ao enviar dados');
+                }
+
+                console.log('Briefing enviado com sucesso!');
+                return true;
+            } catch (error) {
+                console.error('Erro ao enviar briefing:', error);
+                return false;
+            }
+        }
+
+        function updateProgress() {
+            const progress = (currentStep - 1) / (totalSteps - 1) * 100;
+            document.querySelector('.progress').style.width = `${progress}%`;
+        }
+
+        function showQuestion(step) {
+            document.querySelectorAll('.question').forEach(q => q.classList.add('hidden'));
+            
+            if (step === 2) {
+                // No step 2, mostra a pergunta correta baseada na escolha do step 1
+                const projectType = formData.step1;
+                if (projectType === 'Site') {
+                    document.getElementById('site-question').classList.remove('hidden');
+                } else if (projectType === 'Aplicativo Web') {
+                    document.getElementById('app-question').classList.remove('hidden');
+                } else if (projectType === 'Chatbot com IA') {
+                    document.getElementById('chatbot-question').classList.remove('hidden');
+                } else if (projectType === 'Múltiplos projetos') {
+                    document.getElementById('both-question').classList.remove('hidden');
+                }
+            } else {
+                document.querySelector(`[data-step="${step}"]`).classList.remove('hidden');
+            }
+            
+            if (step <= totalSteps) {
+                updateProgress();
+            }
+        }
+
+        function formatPhone(value) {
+            value = value.replace(/\D/g, '');
+            if (value.length > 11) value = value.slice(0, 11);
+            
+            if (value.length > 2) {
+                value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+            }
+            if (value.length > 9) {
+                value = `${value.slice(0, 10)}-${value.slice(10)}`;
+            }
+            return value;
+        }
+
+        function previousStep() {
+            if (currentStep > 1) {
+                currentStep--;
+                showQuestion(currentStep);
+            }
+        }
+
+        function showLoading() {
+            document.querySelectorAll('.question').forEach(q => q.classList.add('hidden'));
+            document.getElementById('loadingScreen').classList.remove('hidden');
+            const bar = document.getElementById('loadingBar');
+            bar.style.width = '0%';
+            // Animate bar to 90% over 3s, the last 10% fills on success
+            setTimeout(() => bar.style.width = '30%', 100);
+            setTimeout(() => bar.style.width = '60%', 800);
+            setTimeout(() => bar.style.width = '85%', 1800);
+        }
+
+        function hideLoading(success) {
+            const bar = document.getElementById('loadingBar');
+            bar.style.width = '100%';
+            setTimeout(() => {
+                document.getElementById('loadingScreen').classList.add('hidden');
+                if (success) {
+                    document.querySelector('[data-step="8"]').classList.remove('hidden');
+                }
+            }, 500);
+        }
+
+        async function nextStep(value) {
+            formData[`step${currentStep}`] = value;
+            
+            if (currentStep === totalSteps) {
+                // Show loading screen
+                showLoading();
+                
+                // Disable submit button
+                const submitBtn = document.getElementById('btnSubmitBriefing');
+                if (submitBtn) submitBtn.disabled = true;
+                
+                // Send data
+                const sent = await sendFormData(formData);
+                
+                if (sent) {
+                    hideLoading(true);
+                } else {
+                    hideLoading(false);
+                    alert('Ops! Houve um erro ao enviar o briefing. Por favor, tente novamente.');
+                    // Go back to step 7
+                    showQuestion(currentStep);
+                    if (submitBtn) submitBtn.disabled = false;
+                }
+            } else {
+                currentStep++;
+                showQuestion(currentStep);
+            }
+        }
+
+        function handleTextInput(button) {
+            const input = button.previousElementSibling;
+            if (input.value.trim()) {
+                nextStep(input.value.trim());
+            }
+        }
+
+        // Event Listeners para botões de opção
+        document.querySelectorAll('.option-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const value = e.target.dataset.value;
+                nextStep(value);
+            });
+        });
+
+        // Permitir Enter nos campos de texto
+        document.querySelectorAll('.text-input').forEach(input => {
+            input.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter' && input.value.trim()) {
+                    nextStep(input.value.trim());
+                }
+            });
+
+            // Adicionar evento de input para validar enquanto digita
+            input.addEventListener('input', (e) => {
+                const nextButton = e.target.nextElementSibling;
+                if (e.target.value.trim()) {
+                    nextButton.removeAttribute('disabled');
+                } else {
+                    nextButton.setAttribute('disabled', 'true');
+                }
+            });
+        });
+
+        // Máscara para o campo de telefone
+        document.getElementById('phone').addEventListener('input', (e) => {
+            e.target.value = formatPhone(e.target.value);
+        });
+
+        showQuestion(1);
+    </script>
+
+    <footer class="site-footer">
+        <div class="footer-brand">Agzap Systems</div>
+        <div class="footer-cnpj">CNPJ: 60.865.841/0001-93</div>
+        <div class="footer-copy">&copy; 2026 Agzap Systems. Todos os direitos reservados.</div>
+    </footer>
+</body>
+</html>

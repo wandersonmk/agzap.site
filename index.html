@@ -1,0 +1,422 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/ico.png" type="image/png">
+    <link rel="shortcut icon" href="img/ico.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Agzap | Tecnologia, Automação e Inteligência Artificial</title>
+</head>
+<body>
+    <div class="caixa-video">
+        <video src="./video/ai-background.mp4" autoplay muted loop></video>
+        <div class="mascara"></div>
+    </div>
+
+    <header class="header">
+        <a href="index.html">
+            <img src="./img/logo.wrn.png" alt="Agzap" class="logo">
+        </a>
+        <div class="menu-mobile">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="portfolio.html">Portfólio</a>
+            <a href="#beneficios">Benefícios</a>
+            <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá! Gostaria de conhecer as soluções da Agzap para minha empresa." target="_blank">Contato</a>
+        </nav>
+        <div class="cta-buttons">
+            <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá! Gostaria de conhecer as soluções da Agzap para minha empresa." target="_blank" class="btn btn-outline">Fale Conosco</a>
+            <a href="briefing.html" class="btn btn-primary">Solicitar Orçamento</a>
+        </div>
+    </header>
+
+    <main class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content-left">
+                <span class="tag">Agzap — Tecnologia & Automação</span>
+                <h1>Tecnologia e Automação Inteligente para Acelerar o Crescimento da Sua Empresa</h1>
+                <p>
+                    Desenvolvemos aplicativos web, sistemas personalizados e soluções de 
+                    Inteligência Artificial integrada ao WhatsApp para automatizar o atendimento 
+                    da sua empresa 24 horas por dia, 7 dias por semana.
+                </p>
+                
+                <a href="briefing.html" class="cta-button">SOLICITAR ORÇAMENTO GRATUITO</a>
+            </div>
+
+            <div class="hero-content-right">
+                <div class="code-editor-card">
+                    <div class="code-editor-header">
+                        <div class="code-dots">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                        </div>
+                        <span class="code-filename">agzap-app.js</span>
+                    </div>
+                    <div class="code-editor-body" id="codeEditorBody">
+                        <!-- Lines are typed dynamically by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="about-section">
+        <div class="about-container">
+            <div class="about-header">
+                <span class="section-tag">QUEM SOMOS</span>
+                <h2>Conheça a Agzap</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>A <strong>Agzap</strong> é uma empresa de tecnologia especializada em criar soluções digitais que transformam a operação de empresas de todos os portes.</p>
+                    <p>Nossa expertise está no desenvolvimento de <strong>aplicativos web</strong>, <strong>sistemas personalizados</strong> e na implementação de <strong>Inteligência Artificial integrada ao WhatsApp</strong>, permitindo atendimento automatizado 24 horas por dia.</p>
+                    <p>Combinamos inovação, automação e tecnologia de ponta para entregar resultados mensuráveis: mais eficiência, menos custos operacionais e uma experiência superior para seus clientes.</p>
+                </div>
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <span class="highlight-number">24/7</span>
+                        <span class="highlight-label">Atendimento Automatizado</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-number">100%</span>
+                        <span class="highlight-label">Soluções Personalizadas</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-number">IA</span>
+                        <span class="highlight-label">Inteligência Artificial</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Serviços -->
+    <section id="servicos" class="services-section">
+        <div class="services-container">
+            <div class="services-header">
+                <span class="section-tag">NOSSOS SERVIÇOS</span>
+                <h2>Soluções Tecnológicas Sob Medida</h2>
+                <p>Cada projeto é desenvolvido de acordo com as necessidades específicas do seu negócio</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Desenvolvimento de Aplicativos Web</h3>
+                    <p>Criação de aplicações web responsivas e de alta performance para digitalizar processos e ampliar a presença online da sua empresa.</p>
+                    <ul class="service-benefits">
+                        <li>Interfaces modernas e intuitivas</li>
+                        <li>Acesso de qualquer dispositivo</li>
+                        <li>Escalabilidade para crescer com seu negócio</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Sistemas Personalizados</h3>
+                    <p>Sistemas sob medida para automatizar e otimizar a gestão da sua empresa, desde o controle interno até o relacionamento com clientes.</p>
+                    <ul class="service-benefits">
+                        <li>Fluxos adaptados ao seu negócio</li>
+                        <li>Integração com ferramentas existentes</li>
+                        <li>Painel de gestão centralizado</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Automação com Inteligência Artificial</h3>
+                    <p>Implantação de IA para automatizar tarefas repetitivas, analisar dados em tempo real e tomar decisões inteligentes que impulsionam resultados.</p>
+                    <ul class="service-benefits">
+                        <li>Redução de erros operacionais</li>
+                        <li>Análise preditiva de dados</li>
+                        <li>Processos inteligentes e escaláveis</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fab fa-whatsapp"></i></div>
+                    <h3>Atendimento via WhatsApp com IA</h3>
+                    <p>Chatbots inteligentes integrados ao WhatsApp que atendem seus clientes 24 horas por dia com respostas rápidas, precisas e humanizadas.</p>
+                    <ul class="service-benefits">
+                        <li>Atendimento automático 24/7</li>
+                        <li>Respostas personalizadas com IA</li>
+                        <li>Redução de até 80% no tempo de resposta</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-plug"></i></div>
+                    <h3>Integração e Automação de Processos</h3>
+                    <p>Conectamos suas ferramentas e sistemas para criar fluxos automatizados que eliminam retrabalho e aumentam a produtividade da equipe.</p>
+                    <ul class="service-benefits">
+                        <li>Eliminação de tarefas manuais</li>
+                        <li>Sincronização entre plataformas</li>
+                        <li>Relatórios automatizados</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Sites e Landing Pages</h3>
+                    <p>Criação de sites institucionais e landing pages de alta conversão, com design moderno, responsivo e otimizado para gerar resultados.</p>
+                    <ul class="service-benefits">
+                        <li>Design profissional e responsivo</li>
+                        <li>Otimização para SEO e conversão</li>
+                        <li>Carregamento rápido e seguro</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Benefícios -->
+    <section id="beneficios" class="benefits-section">
+        <div class="benefits-container">
+            <div class="benefits-header">
+                <span class="section-tag">POR QUE ESCOLHER A AGZAP</span>
+                <h2>Resultados que Transformam Negócios</h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+                    <h4>Atendimento 24 Horas</h4>
+                    <p>Seus clientes são atendidos a qualquer hora do dia ou da noite, sem depender de equipe humana.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-sync-alt"></i></div>
+                    <h4>Automação de Processos</h4>
+                    <p>Elimine tarefas repetitivas e libere sua equipe para atividades estratégicas de maior valor.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
+                    <h4>Aumento de Produtividade</h4>
+                    <p>Processos otimizados e inteligentes que fazem sua empresa produzir mais com menos esforço.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-piggy-bank"></i></div>
+                    <h4>Redução de Custos</h4>
+                    <p>Automatize operações e reduza significativamente os custos operacionais do seu negócio.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-expand-arrows-alt"></i></div>
+                    <h4>Tecnologia Escalável</h4>
+                    <p>Soluções que crescem junto com sua empresa, sem necessidade de reconstrução.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <button class="btn-back-to-top" id="btnBackToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá! Gostaria de conhecer as soluções da Agzap para minha empresa." target="_blank"
+        class="link-whatsapp">
+        <img src="./img/whatsapp.png" alt="Fale conosco no WhatsApp">
+    </a>
+
+    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuMobile = document.querySelector('.menu-mobile');
+            const nav = document.querySelector('nav');
+
+            menuMobile.addEventListener('click', function() {
+                menuMobile.classList.toggle('active');
+                nav.classList.toggle('active');
+            });
+
+            // Fechar menu ao clicar em um link
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuMobile.classList.remove('active');
+                    nav.classList.remove('active');
+                });
+            });
+        });
+    </script>
+
+    <script>
+    /* ===== CODE EDITOR TYPING ANIMATION ===== */
+    (function() {
+        const codeLines = [
+            { num: '1',  html: '<span class="code-keyword">import</span> { <span class="code-var">AgzapApp</span> } <span class="code-keyword">from</span> <span class="code-string">\'@agzap/web\'</span>;' },
+            { num: '2',  html: '' },
+            { num: '3',  html: '<span class="code-keyword">const</span> <span class="code-var">app</span> = <span class="code-keyword">new</span> <span class="code-var">AgzapApp</span>({' },
+            { num: '4',  html: '  <span class="code-prop">nome</span>: <span class="code-string">\'Meu Aplicativo\'</span>,' },
+            { num: '5',  html: '  <span class="code-prop">auth</span>: <span class="code-bool">true</span>,' },
+            { num: '6',  html: '  <span class="code-prop">database</span>: <span class="code-string">\'postgres\'</span>,' },
+            { num: '7',  html: '  <span class="code-prop">deploy</span>: <span class="code-string">\'cloud\'</span>,' },
+            { num: '8',  html: '});' },
+            { num: '9',  html: '' },
+            { num: '10', html: 'app.<span class="code-func">rota</span>(<span class="code-string">\'api/dados\'</span>, <span class="code-keyword">async</span> (<span class="code-var">req</span>) =&gt; {' },
+            { num: '11', html: '  <span class="code-keyword">const</span> <span class="code-var">dados</span> = <span class="code-keyword">await</span> app.<span class="code-func">consultar</span>(req);' },
+            { num: '12', html: '  <span class="code-keyword">return</span> app.<span class="code-func">resposta</span>(dados);' },
+            { num: '13', html: '});' },
+            { num: '14', html: '' },
+            { num: '15', html: 'app.<span class="code-func">iniciar</span>(<span class="code-string">\'produção\'</span>);' },
+            { num: '16', html: '' },
+            { num: '&gt;', html: '<span class="code-success">✓ Aplicativo online — pronto para sua empresa</span>', isOutput: true }
+        ];
+
+        const body = document.getElementById('codeEditorBody');
+        if (!body) return;
+
+        // Extract plain text length from HTML string
+        function textLen(html) {
+            const t = document.createElement('div');
+            t.innerHTML = html;
+            return t.textContent.length;
+        }
+
+        // Build a map: for each visible char index → how many HTML chars to include
+        function buildCharMap(html) {
+            const map = []; // map[visibleIndex] = htmlEndIndex
+            let inTag = false;
+            let visible = 0;
+            for (let i = 0; i < html.length; i++) {
+                if (html[i] === '<') inTag = true;
+                if (!inTag) {
+                    map[visible] = i + 1;
+                    visible++;
+                } 
+                if (html[i] === '>' && inTag) {
+                    inTag = false;
+                    // After closing a tag, update last visible char to include the full tag
+                    if (map.length > 0) {
+                        map[map.length - 1] = i + 1;
+                    }
+                }
+            }
+            return map;
+        }
+
+        // Close any unclosed span tags in a partial HTML slice
+        function closeOpenTags(partial) {
+            const openTags = [];
+            const tagRegex = /<\/?span[^>]*>/gi;
+            let match;
+            while ((match = tagRegex.exec(partial)) !== null) {
+                if (match[0].startsWith('</')) {
+                    openTags.pop();
+                } else {
+                    openTags.push('</span>');
+                }
+            }
+            return partial + openTags.reverse().join('');
+        }
+
+        let lineIndex = 0;
+        const CHAR_DELAY = 35;
+        const LINE_DELAY = 120;
+        const OUTPUT_DELAY = 500;
+        const LOOP_DELAY = 3000;
+
+        function resetAndLoop() {
+            body.style.transition = 'opacity 0.5s ease';
+            body.style.opacity = '0';
+            setTimeout(() => {
+                body.innerHTML = '';
+                body.style.opacity = '1';
+                lineIndex = 0;
+                setTimeout(typeLine, 600);
+            }, 500);
+        }
+
+        function typeLine() {
+            if (lineIndex >= codeLines.length) {
+                setTimeout(resetAndLoop, LOOP_DELAY);
+                return;
+            }
+
+            const lineData = codeLines[lineIndex];
+            const div = document.createElement('div');
+            div.className = 'code-line' + (lineData.isOutput ? ' code-output' : '');
+            if (lineData.isOutput) div.style.opacity = '0';
+
+            const numSpan = document.createElement('span');
+            numSpan.className = 'line-number';
+            numSpan.innerHTML = lineData.num;
+            div.appendChild(numSpan);
+
+            const contentSpan = document.createElement('span');
+            contentSpan.className = 'code-line-content';
+            div.appendChild(contentSpan);
+
+            // Add cursor
+            const cursor = document.createElement('span');
+            cursor.className = 'cursor-blink';
+            cursor.textContent = '|';
+            div.appendChild(cursor);
+
+            body.appendChild(div);
+
+            const html = lineData.html;
+            const totalChars = textLen(html);
+
+            if (totalChars === 0 || lineData.isOutput) {
+                // Empty line or output line — show instantly
+                cursor.remove();
+                if (lineData.isOutput) {
+                    setTimeout(() => {
+                        contentSpan.innerHTML = html;
+                        div.style.opacity = '1';
+                        div.style.transition = 'opacity 0.4s ease';
+                        lineIndex++;
+                        setTimeout(typeLine, LINE_DELAY);
+                    }, OUTPUT_DELAY);
+                } else {
+                    lineIndex++;
+                    setTimeout(typeLine, LINE_DELAY / 2);
+                }
+                return;
+            }
+
+            const charMap = buildCharMap(html);
+            let charI = 0;
+
+            function typeChar() {
+                if (charI < totalChars) {
+                    const htmlSlice = html.substring(0, charMap[charI]);
+                    contentSpan.innerHTML = closeOpenTags(htmlSlice);
+                    charI++;
+                    setTimeout(typeChar, CHAR_DELAY);
+                } else {
+                    // Line done
+                    contentSpan.innerHTML = html;
+                    cursor.remove();
+                    lineIndex++;
+                    setTimeout(typeLine, LINE_DELAY);
+                }
+            }
+
+            typeChar();
+        }
+
+        // Start typing after a short delay
+        setTimeout(typeLine, 800);
+    })();
+    </script>
+
+    <footer class="site-footer">
+        <div class="footer-brand">Agzap Systems</div>
+        <div class="footer-cnpj">CNPJ: 60.865.841/0001-93</div>
+        <div class="footer-copy">&copy; 2026 Agzap Systems. Todos os direitos reservados.</div>
+    </footer>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        var btn = document.getElementById('btnBackToTop');
+        if (btn) btn.classList.toggle('visible', window.scrollY > 400);
+    });
+    </script>
+</body>
+</html>

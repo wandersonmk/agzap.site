@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/ico.png" type="image/png">
+    <link rel="shortcut icon" href="img/ico.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Portfólio - Agzap | Projetos de Tecnologia e Automação</title>
+</head>
+<body>
+    <div class="caixa-video">
+        <video src="./video/ai-background.mp4" autoplay muted loop></video>
+        <div class="mascara"></div>
+    </div>
+
+    <header class="header">
+        <a href="index.html">
+            <img src="./img/logo.wrn.png" alt="Agzap" class="logo">
+        </a>
+        <div class="menu-mobile">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <a href="index.html#sobre">Sobre</a>
+            <a href="index.html#servicos">Serviços</a>
+            <a href="portfolio.html">Portfólio</a>
+            <a href="index.html#beneficios">Benefícios</a>
+            <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá! Gostaria de conhecer as soluções da Agzap para minha empresa." target="_blank">Contato</a>
+        </nav>
+        <div class="cta-buttons">
+            <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá! Gostaria de conhecer as soluções da Agzap para minha empresa." target="_blank" class="btn btn-outline">Fale Conosco</a>
+            <a href="briefing.html" class="btn btn-primary">Solicitar Orçamento</a>
+        </div>
+    </header>
+
+    <main class="portfolio-section">
+        <h1>Nosso Portfólio</h1>
+        <p class="portfolio-intro">Conheça alguns dos projetos desenvolvidos pela Agzap — sites, aplicativos web e sistemas personalizados</p>
+
+        <!-- Filtros -->
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="site">Sites</button>
+            <button class="filter-btn" data-filter="app">Aplicativos</button>
+        </div>
+        
+        <div class="portfolio-grid">
+            <!-- SITES -->
+            <div class="portfolio-item" data-category="site">
+                <div class="portfolio-image">
+                    <iframe src="https://www.fulltimeacademy.com.br/" loading="lazy" title="FullTime Academy"></iframe>
+                    <div class="portfolio-iframe-overlay"></div>
+                </div>
+                <div class="portfolio-content">
+                    <h3>FullTime Academy</h3>
+                    <p>Site institucional para academia com design moderno, responsivo e otimizado para conversão de novos alunos.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Site</span>
+                        <span class="tag">Landing Page</span>
+                        <span class="tag">Responsivo</span>
+                    </div>
+                    <a href="https://www.fulltimeacademy.com.br/" target="_blank" class="portfolio-link">
+                        <i class="fas fa-external-link-alt"></i> Visitar Site
+                    </a>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="site">
+                <div class="portfolio-image">
+                    <iframe src="https://www.rubineiamoreirabergamini.com.br/" loading="lazy" title="Rubineia Moreira Bergamini"></iframe>
+                    <div class="portfolio-iframe-overlay"></div>
+                </div>
+                <div class="portfolio-content">
+                    <h3>Rubineia Moreira Bergamini</h3>
+                    <p>Site profissional com apresentação elegante, conteúdo otimizado e experiência de navegação fluida.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Site</span>
+                        <span class="tag">Institucional</span>
+                        <span class="tag">SEO</span>
+                    </div>
+                    <a href="https://www.rubineiamoreirabergamini.com.br/" target="_blank" class="portfolio-link">
+                        <i class="fas fa-external-link-alt"></i> Visitar Site
+                    </a>
+                </div>
+            </div>
+
+            <!-- APLICATIVOS -->
+            <div class="portfolio-item" data-category="app">
+                <div class="portfolio-image portfolio-preview-card">
+                    <div class="preview-card-content">
+                        <div class="preview-card-icon"><i class="fas fa-rocket"></i></div>
+                        <div class="preview-card-title">ZapWise</div>
+                        <div class="preview-card-subtitle">Plataforma de Gestão & Automação</div>
+                        <div class="preview-card-features">
+                            <span><i class="fas fa-check-circle"></i> Painel Admin</span>
+                            <span><i class="fas fa-check-circle"></i> WhatsApp IA</span>
+                            <span><i class="fas fa-check-circle"></i> Automações</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-content">
+                    <h3>ZapWise</h3>
+                    <p>Plataforma web completa da Agzap com painel de gestão, automações e integração com WhatsApp para atendimento inteligente.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Aplicativo Web</span>
+                        <span class="tag">SaaS</span>
+                        <span class="tag">IA</span>
+                    </div>
+                    <a href="https://app.agzap.com.br/" target="_blank" class="portfolio-link">
+                        <i class="fas fa-external-link-alt"></i> Acessar App
+                    </a>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="app">
+                <div class="portfolio-image">
+                    <iframe src="https://institutofiosdeouro.vercel.app/" loading="lazy" title="Instituto Fios de Ouro"></iframe>
+                    <div class="portfolio-iframe-overlay"></div>
+                </div>
+                <div class="portfolio-content">
+                    <h3>Instituto Fios de Ouro</h3>
+                    <p>Aplicativo web para gestão de escola de cursos com controle de alunos, turmas, matrículas e acompanhamento pedagógico.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Aplicativo Web</span>
+                        <span class="tag">Gestão Escolar</span>
+                        <span class="tag">Cursos</span>
+                    </div>
+                    <a href="https://institutofiosdeouro.vercel.app/" target="_blank" class="portfolio-link">
+                        <i class="fas fa-external-link-alt"></i> Acessar App
+                    </a>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="app">
+                <div class="portfolio-image">
+                    <iframe src="https://agzap-delivery.vercel.app/" loading="lazy" title="Agzap Delivery"></iframe>
+                    <div class="portfolio-iframe-overlay"></div>
+                </div>
+                <div class="portfolio-content">
+                    <h3>Agzap Delivery</h3>
+                    <p>Sistema de delivery completo com cardápio digital, gestão de pedidos em tempo real e integração com entregadores.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Aplicativo Web</span>
+                        <span class="tag">Delivery</span>
+                        <span class="tag">Pedidos</span>
+                    </div>
+                    <a href="https://agzap-delivery.vercel.app/" target="_blank" class="portfolio-link">
+                        <i class="fas fa-external-link-alt"></i> Acessar App
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-cta">
+            <h2>Quer um projeto como esses?</h2>
+            <p>Conte pra gente sua ideia e transformamos em realidade</p>
+            <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá! Vi o portfólio da Agzap e gostaria de um orçamento para meu projeto." target="_blank" class="cta-button">SOLICITAR ORÇAMENTO</a>
+        </div>
+    </main>
+
+    <button class="btn-back-to-top" id="btnBackToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá! Gostaria de saber mais sobre os serviços da Agzap." target="_blank"
+        class="link-whatsapp">
+        <img src="./img/whatsapp.png" alt="Fale conosco no WhatsApp">
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu
+            const menuMobile = document.querySelector('.menu-mobile');
+            const nav = document.querySelector('nav');
+            menuMobile.addEventListener('click', function() {
+                menuMobile.classList.toggle('active');
+                nav.classList.toggle('active');
+            });
+            document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuMobile.classList.remove('active');
+                    nav.classList.remove('active');
+                });
+            });
+
+            // Portfolio filters
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const items = document.querySelectorAll('.portfolio-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const filter = btn.dataset.filter;
+
+                    items.forEach(item => {
+                        if (filter === 'all' || item.dataset.category === filter) {
+                            item.style.display = '';
+                            setTimeout(() => item.style.opacity = '1', 10);
+                        } else {
+                            item.style.opacity = '0';
+                            setTimeout(() => item.style.display = 'none', 300);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+    <footer class="site-footer">
+        <div class="footer-brand">Agzap Systems</div>
+        <div class="footer-cnpj">CNPJ: 60.865.841/0001-93</div>
+        <div class="footer-copy">&copy; 2026 Agzap Systems. Todos os direitos reservados.</div>
+    </footer>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        var btn = document.getElementById('btnBackToTop');
+        if (btn) btn.classList.toggle('visible', window.scrollY > 400);
+    });
+    </script>
+</body>
+</html>

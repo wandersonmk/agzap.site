@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/icon copy.ico" type="image/x-icon">    
+    <title>TechFlow IA - Fale Conosco</title>
+</head>
+
+<body>
+    <div class="mascara-formulario" onclick="esconderForm()"></div>
+
+    <div class="header">
+        <img src="./img/logo-header.png" alt="logo techflow">
+        <a href="index.html">Home</a>
+        <a href="nossos-servicos.html">Nossos Serviços</a>
+        <!-- <a href="fale-conosco.html" onclick="mostrarForm()">Fale Conosco</a> -->
+        <a onclick="mostrarForm(event)">Fale Conosco</a>
+    </div>
+
+    <div class="caixa-mae">
+        <div class="caixa-principal">
+            <img src="./img/logo.png" alt="logo techflow" class="logo-mario"> 
+            <p>🤖 Entre em Contato com a TechFlow IA 📱</p>
+            <p>
+                Pronto para transformar sua empresa com soluções tecnológicas inovadoras? 
+                Nossa equipe está ansiosa para entender suas necessidades e desenvolver 
+                a solução perfeita para o seu negócio!
+            </p>
+            <button onclick="mostrarForm()">Iniciar Projeto</button>
+            <!-- <img src="./img/backgroud.jpeg" alt="backgroud"> --> 
+        </div>
+
+        <div>
+            <img src="./img/mario.png" alt="imagem tecnologia" class="imagem-mario-luigi">
+            <!-- src -> source -> origem -->
+        </div>
+
+
+    </div>
+
+    <div class="caixa-video">
+        <video src="./video/ai-background.mp4" autoplay muted loop></video>
+        <div class="mascara"></div>
+
+    </div>
+
+    <button class="btn-back-to-top" id="btnBackToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Quero%20saber%20mais%20sobre%20solu%C3%A7%C3%B5es%20em%20IA%20e%20desenvolvimento!" target="_blank"
+        class="link-whatsapp">
+        <img src="./img/whatsapp.png" alt="Chama no WhatsApp">
+
+    </a>
+
+    <form 
+        class="formulario-fale-conosco" 
+        action="https://formcarry.com/s/Ko2sflRpKeR"
+        method="POST"
+        enctype="multipart/form-data">
+            <input placeholder="Seu Nome" type="text" name="nome" id="nome" required>
+            <input placeholder="Seu Telefone" type="tel" name="telefone" id="telefone" required>
+            <textarea name="duvida" id="duvida" cols="30" rows="10" placeholder="Conte-nos sobre seu projeto..." required></textarea>
+            <button type="submit" id="submitButton" disabled>Solicitar Proposta</button>
+    </form>
+
+    <footer class="site-footer">
+        <div class="footer-brand">Agzap Systems</div>
+        <div class="footer-cnpj">CNPJ: 60.865.841/0001-93</div>
+        <div class="footer-copy">&copy; 2026 Agzap Systems. Todos os direitos reservados.</div>
+    </footer>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        var btn = document.getElementById('btnBackToTop');
+        if (btn) btn.classList.toggle('visible', window.scrollY > 400);
+    });
+    </script>
+</body>
+
+<script src="scripts.js"></script>
+</html>
