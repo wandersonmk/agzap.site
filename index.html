@@ -602,10 +602,22 @@
 
                 function showBubbleSequence(chunks, index) {
                     if (index >= chunks.length) {
-                        // CTA button after last bubble
+                        var fullReply = chunks.join(' ').toLowerCase();
+                        var userText = (chatHistory.length > 0 ? chatHistory[chatHistory.length - 1].content : '').toLowerCase();
+                        var isAnual = userText.indexOf('anual') !== -1 || fullReply.indexOf('anual') !== -1;
+                        var needsContact = fullReply.indexOf('whatsapp') !== -1 || fullReply.indexOf('agendar') !== -1 || fullReply.indexOf('nosso time') !== -1 || fullReply.indexOf('nossa equipe') !== -1 || fullReply.indexOf('entre em contato') !== -1 || fullReply.indexOf('reuni\u00e3o') !== -1;
+
+                        // CTA buttons after last bubble
                         var ctaBtn = document.createElement('div');
                         ctaBtn.className = 'chat-cta-btn chat-animate-in';
-                        ctaBtn.innerHTML = '<button onclick="openTrialModal(event)"><i class="fas fa-rocket"></i> Testar Grátis</button><a href="https://cal.com/agzap" target="_blank" rel="noopener noreferrer" class="chat-cta-schedule"><i class="fas fa-calendar-alt"></i> Agendar Apresentação</a>';
+                        var btns = '<button onclick="openTrialModal(event)"><i class="fas fa-rocket"></i> Testar Gr\u00e1tis</button>';
+                        btns += '<a href="https://cal.com/agzap" target="_blank" rel="noopener noreferrer" class="chat-cta-schedule"><i class="fas fa-calendar-alt"></i> Agendar Apresenta\u00e7\u00e3o</a>';
+                        if (isAnual) {
+                            btns += '<a href="https://wa.me/5511914600243?text=' + encodeURIComponent('Ol\u00e1! Gostaria de saber sobre o plano anual da Agzap.') + '" target="_blank" rel="noopener noreferrer" class="chat-cta-whatsapp"><i class="fab fa-whatsapp"></i> Tirar d\u00favida sobre plano anual</a>';
+                        } else if (needsContact) {
+                            btns += '<a href="https://wa.me/5511914600243?text=' + encodeURIComponent('Ol\u00e1! Gostaria de tirar uma d\u00favida sobre a Agzap.') + '" target="_blank" rel="noopener noreferrer" class="chat-cta-whatsapp"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</a>';
+                        }
+                        ctaBtn.innerHTML = btns;
                         chat.appendChild(ctaBtn);
                         chat.scrollTop = chat.scrollHeight;
                         waitingReply = false;
