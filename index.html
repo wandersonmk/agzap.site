@@ -332,7 +332,7 @@
                     <a href="#" onclick="openTrialModal(event)" class="cta-button cta-button-full">
                         <i class="fas fa-rocket"></i> QUERO COMEÇAR AGORA
                     </a>
-                    <span class="plan-note">Sem taxa de adesão · Cancele quando quiser</span>
+                    <span class="plan-note">Teste grátis por 1 dia · Cancele quando quiser</span>
                 </div>
             </div>
         </div>
@@ -612,10 +612,8 @@
                         ctaBtn.className = 'chat-cta-btn chat-animate-in';
                         var btns = '<button onclick="openTrialModal(event)"><i class="fas fa-rocket"></i> Testar Gr\u00e1tis</button>';
                         btns += '<a href="https://cal.com/agzap" target="_blank" rel="noopener noreferrer" class="chat-cta-schedule"><i class="fas fa-calendar-alt"></i> Agendar Apresenta\u00e7\u00e3o</a>';
-                        if (isAnual) {
-                            btns += '<a href="https://wa.me/5511914600243?text=' + encodeURIComponent('Ol\u00e1! Gostaria de saber sobre o plano anual da Agzap.') + '" target="_blank" rel="noopener noreferrer" class="chat-cta-whatsapp"><i class="fab fa-whatsapp"></i> Tirar d\u00favida sobre plano anual</a>';
-                        } else if (needsContact) {
-                            btns += '<a href="https://wa.me/5511914600243?text=' + encodeURIComponent('Ol\u00e1! Gostaria de tirar uma d\u00favida sobre a Agzap.') + '" target="_blank" rel="noopener noreferrer" class="chat-cta-whatsapp"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</a>';
+                        if (needsContact || isAnual) {
+                            btns += '<a href="https://wa.me/5511914600243?text=' + encodeURIComponent('Ol\u00e1! Gostaria de saber mais sobre o plano da Agzap.') + '" target="_blank" rel="noopener noreferrer" class="chat-cta-whatsapp"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</a>';
                         }
                         ctaBtn.innerHTML = btns;
                         chat.appendChild(ctaBtn);
@@ -637,7 +635,8 @@
                         bubble.innerHTML = '<p>' + escapeHtml(chunks[index]).replace(/\n/g,'<br>') + '</p><span class="chat-time">' + getTime() + '</span>';
                         chat.appendChild(bubble);
                         chat.scrollTop = chat.scrollHeight;
-                        setTimeout(function() { showBubbleSequence(chunks, index + 1); }, 300);
+                        var readDelay = Math.min(1200 + chunks[index].length * 15, 4000);
+                        setTimeout(function() { showBubbleSequence(chunks, index + 1); }, readDelay);
                     }, delay);
                 }
 
