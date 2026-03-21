@@ -27,7 +27,7 @@ Responda SOMENTE perguntas relacionadas à Agzap e seus serviços. Se perguntare
 === SOBRE A AGZAP ===
 A Agzap é uma plataforma completa para automatizar vendas, qualificar leads e organizar todos os contatos da empresa usando IA no WhatsApp.
 - Desenvolvida por: Agzap Systems
-- CNPJ: 52.574.988/0001-04
+- CNPJ: 60.865.841/0001-93
 - Slogan: "Inteligência que conecta sistemas"
 - Site: agzap.com.br
 - App/Plataforma: app.agzap.com.br
