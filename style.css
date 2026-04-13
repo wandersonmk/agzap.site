@@ -1419,13 +1419,13 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #f97316, #facc15);
+    background: linear-gradient(135deg, #25d366, #128c7e);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     font-size: 26px;
     color: #fff;
-    box-shadow: 0 0 30px rgba(249, 115, 22, 0.4);
+    box-shadow: 0 0 30px rgba(37, 211, 102, 0.4);
 }
 .modal-card h2 {
     color: #fff;
@@ -1482,6 +1482,15 @@ body {
     flex-direction: column;
     gap: 10px;
     align-items: center;
+}
+.modal-cta-whatsapp {
+    background: linear-gradient(135deg, #25d366, #128c7e) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45) !important;
+}
+.modal-cta-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.65) !important;
 }
 .modal-cta-secondary {
     background: transparent !important;
