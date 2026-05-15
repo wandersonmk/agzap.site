@@ -367,6 +367,12 @@
         </div>
     </footer>
 
+    <!-- Balão flutuante: convida a interagir com o celular -->
+    <button type="button" id="phoneHint" class="phone-hint" aria-label="Clique para conversar com a IA no celular">
+        <i class="fas fa-hand-pointer"></i>
+        <span>Experimente tirar suas dúvidas <strong>Clique aqui</strong></span>
+    </button>
+
     <!-- WhatsApp flutuante -->
     <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá! Gostaria de conhecer a Agzap para minha empresa." target="_blank" class="link-whatsapp">
         <img src="./img/whatsapp.png" alt="Fale conosco no WhatsApp">
@@ -432,6 +438,20 @@
         window.addEventListener('scroll', function() {
             var btn = document.getElementById('btnBackToTop');
             if (btn) btn.classList.toggle('visible', window.scrollY > 400);
+        });
+
+        // Balão flutuante: ao clicar, sobe pro topo e foca no input do celular
+        document.addEventListener('DOMContentLoaded', function() {
+            var phoneHint = document.getElementById('phoneHint');
+            if (!phoneHint) return;
+            phoneHint.addEventListener('click', function() {
+                var phoneInput = document.getElementById('phoneInputText');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                setTimeout(function() {
+                    if (phoneInput) phoneInput.focus({ preventScroll: true });
+                }, 700);
+                phoneHint.classList.add('dismissed');
+            });
         });
 
         // Animação de entrada nas seções
