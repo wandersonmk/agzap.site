@@ -678,6 +678,12 @@
             });
         });
 
+        // Reflexo (shine) aleatório nos botões — cada um dispara em momento e ritmo diferentes
+        document.querySelectorAll('.cta-button, .btn-primary, .modal-cta-go').forEach(function(btn) {
+            btn.style.setProperty('--shine-delay', (Math.random() * 7).toFixed(2) + 's');
+            btn.style.setProperty('--shine-dur', (8 + Math.random() * 5).toFixed(2) + 's');
+        });
+
         // Modal
         function openTrialModal(e) {
             if (e) e.preventDefault();

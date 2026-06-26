@@ -2995,11 +2995,12 @@ body {
     background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.45) 50%, transparent 100%);
     transform: skewX(-22deg);
     pointer-events: none;
-    animation: btnShine 4.5s ease-in-out infinite;
+    animation: btnShine var(--shine-dur, 9s) ease-in-out infinite;
+    animation-delay: var(--shine-delay, 0s);
 }
 @keyframes btnShine {
     0% { left: -150%; }
-    18% { left: 150%; }
+    14% { left: 150%; }
     100% { left: 150%; }
 }
 @media (prefers-reduced-motion: reduce) {
