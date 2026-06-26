@@ -9,6 +9,10 @@ html {
     scroll-behavior: smooth;
 }
 
+section[id] {
+    scroll-margin-top: 80px;
+}
+
 :root {
     --primary-color: #6d28d9;
     --primary-light: #8b5cf6;
@@ -1156,11 +1160,14 @@ body {
     overflow: hidden;
     background: #0d0d18;
     position: relative;
+    aspect-ratio: 2550 / 1237;
 }
 
 .screenshot-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
     display: block;
     transition: transform 0.5s ease;
 }
@@ -2560,7 +2567,7 @@ body {
 }
 
 /* ===== PLANOS: 2 CARDS COMPACTOS (MENSAL + ANUAL) ===== */
-.plan-container { max-width: 760px; }
+.plan-container { max-width: 880px; }
 
 .plans-grid {
     display: grid;
@@ -2957,4 +2964,14 @@ body {
     }
     .cadastro-left { padding: 32px 22px 24px; }
     .cadastro-head-text h2 { font-size: 1.2rem; }
+}
+
+.plan-includes-more {
+    text-align: left;
+    margin-top: 14px;
+    padding-left: 22px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--primary-light);
 }
