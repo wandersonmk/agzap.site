@@ -2975,3 +2975,35 @@ body {
     font-style: italic;
     color: var(--primary-light);
 }
+
+/* ===== EFEITO DE REFLEXO (SHINE) NOS BOTÕES ===== */
+.cta-button,
+.btn-primary,
+.modal-cta-go {
+    position: relative;
+    overflow: hidden;
+}
+.cta-button::after,
+.btn-primary::after,
+.modal-cta-go::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.45) 50%, transparent 100%);
+    transform: skewX(-22deg);
+    pointer-events: none;
+    animation: btnShine 4.5s ease-in-out infinite;
+}
+@keyframes btnShine {
+    0% { left: -150%; }
+    18% { left: 150%; }
+    100% { left: 150%; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .cta-button::after,
+    .btn-primary::after,
+    .modal-cta-go::after { animation: none; display: none; }
+}
