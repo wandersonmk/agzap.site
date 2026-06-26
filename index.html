@@ -776,7 +776,7 @@
 
                 function showNextPart() {
                     if (partIndex >= welcomeParts.length) {
-                        inputText.focus();
+                        inputText.focus({ preventScroll: true });
                         return;
                     }
                     // Remove typing anterior
@@ -802,7 +802,7 @@
                             setTimeout(showNextPart, 1200);
                         }, 400);
                     } else {
-                        inputText.focus();
+                        inputText.focus({ preventScroll: true });
                     }
                 }
 
