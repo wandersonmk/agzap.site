@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /download-video.html
+
+Sitemap: https://agzap.com.br/sitemap.xml
