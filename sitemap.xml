@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://agzap.com.br/</loc>
+    <loc>https://www.agzap.com.br/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://agzap.com.br/nossos-servicos.html</loc>
+    <loc>https://www.agzap.com.br/nossos-servicos.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://agzap.com.br/portfolio.html</loc>
+    <loc>https://www.agzap.com.br/portfolio.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://agzap.com.br/briefing.html</loc>
+    <loc>https://www.agzap.com.br/briefing.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://agzap.com.br/fale-conosco.html</loc>
+    <loc>https://www.agzap.com.br/fale-conosco.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
