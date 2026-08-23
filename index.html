@@ -584,6 +584,21 @@
                 </div>
             </div>
 
+            <div class="partners-panel">
+                <div class="partners-panel-text">
+                    <span class="partners-panel-tag"><i class="fas fa-desktop"></i> Painel do Parceiro</span>
+                    <h3>Gerencie toda a sua carteira em um só lugar</h3>
+                    <p>Um painel exclusivo para acompanhar cada cliente e o progresso do seu negócio como parceiro Agzap — tudo em tempo real, sem depender de planilhas.</p>
+                </div>
+                <div class="partners-panel-features">
+                    <div class="partners-panel-feature"><i class="fas fa-users-cog"></i> Gerencie todos os seus clientes em um só lugar</div>
+                    <div class="partners-panel-feature"><i class="fas fa-chart-line"></i> Acompanhe o progresso e a evolução de cada conta</div>
+                    <div class="partners-panel-feature"><i class="fas fa-user-lock"></i> Bloqueie ou libere o acesso de clientes</div>
+                    <div class="partners-panel-feature"><i class="fas fa-rotate-right"></i> Faça renovações de licença com poucos cliques</div>
+                    <div class="partners-panel-feature"><i class="fas fa-list-check"></i> E muito mais, direto do painel</div>
+                </div>
+            </div>
+
             <div class="partners-flow">
                 <h3>Como o parceiro fatura</h3>
                 <div class="partners-flow-steps">
@@ -773,7 +788,7 @@
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.feature-card, .advantage-card, .screenshot-card, .plan-card, .addon-card, .faq-item, .partner-card, .partners-audience-item, .flow-step').forEach(el => {
+        document.querySelectorAll('.feature-card, .advantage-card, .screenshot-card, .plan-card, .addon-card, .faq-item, .partner-card, .partners-audience-item, .flow-step, .partners-panel-feature').forEach(el => {
             el.classList.add('animate-target');
             observer.observe(el);
         });

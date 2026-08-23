@@ -3156,6 +3156,82 @@ body {
     color: var(--text-muted);
 }
 
+/* Painel do Parceiro */
+.partners-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    padding: 44px 40px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(109, 40, 217, 0.1), rgba(20, 20, 28, 0.4));
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    margin-bottom: 56px;
+}
+
+.partners-panel-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--primary-light);
+    margin-bottom: 14px;
+}
+
+.partners-panel-text h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.partners-panel-text p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.partners-panel-features {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.partners-panel-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.partners-panel-feature:hover {
+    border-color: rgba(139, 92, 246, 0.35);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.partners-panel-feature i {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: rgba(139, 92, 246, 0.12);
+    color: var(--primary-light);
+    font-size: 0.85rem;
+}
+
 /* Fluxo de faturamento */
 .partners-flow {
     text-align: center;
@@ -3315,6 +3391,15 @@ body {
         grid-template-columns: 1fr;
         gap: 18px;
     }
+    .partners-panel {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 32px 24px;
+        margin-bottom: 40px;
+    }
+    .partners-panel-text h3 {
+        font-size: 1.3rem;
+    }
     .partners-flow-steps {
         flex-direction: column;
     }
@@ -3336,6 +3421,9 @@ body {
 @media (max-width: 480px) {
     .partners-audience {
         padding: 20px 18px;
+    }
+    .partners-panel {
+        padding: 26px 18px;
     }
     .partners-cta-button {
         width: 100%;
