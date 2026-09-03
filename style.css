@@ -2740,9 +2740,22 @@ body {
     color: #0866ff;
     font-size: 1.05rem;
 }
-.footer-brand .meta-partner-badge {
+.meta-partner-badge--ig i {
+    color: #e1306c;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.footer-partner-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     margin-top: 4px;
     margin-bottom: 26px;
+}
+.footer-partner-badges .meta-partner-badge {
+    margin-top: 0;
 }
 
 /* ===== CARROSSEL DE LOGOS (MARQUEE) ===== */
