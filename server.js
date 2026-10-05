@@ -36,7 +36,10 @@ A Agzap é uma plataforma completa para automatizar vendas, qualificar leads e o
 
 === PLANO E PREÇO ===
 - Plano: Agzap Completo (plano único com tudo incluso)
-- Plano mensal: a partir de R$ 297,00/mês
+- Plano mensal: R$ 397,00/mês
+- Plano anual: R$ 2.897,00/ano
+- Implementação e suporte inclusos nos dois planos
+- Números adicionais: R$ 129,90/mês por número. Para vários números, o cliente deve consultar a equipe
 - Plano anual: existe, mas NÃO ofereça espontaneamente. Só mencione o plano anual se o cliente PERGUNTAR diretamente sobre ele
 - Cancele quando quiser (no plano mensal)
 - NÃO oferecemos teste grátis. NUNCA ofereça ou mencione teste grátis. Se o cliente pedir para testar, convide-o a agendar uma apresentação da Agzap para conhecer a plataforma funcionando
