@@ -67,7 +67,8 @@ html {
 }
 
 section[id],
-#modulos {
+#modulos,
+#modulo-delivery {
     scroll-margin-top: calc(var(--header-h) + 16px);
 }
 
@@ -979,29 +980,24 @@ p {
     margin-bottom: 44px;
 }
 
+/* Rótulo do módulo: texto simples, sem cápsula */
 .module-badge {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 7px 14px;
-    margin-bottom: 18px;
-    border-radius: 999px;
+    margin-bottom: 14px;
     font-size: 0.78rem;
     font-weight: 700;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 
 .module-delivery .module-badge {
-    background: var(--orange-50);
     color: var(--orange-700);
-    border: 1px solid var(--orange-100);
 }
 
 .module-imob .module-badge {
-    background: var(--brand-50);
     color: var(--brand-700);
-    border: 1px solid var(--brand-100);
 }
 
 .module-copy h3 {
@@ -1019,22 +1015,52 @@ p {
     color: var(--muted);
 }
 
-.module-audience {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 30px;
-    list-style: none;
+.module-copy > p.module-for {
+    margin-top: -6px;
+    margin-bottom: 28px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--muted);
 }
 
-.module-audience li {
-    padding: 6px 12px;
-    border-radius: 999px;
-    background: #fff;
-    border: 1px solid var(--line);
-    font-size: 0.82rem;
-    font-weight: 500;
+.module-for strong {
+    font-weight: 600;
     color: var(--text);
+}
+
+/* Botão que leva da Imobiliária ao Delivery */
+.btn-cross {
+    position: absolute;
+    top: -12px;
+    right: 0;
+    z-index: 2;
+    background: var(--orange-50);
+    border-color: #fed7aa;
+    color: var(--orange-700);
+    animation: crossPulse 2.2s ease-out infinite;
+}
+
+/* Pulso laranja em volta do botão */
+@keyframes crossPulse {
+    0% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.45); }
+    70% { box-shadow: 0 0 0 12px rgba(249, 115, 22, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0); }
+}
+
+.btn-cross:hover {
+    animation-play-state: paused;
+    transform: translateY(-1px);
+    background: var(--orange-100);
+    border-color: #fdba74;
+}
+
+.btn-cross-arrow {
+    font-size: 0.75em;
+    transition: transform 0.25s var(--ease);
+}
+
+.btn-cross:hover .btn-cross-arrow {
+    transform: translateY(2px);
 }
 
 .module-actions {
@@ -1094,8 +1120,8 @@ p {
     margin-bottom: 0;
 }
 
-.module-intro-side .module-audience {
-    margin-bottom: 22px;
+.module-intro .module-copy > p.module-for {
+    margin: 12px 0 0;
 }
 
 .imob-showcase {
@@ -1404,6 +1430,82 @@ p {
 .demo-card-go {
     font-size: 0.8rem;
     color: var(--brand-600);
+}
+
+/* Chamada da Imobiliária para o módulo Delivery */
+.module-crosslink {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+    padding: 18px 20px;
+    border-radius: 16px;
+    background: linear-gradient(90deg, var(--orange-50), #fff 70%);
+    border: 1px solid var(--orange-100);
+    color: var(--text);
+    text-decoration: none;
+    transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), border-color 0.25s;
+}
+
+.module-crosslink:hover {
+    transform: translateY(-2px);
+    border-color: #fed7aa;
+    box-shadow: 0 1px 2px rgba(22, 17, 43, 0.04), 0 16px 32px -18px rgba(234, 88, 12, 0.3);
+}
+
+.mc-ico {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: linear-gradient(180deg, var(--orange-100), #fff);
+    border: 1px solid #fed7aa;
+    color: var(--orange-700);
+    font-size: 1.05rem;
+}
+
+.mc-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.mc-text strong {
+    display: block;
+    font-family: var(--font-head);
+    font-size: 1rem;
+    color: var(--ink);
+}
+
+.mc-text span {
+    display: block;
+    font-size: 0.88rem;
+    color: var(--muted);
+}
+
+.mc-go {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    min-height: 40px;
+    padding: 9px 16px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, var(--orange-500), var(--orange-600));
+    color: #fff;
+    font-size: 0.88rem;
+    font-weight: 600;
+    box-shadow: 0 1px 2px rgba(22, 17, 43, 0.1), 0 8px 18px -10px rgba(234, 88, 12, 0.6);
+}
+
+.mc-go i {
+    font-size: 0.75rem;
+    transition: transform 0.25s var(--ease);
+}
+
+.module-crosslink:hover .mc-go i {
+    transform: translateY(2px);
 }
 
 /* Recursos de cada módulo */
@@ -2762,6 +2864,11 @@ p {
 }
 
 @media (max-width: 960px) {
+    .btn-cross {
+        position: static;
+        margin-top: 12px;
+    }
+
     .section {
         padding: 80px 0;
     }
@@ -2938,7 +3045,8 @@ p {
         border-radius: 22px;
     }
 
-    .module-actions .btn {
+    .module-actions .btn,
+    .btn-cross {
         width: 100%;
     }
 
@@ -2949,6 +3057,17 @@ p {
 
     .module-note {
         text-align: center;
+    }
+
+    .module-crosslink {
+        flex-wrap: wrap;
+        padding: 16px;
+    }
+
+    .mc-go {
+        width: 100%;
+        justify-content: center;
+        min-height: 44px;
     }
 
     .shot-site .mb-url {
