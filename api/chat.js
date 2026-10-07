@@ -108,9 +108,30 @@ Exemplos: resumir uma conversa, tempo médio de resposta da equipe, conversas pa
 • Pagamento online: o cliente paga por Pix ou cartão diretamente na conversa, sem sair do atendimento
 
 === MÓDULOS OPCIONAIS (NÃO INCLUSOS NO PLANO) ===
-IMPORTANTE: Delivery e Vitrine são MÓDULOS OPCIONAIS, contratados à parte. NUNCA diga que estão inclusos no plano.
-• Delivery completo (módulo opcional): cardápio digital e pedidos pelo WhatsApp — a IA registra o pedido, endereço e forma de pagamento; controle de mesas, garçons e entregas
-• Vitrine (módulo opcional): catálogo online de produtos que a IA consulta para apresentar preços, opções e informações ao cliente
+IMPORTANTE: Delivery, Imobiliária e Vitrine são MÓDULOS OPCIONAIS, contratados à parte. NUNCA diga que estão inclusos no plano.
+
+MÓDULO DELIVERY (restaurantes, pizzarias, hamburguerias, lanchonetes, açaís):
+• Cardápio digital com link próprio (ou domínio próprio), com fotos, categorias e complementos — o cliente faz o pedido sozinho
+• Pedidos pelo WhatsApp com IA: a IA envia o link do cardápio ou anota o pedido na conversa, calcula frete e total e confirma o resumo antes de fechar
+• Pagamento online por Pix e cartão (Mercado Pago) ou na entrega (dinheiro, maquininha, vale-refeição)
+• Frete por bairro ou por distância (km), frete grátis acima de um valor, pedido mínimo para entrega e tempo de entrega por bairro
+• Cliente acompanha o pedido em tempo real; app do entregador com rastreio no mapa
+• PDV de balcão com leitor de código de barras, atalhos de teclado, pagamento dividido e controle de caixa (abertura, sangria, fechamento)
+• Tela da cozinha com comanda impressa, app do garçom, mesas com QR Code e reserva de mesa feita pela IA
+• Estoque com fornecedores, cupons de desconto, cashback para fidelizar clientes e relatórios em PDF e Excel
+
+MÓDULO IMOBILIÁRIA (imobiliárias, corretores, loteadoras):
+• Site de imóveis pronto, no domínio da imobiliária, com filtros por cidade, bairro, compra e aluguel, fotos, mapa e visual com a marca
+• Corretor responsável em cada anúncio, com botão para chamar direto no WhatsApp dele
+• IA no WhatsApp, Instagram e chat do site que reconhece o código do imóvel e qualifica o lead: compra, locação, terreno ou captação (quem quer anunciar o imóvel)
+• O lead entra sozinho no funil certo do CRM (Vendas, Locação ou Captação), com temperatura, corretor e imóvel de interesse
+• Agenda de visitas na página do imóvel, com confirmação na véspera, lembrete e pesquisa pós-visita automáticos
+• Cruzamento imóvel × cliente: ao publicar um imóvel ou baixar o preço, o sistema encontra os clientes compatíveis e o corretor decide quem avisar
+• Formulário de captação para proprietários anunciarem o imóvel
+• Relatório por imóvel em PDF, permissões por corretor (cada um vê só os seus) e Pixel do Facebook e Google prontos para campanhas
+
+VITRINE (módulo opcional): catálogo online de produtos que a IA consulta para apresentar preços, opções e informações ao cliente.
+
 • Se o cliente quiser contratar ou saber condições desses módulos, convide para agendar uma apresentação ou falar com o time pelo WhatsApp — NUNCA cite valores
 
 === INTEGRAÇÕES ===

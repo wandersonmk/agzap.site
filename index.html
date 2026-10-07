@@ -1,24 +1,27 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#ffffff">
     <link rel="icon" href="img/ico.png" type="image/png">
     <link rel="shortcut icon" href="img/ico.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
     <meta name="facebook-domain-verification" content="r9r19qzc4vsrris14i2nfm49m6fvwk" />
     <title>Agzap | Atendimento Automatizado com IA no WhatsApp</title>
-    <meta name="description" content="Transforme seu WhatsApp em uma máquina de vendas com IA: atendimento 24h, CRM Kanban e equipe ilimitada. Agende uma apresentação e conheça a plataforma.">
+    <meta name="description" content="Transforme seu WhatsApp em uma máquina de vendas com IA: atendimento 24h, CRM Kanban, equipe ilimitada e módulos para delivery e imobiliárias. Agende uma apresentação.">
     <link rel="canonical" href="https://www.agzap.com.br/">
 
     <!-- Open Graph / WhatsApp, Facebook, Instagram -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.agzap.com.br/">
     <meta property="og:title" content="Agzap | Atendimento Automatizado com IA no WhatsApp">
-    <meta property="og:description" content="Transforme seu WhatsApp em uma máquina de vendas com IA: atendimento 24h, CRM Kanban e equipe ilimitada. Agende uma apresentação e conheça a plataforma.">
+    <meta property="og:description" content="Transforme seu WhatsApp em uma máquina de vendas com IA: atendimento 24h, CRM Kanban, equipe ilimitada e módulos para delivery e imobiliárias. Agende uma apresentação.">
     <meta property="og:image" content="https://www.agzap.com.br/img/og-image.png">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="Agzap">
@@ -26,70 +29,77 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Agzap | Atendimento Automatizado com IA no WhatsApp">
-    <meta name="twitter:description" content="Transforme seu WhatsApp em uma máquina de vendas com IA: atendimento 24h, CRM Kanban e equipe ilimitada. Agende uma apresentação e conheça a plataforma.">
+    <meta name="twitter:description" content="Transforme seu WhatsApp em uma máquina de vendas com IA: atendimento 24h, CRM Kanban, equipe ilimitada e módulos para delivery e imobiliárias. Agende uma apresentação.">
     <meta name="twitter:image" content="https://www.agzap.com.br/img/og-image.png">
 </head>
 <body>
+    <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
 
     <!-- Header -->
-    <header class="header">
-        <a href="index.html">
-            <img src="./img/logo.wrn.png" alt="Agzap" class="logo">
-        </a>
-        <div class="menu-mobile">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <nav>
-            <a href="#funcionalidades">Funcionalidades</a>
-            <a href="#vantagens">Vantagens</a>
-            <a href="#screenshots">Conheça o Sistema</a>
-            <a href="#plano">Planos</a>
-            <a href="#parceiros">Seja Parceiro</a>
-            <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá! Gostaria de conhecer a Agzap para minha empresa." target="_blank">Contato</a>
-        </nav>
-        <div class="cta-buttons">
-            <a href="https://cal.com/agzap" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Agendar Apresentação</a>
+    <header class="header" id="siteHeader">
+        <div class="header-inner">
+            <a href="index.html" class="header-logo" aria-label="Agzap — página inicial">
+                <img src="./img/logo-agzap-escuro.png" alt="Agzap" width="91" height="38">
+            </a>
+            <nav class="nav" id="siteNav" aria-label="Navegação principal">
+                <a href="#funcionalidades">Funcionalidades</a>
+                <a href="#vantagens">Vantagens</a>
+                <a href="#screenshots">Conheça o Sistema</a>
+                <a href="#plano">Planos</a>
+                <a href="#parceiros">Seja Parceiro</a>
+                <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá! Gostaria de conhecer a Agzap para minha empresa." target="_blank" rel="noopener noreferrer">Contato</a>
+                <a href="https://cal.com/agzap" target="_blank" rel="noopener noreferrer" class="btn btn-primary nav-cta-mobile">Agendar Apresentação</a>
+            </nav>
+            <div class="header-actions">
+                <a href="https://cal.com/agzap" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Agendar Apresentação</a>
+                <button class="menu-mobile" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="siteNav">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </header>
 
+    <main id="conteudo">
+
     <!-- Hero -->
-    <main class="hero-section">
-        <video class="hero-video-bg" autoplay muted loop playsinline>
-            <source src="./video/ai-background.mp4" type="video/mp4">
-        </video>
-        <div class="hero-video-overlay"></div>
-        <div class="hero-container">
-            <div class="hero-content-left">
-                <h1>Sua empresa atendendo no <span class="gradient-text">WhatsApp</span> com <span class="gradient-text">IA</span></h1>
-                <p>
+    <section class="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <a href="#modulos" class="hero-pill">
+                    <span class="hero-pill-new">Novo</span>
+                    Módulos Delivery e Imobiliária
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <h1>Sua empresa atendendo no <span class="text-gradient">WhatsApp</span> com <span class="text-gradient">IA</span></h1>
+                <p class="hero-lead">
                     Agente de inteligência artificial ilimitado para o seu atendimento no WhatsApp.
                     Seu assistente vendendo e atendendo <strong>24h por dia</strong>, todos os dias.
                 </p>
-                <div class="hero-cta-group">
-                    <a href="https://cal.com/agzap" target="_blank" rel="noopener noreferrer" class="cta-button">
-                        <i class="fas fa-calendar-alt"></i> AGENDAR APRESENTAÇÃO
+                <div class="hero-ctas">
+                    <a href="https://cal.com/agzap" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+                        <i class="fas fa-calendar-alt" aria-hidden="true"></i> Agendar apresentação
                     </a>
-                    <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá!%20Gostaria%20de%20conhecer%20a%20Agzap%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="cta-button-secondary">
-                        <i class="fab fa-whatsapp"></i> Falar com o time
+                    <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá!%20Gostaria%20de%20conhecer%20a%20Agzap%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i> Falar com o time
                     </a>
                 </div>
                 <div class="hero-stats">
                     <div class="hero-stat">
-                        <span class="hero-stat-number">24/7</span>
-                        <span class="hero-stat-label">Atendimento</span>
+                        <strong>24/7</strong>
+                        <span>Atendimento</span>
                     </div>
                     <div class="hero-stat">
-                        <span class="hero-stat-number">∞</span>
-                        <span class="hero-stat-label">Mensagens ilimitadas</span>
+                        <strong>∞</strong>
+                        <span>Mensagens ilimitadas</span>
                     </div>
                     <div class="meta-partner-badge">
-                        <i class="fab fa-meta"></i> Meta Business Partner
+                        <i class="fab fa-meta" aria-hidden="true"></i> Meta Business Partner
                     </div>
                 </div>
             </div>
-            <div class="hero-content-right">
+
+            <div class="hero-visual">
                 <div class="phone-frame">
                     <div class="phone-frame-btn phone-btn-silent"></div>
                     <div class="phone-frame-btn phone-btn-vol-up"></div>
@@ -117,129 +127,380 @@
                                 <i class="fas fa-phone"></i>
                             </div>
                         </div>
-                        <div class="phone-chat" id="phoneChat">
+                        <div class="phone-chat" id="phoneChat" aria-live="polite">
                         </div>
                         <div class="phone-input" id="phoneInputBar">
                             <div class="phone-input-field" id="phoneInputField">
                                 <i class="far fa-smile"></i>
                                 <span id="phoneInputPlaceholder">Mensagem</span>
-                                <input type="text" id="phoneInputText" class="phone-input-real" placeholder="Digite sua dúvida..." maxlength="500">
+                                <input type="text" id="phoneInputText" class="phone-input-real" placeholder="Digite sua dúvida..." maxlength="500" aria-label="Digite sua dúvida para a assistente da Agzap">
                             </div>
-                            <div class="phone-input-send" id="phoneInputSend"><i class="fas fa-microphone" id="phoneSendIcon"></i></div>
+                            <div class="phone-input-send" id="phoneInputSend" role="button" tabindex="0" aria-label="Enviar mensagem"><i class="fas fa-microphone" id="phoneSendIcon"></i></div>
                         </div>
                         <div class="phone-home-indicator"></div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
-    <!-- Funcionalidades -->
-    <section id="funcionalidades" class="features-section">
-        <div class="features-container">
-            <div class="features-header">
-                <span class="section-tag">Funcionalidades</span>
+    <!-- Funcionalidades (módulos + recursos da plataforma) -->
+    <section id="funcionalidades" class="section section-soft">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Funcionalidades</span>
                 <h2>Tudo que sua empresa precisa em um só lugar</h2>
-                <p>Uma plataforma completa para automatizar vendas, qualificar leads e organizar todos os contatos da sua empresa</p>
+                <p>Uma plataforma completa para automatizar vendas, qualificar leads e organizar todos os contatos — com módulos prontos para quem vende por delivery ou trabalha com imóveis.</p>
+            </div>
+
+            <div class="modules" id="modulos">
+
+                <!-- Módulo Delivery -->
+                <article class="module module-delivery">
+                    <div class="module-main">
+                        <div class="module-copy">
+                            <span class="module-badge"><i class="fas fa-motorcycle" aria-hidden="true"></i> Módulo Delivery</span>
+                            <h3>Do cardápio à entrega, com a IA atendendo os pedidos</h3>
+                            <p>Cardápio online, pedidos pelo WhatsApp, PDV de balcão, cozinha, mesas e entregadores em um só sistema — integrado à mesma IA e às mesmas conversas.</p>
+                            <ul class="module-audience" aria-label="Indicado para">
+                                <li>Restaurantes</li>
+                                <li>Pizzarias</li>
+                                <li>Hamburguerias</li>
+                                <li>Lanchonetes</li>
+                                <li>Açaís</li>
+                            </ul>
+                            <div class="module-actions">
+                                <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá!%20Quero%20conhecer%20o%20módulo%20Delivery%20da%20Agzap." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+                                    <i class="fab fa-whatsapp" aria-hidden="true"></i> Quero o módulo Delivery
+                                </a>
+                                <a href="https://app.agzap.com.br/cardapio/agzap" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg btn-demo">
+                                    <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Ver cardápio modelo
+                                </a>
+                            </div>
+                            <span class="module-note">Módulo opcional, contratado à parte</span>
+                        </div>
+                        <div class="module-visual">
+                            <a href="https://app.agzap.com.br/cardapio/agzap" target="_blank" rel="noopener noreferrer" class="demo-link" aria-label="Abrir o cardápio modelo em uma nova aba">
+                                <img src="./img/delivery-cardapio.png" alt="Cardápio digital do módulo Delivery aberto no celular, com banner, categorias e produtos" class="delivery-phone-shot" width="373" height="758" loading="lazy">
+                                <span class="demo-pill"><i class="fas fa-circle" aria-hidden="true"></i> Abrir modelo ao vivo</span>
+                            </a>
+                            <div class="float-card float-card-a" aria-hidden="true">
+                                <span class="fc-icon fc-green"><i class="fab fa-whatsapp"></i></span>
+                                <div><strong>IA no WhatsApp</strong><span>“Para pedir, é só clicar no link do cardápio.”</span></div>
+                            </div>
+                            <div class="float-card float-card-b" aria-hidden="true">
+                                <span class="fc-icon fc-orange"><i class="fas fa-check"></i></span>
+                                <div><strong>Pedido #128 recebido</strong><span>Pix aprovado pela conversa</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="module-features">
+                        <div class="module-feature">
+                            <span class="mf-ico"><i class="fas fa-book-open" aria-hidden="true"></i></span>
+                            <div>
+                                <h4>Cardápio digital com link próprio</h4>
+                                <p>Cardápio online com fotos, categorias e complementos, no seu link ou domínio. O cliente faz o pedido sozinho.</p>
+                            </div>
+                        </div>
+                        <div class="module-feature">
+                            <span class="mf-ico"><i class="fab fa-whatsapp" aria-hidden="true"></i></span>
+                            <div>
+                                <h4>Pedidos pelo WhatsApp com IA</h4>
+                                <p>A IA envia o link do cardápio ou anota o pedido na conversa, calcula frete e total e confirma tudo antes de fechar.</p>
+                            </div>
+                        </div>
+                        <div class="module-feature">
+                            <span class="mf-ico"><i class="fas fa-qrcode" aria-hidden="true"></i></span>
+                            <div>
+                                <h4>Pagamento online</h4>
+                                <p>Pix e cartão pelo Mercado Pago, ou pagamento na entrega com dinheiro, maquininha e vale-refeição.</p>
+                            </div>
+                        </div>
+                        <div class="module-feature">
+                            <span class="mf-ico"><i class="fas fa-route" aria-hidden="true"></i></span>
+                            <div>
+                                <h4>Frete por bairro ou distância</h4>
+                                <p>Taxa por bairro ou por km, frete grátis acima de um valor, pedido mínimo e tempo de entrega por região.</p>
+                            </div>
+                        </div>
+                        <div class="module-feature">
+                            <span class="mf-ico"><i class="fas fa-map-location-dot" aria-hidden="true"></i></span>
+                            <div>
+                                <h4>Entrega acompanhada</h4>
+                                <p>O cliente acompanha o pedido em tempo real e o entregador tem um app próprio com rastreio no mapa.</p>
+                            </div>
+                        </div>
+                        <div class="module-feature">
+                            <span class="mf-ico"><i class="fas fa-cash-register" aria-hidden="true"></i></span>
+                            <div>
+                                <h4>PDV e controle de caixa</h4>
+                                <p>Venda de balcão com leitor de código de barras, atalhos de teclado, pagamento dividido, abertura e fechamento de caixa.</p>
+                            </div>
+                        </div>
+                        <div class="module-feature">
+                            <span class="mf-ico"><i class="fas fa-utensils" aria-hidden="true"></i></span>
+                            <div>
+                                <h4>Cozinha, mesas e garçons</h4>
+                                <p>Tela da cozinha com comanda impressa, app do garçom, mesas com QR Code e reservas feitas pela IA.</p>
+                            </div>
+                        </div>
+                        <div class="module-feature">
+                            <span class="mf-ico"><i class="fas fa-boxes-stacked" aria-hidden="true"></i></span>
+                            <div>
+                                <h4>Estoque, cupons e cashback</h4>
+                                <p>Estoque com fornecedores, cupons de desconto, cashback para fidelizar e relatórios em PDF e Excel.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Módulo Imobiliária -->
+                <article class="module module-imob">
+                    <div class="module-intro">
+                        <div class="module-copy">
+                            <span class="module-badge"><i class="fas fa-house" aria-hidden="true"></i> Módulo Imobiliária</span>
+                            <h3>Seu site de imóveis com IA qualificando cada lead</h3>
+                            <p>Página de imóveis pronta, corretor responsável em cada anúncio, agenda de visitas, métricas de cada imóvel e o lead caindo no funil certo do CRM.</p>
+                        </div>
+                        <div class="module-intro-side">
+                            <ul class="module-audience" aria-label="Indicado para">
+                                <li>Imobiliárias</li>
+                                <li>Corretores</li>
+                                <li>Loteadoras</li>
+                                <li>Administradoras de locação</li>
+                            </ul>
+                            <div class="module-actions">
+                                <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá!%20Quero%20conhecer%20o%20módulo%20Imobiliária%20da%20Agzap." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+                                    <i class="fab fa-whatsapp" aria-hidden="true"></i> Quero o módulo Imobiliária
+                                </a>
+                                <a href="https://app.agzap.com.br/imoveis/agzap" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg btn-demo">
+                                    <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Ver site modelo
+                                </a>
+                            </div>
+                            <span class="module-note">Módulo opcional, contratado à parte</span>
+                        </div>
+                    </div>
+                    <div class="imob-showcase">
+                        <figure class="shot shot-site">
+                            <div class="shot-bar">
+                                <span class="mb-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                                <span class="mb-url" aria-hidden="true"><i class="fas fa-lock"></i> suaimobiliaria.com.br</span>
+                                <a href="https://app.agzap.com.br/imoveis/agzap" target="_blank" rel="noopener noreferrer" class="shot-open">
+                                    <i class="fas fa-circle" aria-hidden="true"></i> Abrir modelo ao vivo
+                                </a>
+                            </div>
+                            <img src="./img/imobiliaria-site.jpg" alt="Página pública de imóveis: busca por cidade, bairro e tipo, anúncios com fotos e o corretor responsável com botão de WhatsApp" width="1600" height="932" loading="lazy">
+                            <figcaption class="shot-label"><i class="fas fa-globe" aria-hidden="true"></i> Seu site de imóveis</figcaption>
+                        </figure>
+                        <figure class="shot shot-metrics">
+                            <div class="shot-bar" aria-hidden="true">
+                                <span class="mb-dots"><i></i><i></i><i></i></span>
+                                <span class="mb-url"><i class="fas fa-lock"></i> app.agzap.com.br</span>
+                            </div>
+                            <img src="./img/metricas-imob.png" alt="Painel de métricas da imobiliária: visitas na página, visualizações de imóveis, cliques no WhatsApp, leads e imóveis mais vistos" width="2220" height="1183" loading="lazy">
+                            <figcaption class="shot-label"><i class="fas fa-chart-line" aria-hidden="true"></i> Métricas da imobiliária</figcaption>
+                        </figure>
+                        <div class="float-card float-card-a" aria-hidden="true">
+                            <span class="fc-icon fc-purple"><i class="fas fa-fire"></i></span>
+                            <div><strong>Lead qualificado</strong><span>Compra · até R$ 700 mil · 3 quartos</span></div>
+                        </div>
+                        <div class="float-card float-card-b" aria-hidden="true">
+                            <span class="fc-icon fc-green"><i class="fas fa-calendar-check"></i></span>
+                            <div><strong>Visita agendada</strong><span>Sábado, 10h · Ref. AG-1010</span></div>
+                        </div>
+                    </div>
+                    <div class="module-features">
+                        <div class="module-feature">
+                            <span class="mf-ico"><i class="fas fa-globe" aria-hidden="true"></i></span>
+                            <div>
+                                <h4>Site de imóveis pronto</h4>
+                                <p>Página pública no seu domínio, com filtros por cidade, bairro, compra e aluguel, fotos, mapa e visual com a sua marca.</p>
+                            </div>
+                        </div>
+                        <div class="module-feature">
+                            <span class="mf-ico"><i class="fas fa-user-tie" aria-hidden="true"></i></span>
+                            <div>
+                                <h4>Corretor em cada anúncio</h4>
+                                <p>Cada imóvel mostra o corretor responsável, com botão para chamar direto no WhatsApp dele.</p>
+                            </div>
+                        </div>
+                        <div class="module-feature">
+                            <span class="mf-ico"><i class="fas fa-robot" aria-hidden="true"></i></span>
+                            <div>
+                                <h4>IA que qualifica o lead</h4>
+                                <p>No WhatsApp, Instagram e chat do site, a IA reconhece o código do imóvel e entende se o cliente quer comprar, alugar, um terreno ou anunciar.</p>
+                            </div>
+                        </div>
+                        <div class="module-feature">
+                            <span class="mf-ico"><i class="fas fa-columns" aria-hidden="true"></i></span>
+                            <div>
+                                <h4>CRM com funis por intenção</h4>
+                                <p>O lead entra sozinho no funil de Vendas, Locação ou Captação, com temperatura, corretor e imóvel de interesse.</p>
+                            </div>
+                        </div>
+                        <div class="module-feature">
+                            <span class="mf-ico"><i class="fas fa-calendar-check" aria-hidden="true"></i></span>
+                            <div>
+                                <h4>Agenda de visitas</h4>
+                                <p>O cliente marca a visita na página do imóvel, com confirmação, lembrete e pesquisa pós-visita automáticos.</p>
+                            </div>
+                        </div>
+                        <div class="module-feature">
+                            <span class="mf-ico"><i class="fas fa-people-arrows" aria-hidden="true"></i></span>
+                            <div>
+                                <h4>Cruzamento imóvel × cliente</h4>
+                                <p>Publicou um imóvel ou baixou o preço? O sistema encontra os clientes compatíveis e o corretor decide quem avisar.</p>
+                            </div>
+                        </div>
+                        <div class="module-feature">
+                            <span class="mf-ico"><i class="fas fa-key" aria-hidden="true"></i></span>
+                            <div>
+                                <h4>Captação de imóveis</h4>
+                                <p>Formulário para proprietários anunciarem o imóvel, com o contato indo direto para o funil de captação.</p>
+                            </div>
+                        </div>
+                        <div class="module-feature">
+                            <span class="mf-ico"><i class="fas fa-chart-line" aria-hidden="true"></i></span>
+                            <div>
+                                <h4>Métricas, permissões e anúncios</h4>
+                                <p>Relatório por imóvel em PDF, cada corretor vê só os seus, e Pixel do Facebook e Google prontos para campanhas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Modelos ao vivo -->
+            <div class="demo-strip">
+                <div class="demo-strip-head">
+                    <span class="demo-live"><i class="fas fa-circle" aria-hidden="true"></i> Ao vivo</span>
+                    <h3>Veja os modelos funcionando</h3>
+                    <p>Abra e navegue como se fosse o seu cliente.</p>
+                </div>
+                <div class="demo-cards">
+                    <a href="https://app.agzap.com.br/cardapio/agzap" target="_blank" rel="noopener noreferrer" class="demo-card demo-card-delivery">
+                        <span class="demo-card-ico"><i class="fas fa-utensils" aria-hidden="true"></i></span>
+                        <span class="demo-card-text"><strong>Cardápio Delivery</strong><span>Navegue pelo cardápio</span></span>
+                        <i class="fas fa-arrow-up-right-from-square demo-card-go" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://app.agzap.com.br/vitrine/agzap" target="_blank" rel="noopener noreferrer" class="demo-card demo-card-vitrine">
+                        <span class="demo-card-ico"><i class="fas fa-store" aria-hidden="true"></i></span>
+                        <span class="demo-card-text"><strong>Vitrine</strong><span>Veja produtos e preços</span></span>
+                        <i class="fas fa-arrow-up-right-from-square demo-card-go" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://app.agzap.com.br/imoveis/agzap" target="_blank" rel="noopener noreferrer" class="demo-card demo-card-imob">
+                        <span class="demo-card-ico"><i class="fas fa-house" aria-hidden="true"></i></span>
+                        <span class="demo-card-text"><strong>Site de Imóveis</strong><span>Busque imóveis à venda</span></span>
+                        <i class="fas fa-arrow-up-right-from-square demo-card-go" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="section-subhead">
+                <h3>Recursos da plataforma</h3>
+                <p>Tudo o que sua equipe usa no dia a dia para atender, vender e se organizar.</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-comments"></i></div>
+                    <div class="feature-icon"><i class="fas fa-comments" aria-hidden="true"></i></div>
                     <h3>Conversas Centralizadas</h3>
                     <p>Central de mensagens para atender clientes de WhatsApp, Instagram e chat do site, tudo em um só lugar, com toda a equipe.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-robot"></i></div>
+                    <div class="feature-icon"><i class="fas fa-robot" aria-hidden="true"></i></div>
                     <h3>Assistente de IA 24h</h3>
                     <p>Atendente virtual que responde automaticamente, 24 horas por dia. Entende áudios, responde por voz, lê comprovantes, tira pedidos e transfere para um atendente quando necessário.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-columns"></i></div>
+                    <div class="feature-icon"><i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i></div>
+                    <h3>Analista de Atendimento</h3>
+                    <p>Uma segunda IA que responde perguntas do gestor sobre a operação: resume conversas, aponta conversas paradas e mostra o desempenho da equipe.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-columns" aria-hidden="true"></i></div>
                     <h3>CRM Kanban</h3>
                     <p>Quadro visual para organizar seus leads por etapas: novo contato, negociando, fechado. Acompanhe cada cliente até a venda.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-address-book"></i></div>
+                    <div class="feature-icon"><i class="fas fa-address-book" aria-hidden="true"></i></div>
                     <h3>Gestão de Clientes</h3>
                     <p>Lista completa dos seus contatos, sem limites, com etiquetas para organização e histórico de cada cliente.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-bullhorn"></i></div>
+                    <div class="feature-icon"><i class="fas fa-bullhorn" aria-hidden="true"></i></div>
                     <h3>Disparos em Massa</h3>
                     <p>Envie mensagens para vários clientes de uma só vez: promoções, avisos ou novidades direto no WhatsApp.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-redo"></i></div>
+                    <div class="feature-icon"><i class="fas fa-redo" aria-hidden="true"></i></div>
                     <h3>Follow-up Automático</h3>
                     <p>Reengaje clientes que pararam de responder com mensagens de acompanhamento enviadas no momento certo.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                    <div class="feature-icon"><i class="fas fa-clock" aria-hidden="true"></i></div>
                     <h3>Mensagens Agendadas</h3>
                     <p>Programe mensagens para serem enviadas automaticamente no dia e horário que você escolher.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-motorcycle"></i></div>
-                    <h3>Delivery Completo</h3>
-                    <p>Cardápio digital e pedidos pelo WhatsApp. A IA registra pedido, endereço e pagamento — com controle de mesas, garçons e entregas. Módulo opcional.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-credit-card"></i></div>
+                    <div class="feature-icon"><i class="fas fa-credit-card" aria-hidden="true"></i></div>
                     <h3>Pagamento Online</h3>
                     <p>Seu cliente paga por Pix ou cartão diretamente na conversa, sem precisar sair do atendimento.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-store"></i></div>
+                    <div class="feature-icon"><i class="fas fa-store" aria-hidden="true"></i></div>
                     <h3>Vitrine de Produtos</h3>
                     <p>Catálogo online que a IA consulta para apresentar preços, opções e informações ao cliente. Módulo opcional.</p>
+                    <a href="https://app.agzap.com.br/vitrine/agzap" target="_blank" rel="noopener noreferrer" class="feature-link">
+                        Ver vitrine modelo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </a>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-calendar-check"></i></div>
+                    <div class="feature-icon"><i class="fas fa-calendar-check" aria-hidden="true"></i></div>
                     <h3>Sistema de Agendamento</h3>
                     <p>Agenda com página própria para o cliente marcar horário sozinho, além de lembretes automáticos que reduzem faltas.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-users-cog"></i></div>
+                    <div class="feature-icon"><i class="fas fa-users-cog" aria-hidden="true"></i></div>
                     <h3>Equipe e Atendentes</h3>
                     <p>Cadastre sua equipe com horários de trabalho. A IA identifica quem está disponível e transfere a conversa para o atendente correto.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-comment-dots"></i></div>
+                    <div class="feature-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></div>
                     <h3>Chat Interno</h3>
                     <p>Bate-papo entre os membros da equipe dentro da própria plataforma, sem depender do WhatsApp pessoal.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-sitemap"></i></div>
+                    <div class="feature-icon"><i class="fas fa-sitemap" aria-hidden="true"></i></div>
                     <h3>Roteamento para Franquias</h3>
                     <p>Ideal para redes: a matriz recebe o lead e o sistema direciona automaticamente para a unidade correta.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="feature-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
                     <h3>Origem dos Leads</h3>
                     <p>Saiba de onde cada cliente veio — anúncio, site ou indicação — e descubra quais canais trazem mais resultado.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-chart-pie"></i></div>
+                    <div class="feature-icon"><i class="fas fa-chart-pie" aria-hidden="true"></i></div>
                     <h3>Relatórios Completos</h3>
                     <p>Acompanhe conversas, vendas, desempenho da equipe e atuação da IA com os principais números do seu atendimento.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-photo-film"></i></div>
+                    <div class="feature-icon"><i class="fas fa-photo-film" aria-hidden="true"></i></div>
                     <h3>Mídias e Macros</h3>
                     <p>Biblioteca de fotos, áudios e respostas prontas para agilizar o atendimento da sua equipe.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-code"></i></div>
+                    <div class="feature-icon"><i class="fas fa-code" aria-hidden="true"></i></div>
                     <h3>API para Integrações</h3>
                     <p>Integre a Agzap aos seus sistemas com API e webhooks, com documentação completa para desenvolvedores.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-gift"></i></div>
+                    <div class="feature-icon"><i class="fas fa-gift" aria-hidden="true"></i></div>
                     <h3>Programa de Indicação</h3>
                     <p>Indique a Agzap para outras empresas e ganhe recompensas a cada nova indicação.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                    <div class="feature-icon"><i class="fas fa-headset" aria-hidden="true"></i></div>
                     <h3>Suporte e Ajuda</h3>
                     <p>Central de ajuda com vídeos, assistente para tirar dúvidas e canal para enviar sugestões — além do suporte humano incluso.</p>
                 </div>
@@ -248,40 +509,40 @@
     </section>
 
     <!-- Vantagens -->
-    <section id="vantagens" class="advantages-section">
-        <div class="advantages-container">
-            <div class="advantages-header">
-                <span class="section-tag">Vantagens</span>
+    <section id="vantagens" class="section">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Vantagens</span>
                 <h2>Sem custos adicionais. Sem surpresas.</h2>
             </div>
             <div class="advantages-grid">
-                <div class="advantage-card advantage-highlight">
-                    <div class="advantage-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="advantage-card is-highlight">
+                    <div class="advantage-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
                     <h3>Preço fixo, sem surpresas</h3>
                     <p>Um único valor mensal com tudo incluso. Sem cobranças por mensagem ou por atendente adicional.</p>
                 </div>
                 <div class="advantage-card">
-                    <div class="advantage-icon"><i class="fas fa-users"></i></div>
+                    <div class="advantage-icon"><i class="fas fa-users" aria-hidden="true"></i></div>
                     <h3>Atendentes ilimitados</h3>
                     <p>Coloque toda sua equipe para atender por um único número. Sem limite de atendentes adicionais na plataforma.</p>
                 </div>
                 <div class="advantage-card">
-                    <div class="advantage-icon"><i class="fas fa-infinity"></i></div>
+                    <div class="advantage-icon"><i class="fas fa-infinity" aria-hidden="true"></i></div>
                     <h3>Sem limites de uso</h3>
                     <p>Mensagens ilimitadas — sua IA nunca para de atender. Use à vontade, sem cobrança por volume.</p>
                 </div>
                 <div class="advantage-card">
-                    <div class="advantage-icon"><i class="fas fa-lock"></i></div>
+                    <div class="advantage-icon"><i class="fas fa-lock" aria-hidden="true"></i></div>
                     <h3>Controle de permissões</h3>
                     <p>Defina o que cada membro da equipe pode ver e acessar. Libere ou restrinja acesso ao sistema por profissional.</p>
                 </div>
                 <div class="advantage-card">
-                    <div class="advantage-icon"><i class="fas fa-link"></i></div>
+                    <div class="advantage-icon"><i class="fas fa-link" aria-hidden="true"></i></div>
                     <h3>Link individual de agenda</h3>
                     <p>Cada profissional tem seu próprio link de agendamento para compartilhar com seus clientes.</p>
                 </div>
                 <div class="advantage-card">
-                    <div class="advantage-icon"><i class="fas fa-comments"></i></div>
+                    <div class="advantage-icon"><i class="fas fa-comments" aria-hidden="true"></i></div>
                     <h3>Chat interno da equipe</h3>
                     <p>Sua equipe se comunica dentro da própria plataforma, sem precisar do WhatsApp pessoal. Conversas internas centralizadas e organizadas.</p>
                 </div>
@@ -290,83 +551,67 @@
     </section>
 
     <!-- Screenshots do Sistema -->
-    <section id="screenshots" class="screenshots-section">
-        <div class="screenshots-container">
-            <div class="screenshots-header">
-                <span class="section-tag">O sistema</span>
+    <section id="screenshots" class="section section-soft">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">O sistema</span>
                 <h2>Veja o sistema em ação</h2>
-                <p>Conheça cada detalhe da plataforma antes mesmo de começar a usar</p>
+                <p>Conheça cada detalhe da plataforma antes mesmo de começar a usar. Clique nas imagens para ampliar.</p>
             </div>
             <div class="screenshots-grid">
                 <div class="screenshot-card">
-                    <div class="screenshot-image">
-                        <img src="./img/dashboard.png" alt="Dashboard" loading="lazy">
-                    </div>
+                    <div class="screenshot-image"><img src="./img/dashboard.png" alt="Dashboard" loading="lazy"></div>
                     <div class="screenshot-info">
-                        <h4><i class="fas fa-chart-pie"></i> Dashboard</h4>
+                        <h4><i class="fas fa-chart-pie" aria-hidden="true"></i> Dashboard</h4>
                         <p>Visão geral completa do seu negócio com métricas e indicadores em tempo real.</p>
                     </div>
                 </div>
                 <div class="screenshot-card">
-                    <div class="screenshot-image">
-                        <img src="./img/kanban.png" alt="CRM Kanban" loading="lazy">
-                    </div>
+                    <div class="screenshot-image"><img src="./img/kanban.png" alt="CRM Kanban" loading="lazy"></div>
                     <div class="screenshot-info">
-                        <h4><i class="fas fa-columns"></i> CRM Kanban</h4>
+                        <h4><i class="fas fa-columns" aria-hidden="true"></i> CRM Kanban</h4>
                         <p>Organize seus leads visualmente por etapas: Prospecção, Qualificação, Proposta e Fechamento.</p>
                     </div>
                 </div>
                 <div class="screenshot-card">
-                    <div class="screenshot-image">
-                        <img src="./img/conversas-centralizadas.png" alt="Conversas Centralizadas" loading="lazy">
-                    </div>
+                    <div class="screenshot-image"><img src="./img/conversas-centralizadas.png" alt="Conversas Centralizadas" loading="lazy"></div>
                     <div class="screenshot-info">
-                        <h4><i class="fas fa-comments"></i> Conversas Centralizadas</h4>
+                        <h4><i class="fas fa-comments" aria-hidden="true"></i> Conversas Centralizadas</h4>
                         <p>Todas as conversas do WhatsApp em um painel único com toda a equipe atendendo.</p>
                     </div>
                 </div>
                 <div class="screenshot-card">
-                    <div class="screenshot-image">
-                        <img src="./img/contatos-ilimitados.png" alt="Contatos Ilimitados" loading="lazy">
-                    </div>
+                    <div class="screenshot-image"><img src="./img/contatos-ilimitados.png" alt="Contatos Ilimitados" loading="lazy"></div>
                     <div class="screenshot-info">
-                        <h4><i class="fas fa-address-book"></i> Contatos Ilimitados</h4>
+                        <h4><i class="fas fa-address-book" aria-hidden="true"></i> Contatos Ilimitados</h4>
                         <p>Gerencie toda sua base de clientes sem limites de cadastro.</p>
                     </div>
                 </div>
                 <div class="screenshot-card">
-                    <div class="screenshot-image">
-                        <img src="./img/cadastro-profissionais.png" alt="Cadastro de Profissionais" loading="lazy">
-                    </div>
+                    <div class="screenshot-image"><img src="./img/cadastro-profissionais.png" alt="Cadastro de Profissionais" loading="lazy"></div>
                     <div class="screenshot-info">
-                        <h4><i class="fas fa-user-tie"></i> Cadastro de Profissionais</h4>
+                        <h4><i class="fas fa-user-tie" aria-hidden="true"></i> Cadastro de Profissionais</h4>
                         <p>Cadastre sua equipe com níveis de permissão e controle de acesso personalizado.</p>
                     </div>
                 </div>
                 <div class="screenshot-card">
-                    <div class="screenshot-image">
-                        <img src="./img/agenda.png" alt="Agenda" loading="lazy">
-                    </div>
+                    <div class="screenshot-image"><img src="./img/agenda.png" alt="Agenda" loading="lazy"></div>
                     <div class="screenshot-info">
-                        <h4><i class="fas fa-calendar-alt"></i> Sistema de Agendamento</h4>
+                        <h4><i class="fas fa-calendar-alt" aria-hidden="true"></i> Sistema de Agendamento</h4>
                         <p>Agenda completa com link individual para cada profissional da equipe.</p>
                     </div>
                 </div>
                 <div class="screenshot-card">
-                    <div class="screenshot-image">
-                        <img src="./img/instrucao-agente-individual.png" alt="Instrução do Agente IA" loading="lazy">
-                    </div>
+                    <div class="screenshot-image"><img src="./img/instrucao-agente-individual.png" alt="Instrução do Agente IA" loading="lazy"></div>
                     <div class="screenshot-info">
-                        <h4><i class="fas fa-brain"></i> Instrução do Agente IA</h4>
+                        <h4><i class="fas fa-brain" aria-hidden="true"></i> Instrução do Agente IA</h4>
                         <p>Configure a instrução de cada agente de IA individualmente para cada número conectado.</p>
                     </div>
                 </div>
                 <div class="screenshot-card">
-                    <div class="screenshot-image">
-                        <img src="./img/chat-interno.png" alt="Chat Interno da Equipe" loading="lazy" onerror="this.src='./img/atualizacoes-sistema.png'">
-                    </div>
+                    <div class="screenshot-image"><img src="./img/chat-interno.png" alt="Chat Interno da Equipe" loading="lazy" onerror="this.src='./img/atualizacoes-sistema.png'"></div>
                     <div class="screenshot-info">
-                        <h4><i class="fas fa-comments"></i> Chat Interno</h4>
+                        <h4><i class="fas fa-comments" aria-hidden="true"></i> Chat Interno</h4>
                         <p>Sua equipe conversa dentro da plataforma, sem precisar do WhatsApp pessoal.</p>
                     </div>
                 </div>
@@ -374,81 +619,79 @@
         </div>
     </section>
 
-    <!-- Prova social / Parceiros -->
-    <section id="depoimentos" class="testimonials-section">
-        <div class="testimonials-container">
-            <div class="testimonials-header">
-                <span class="section-tag">Quem usa a Agzap</span>
+    <!-- Prova social -->
+    <section id="depoimentos" class="section">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Quem usa a Agzap</span>
                 <h2>Empresas que já atendem com IA no WhatsApp</h2>
                 <p>Negócios de diferentes segmentos automatizam vendas e atendimento com a Agzap todos os dias</p>
             </div>
-            <div class="logo-marquee" aria-label="Empresas que confiam na Agzap">
-                <div class="logo-marquee-track">
-                    <div class="logo-item"><span class="logo-thumb"><img src="./img/ativa-contabilidade.png" alt="Ativa Contabilidade" loading="lazy"></span><span class="logo-name">Ativa Contabilidade</span></div>
-                    <div class="logo-item"><span class="logo-thumb"><img src="./img/educare.png" alt="Educare Escola Cristã" loading="lazy"></span><span class="logo-name">Educare</span></div>
-                    <div class="logo-item"><span class="logo-thumb"><img src="./img/razy-corretora.png" alt="Razy Corretora de Seguros" loading="lazy"></span><span class="logo-name">Razy Corretora</span></div>
-                    <div class="logo-item"><span class="logo-thumb"><img src="./img/sieme.png" alt="Sieme Consultoria" loading="lazy"></span><span class="logo-name">Sieme</span></div>
-                    <div class="logo-item"><span class="logo-thumb"><img src="./img/saco-para-delivery.png" alt="Saco para Delivery" loading="lazy"></span><span class="logo-name">Saco para Delivery</span></div>
-                    <div class="logo-item"><span class="logo-thumb"><img src="./img/link-grades.png" alt="Criadeck" loading="lazy"></span><span class="logo-name">Criadeck</span></div>
-                    <div class="logo-item" aria-hidden="true"><span class="logo-thumb"><img src="./img/ativa-contabilidade.png" alt="" loading="lazy"></span><span class="logo-name">Ativa Contabilidade</span></div>
-                    <div class="logo-item" aria-hidden="true"><span class="logo-thumb"><img src="./img/educare.png" alt="" loading="lazy"></span><span class="logo-name">Educare</span></div>
-                    <div class="logo-item" aria-hidden="true"><span class="logo-thumb"><img src="./img/razy-corretora.png" alt="" loading="lazy"></span><span class="logo-name">Razy Corretora</span></div>
-                    <div class="logo-item" aria-hidden="true"><span class="logo-thumb"><img src="./img/sieme.png" alt="" loading="lazy"></span><span class="logo-name">Sieme</span></div>
-                    <div class="logo-item" aria-hidden="true"><span class="logo-thumb"><img src="./img/saco-para-delivery.png" alt="" loading="lazy"></span><span class="logo-name">Saco para Delivery</span></div>
-                    <div class="logo-item" aria-hidden="true"><span class="logo-thumb"><img src="./img/link-grades.png" alt="" loading="lazy"></span><span class="logo-name">Criadeck</span></div>
-                </div>
+        </div>
+        <div class="logo-marquee" aria-label="Empresas que confiam na Agzap">
+            <div class="logo-marquee-track">
+                <div class="logo-item"><span class="logo-thumb"><img src="./img/ativa-contabilidade.png" alt="Ativa Contabilidade" loading="lazy"></span><span class="logo-name">Ativa Contabilidade</span></div>
+                <div class="logo-item"><span class="logo-thumb"><img src="./img/educare.png" alt="Educare Escola Cristã" loading="lazy"></span><span class="logo-name">Educare</span></div>
+                <div class="logo-item"><span class="logo-thumb"><img src="./img/razy-corretora.png" alt="Razy Corretora de Seguros" loading="lazy"></span><span class="logo-name">Razy Corretora</span></div>
+                <div class="logo-item"><span class="logo-thumb"><img src="./img/saco-para-delivery.png" alt="Saco para Delivery" loading="lazy"></span><span class="logo-name">Saco para Delivery</span></div>
+                <div class="logo-item"><span class="logo-thumb"><img src="./img/link-grades.png" alt="Criadeck" loading="lazy"></span><span class="logo-name">Criadeck</span></div>
+                <div class="logo-item" aria-hidden="true"><span class="logo-thumb"><img src="./img/ativa-contabilidade.png" alt="" loading="lazy"></span><span class="logo-name">Ativa Contabilidade</span></div>
+                <div class="logo-item" aria-hidden="true"><span class="logo-thumb"><img src="./img/educare.png" alt="" loading="lazy"></span><span class="logo-name">Educare</span></div>
+                <div class="logo-item" aria-hidden="true"><span class="logo-thumb"><img src="./img/razy-corretora.png" alt="" loading="lazy"></span><span class="logo-name">Razy Corretora</span></div>
+                <div class="logo-item" aria-hidden="true"><span class="logo-thumb"><img src="./img/saco-para-delivery.png" alt="" loading="lazy"></span><span class="logo-name">Saco para Delivery</span></div>
+                <div class="logo-item" aria-hidden="true"><span class="logo-thumb"><img src="./img/link-grades.png" alt="" loading="lazy"></span><span class="logo-name">Criadeck</span></div>
             </div>
         </div>
     </section>
 
-    <!-- Planos / Preços -->
-    <section id="plano" class="plan-section">
-        <div class="plan-container">
-            <div class="plan-header">
-                <span class="section-tag">Planos</span>
+    <!-- Planos -->
+    <section id="plano" class="section section-soft">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Planos</span>
                 <h2>Escolha como prefere pagar</h2>
             </div>
             <div class="plans-grid">
                 <!-- Mensal -->
-                <div class="plan-card plan-card-compact">
-                    <div class="plan-col-name">Mensal</div>
+                <div class="plan-card">
+                    <div class="plan-name">Mensal</div>
                     <div class="plan-price">
                         <span class="plan-price-value"><span class="plan-price-currency">R$</span>397</span>
                         <span class="plan-price-period">/mês</span>
                     </div>
                     <p class="plan-price-hint">Flexível — cancele quando quiser</p>
                     <ul class="plan-mini-features">
-                        <li><i class="fas fa-check"></i> 1 número de WhatsApp com IA incluso</li>
-                        <li><i class="fas fa-check"></i> + Instagram ou chat do site incluso</li>
-                        <li><i class="fas fa-check"></i> Recursos completos da plataforma</li>
-                        <li><i class="fas fa-check"></i> Implementação e suporte inclusos</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 1 número de WhatsApp com IA incluso</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> + Instagram ou chat do site incluso</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Recursos completos da plataforma</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Implementação e suporte inclusos</li>
                     </ul>
                     <div class="plan-cta">
-                        <a href="#" onclick="openCadastroModal(event)" class="cta-button cta-button-full">
-                            <i class="fas fa-rocket"></i> QUERO COMEÇAR AGORA
+                        <a href="#" onclick="openCadastroModal(event)" class="btn btn-primary btn-lg btn-block">
+                            <i class="fas fa-rocket" aria-hidden="true"></i> Quero começar agora
                         </a>
                         <span class="plan-note">Sem fidelidade — cancele quando quiser</span>
                     </div>
                 </div>
                 <!-- Anual -->
-                <div class="plan-card plan-card-compact plan-card-highlight">
-                    <div class="plan-badge"><i class="fas fa-star"></i> Economize 39%</div>
-                    <div class="plan-col-name">Anual</div>
+                <div class="plan-card is-highlight">
+                    <div class="plan-badge"><i class="fas fa-star" aria-hidden="true"></i> Economize 39%</div>
+                    <div class="plan-name">Anual</div>
                     <div class="plan-price">
                         <span class="plan-price-value"><span class="plan-price-currency">R$</span>2.897</span>
                         <span class="plan-price-period">/ano</span>
                     </div>
                     <p class="plan-price-hint">Equivale a <strong>R$ 241,42/mês</strong></p>
-                    <div class="plan-save-line"><i class="fas fa-piggy-bank"></i> Economize R$ 1.867 por ano</div>
+                    <div class="plan-save-line"><i class="fas fa-piggy-bank" aria-hidden="true"></i> Economize R$ 1.867 por ano</div>
                     <ul class="plan-mini-features">
-                        <li><i class="fas fa-check"></i> 1 número de WhatsApp com IA incluso</li>
-                        <li><i class="fas fa-check"></i> + Instagram ou chat do site incluso</li>
-                        <li><i class="fas fa-check"></i> Recursos completos da plataforma</li>
-                        <li><i class="fas fa-check"></i> Implementação e suporte inclusos</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 1 número de WhatsApp com IA incluso</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> + Instagram ou chat do site incluso</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Recursos completos da plataforma</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Implementação e suporte inclusos</li>
                     </ul>
                     <div class="plan-cta">
-                        <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá!%20Quero%20solicitar%20o%20link%20de%20pagamento%20do%20plano%20anual%20da%20Agzap." target="_blank" rel="noopener noreferrer" class="cta-button cta-button-full">
-                            <i class="fab fa-whatsapp"></i> SOLICITAR PLANO ANUAL
+                        <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá!%20Quero%20solicitar%20o%20link%20de%20pagamento%20do%20plano%20anual%20da%20Agzap." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg btn-block">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i> Solicitar plano anual
                         </a>
                         <span class="plan-note">Pagamento único pelo ano todo</span>
                     </div>
@@ -458,166 +701,181 @@
             <!-- Tudo incluso nos dois planos -->
             <div class="plan-includes">
                 <h3>Os dois planos incluem</h3>
-                <div class="plan-features-list">
-                    <div class="plan-feature"><i class="fas fa-check"></i> Agente de IA 24h (1 número de WhatsApp incluso)</div>
-                    <div class="plan-feature"><i class="fas fa-check"></i> Canal adicional incluso: Instagram ou chat do site</div>
-                    <div class="plan-feature"><i class="fas fa-check"></i> Contatos ilimitados</div>
-                    <div class="plan-feature"><i class="fas fa-check"></i> Mensagens ilimitadas</div>
-                    <div class="plan-feature"><i class="fas fa-check"></i> Atendentes ilimitados</div>
-                    <div class="plan-feature"><i class="fas fa-check"></i> CRM Kanban por atendente</div>
-                    <div class="plan-feature"><i class="fas fa-check"></i> Agendamento com link individual</div>
-                    <div class="plan-feature"><i class="fas fa-check"></i> Conversas centralizadas em um painel</div>
-                    <div class="plan-feature"><i class="fas fa-check"></i> Follow-up automático</div>
-                    <div class="plan-feature"><i class="fas fa-check"></i> Lembretes de agendamento e aniversário</div>
-                    <div class="plan-feature"><i class="fas fa-check"></i> Dashboard com relatórios</div>
-                    <div class="plan-feature"><i class="fas fa-check"></i> Implementação inclusa</div>
-                    <div class="plan-feature"><i class="fas fa-check"></i> Suporte incluso</div>
-                    <div class="plan-feature"><i class="fas fa-check"></i> Chat interno para a equipe</div>
-                    <div class="plan-feature"><i class="fas fa-check"></i> Agendamento pelo WhatsApp com a IA</div>
-                    <div class="plan-feature"><i class="fas fa-check"></i> Agendamento de mensagens</div>
-                    <div class="plan-feature"><i class="fas fa-check"></i> Disparos em massa</div>
-                    <div class="plan-feature"><i class="fas fa-check"></i> Pagamento online por Pix e cartão na conversa</div>
-                    <div class="plan-feature"><i class="fas fa-check"></i> Roteamento de leads para franquias</div>
-                    <div class="plan-feature"><i class="fas fa-check"></i> Origem dos leads por canal</div>
-                    <div class="plan-feature"><i class="fas fa-check"></i> Mídias e macros para respostas rápidas</div>
-                    <div class="plan-feature"><i class="fas fa-check"></i> Programa de indicação com recompensas</div>
-                    <div class="plan-feature"><i class="fas fa-check"></i> Integração via API com documentação completa</div>
-                    <div class="plan-feature"><i class="fas fa-check"></i> Webhooks para integrações</div>
-                </div>
+                <ul class="plan-features-list">
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Agente de IA 24h (1 número de WhatsApp incluso)</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Canal adicional incluso: Instagram ou chat do site</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Contatos ilimitados</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Mensagens ilimitadas</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Atendentes ilimitados</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> CRM Kanban por atendente</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Agendamento com link individual</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Conversas centralizadas em um painel</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Follow-up automático</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Lembretes de agendamento e aniversário</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Dashboard com relatórios</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Implementação inclusa</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Suporte incluso</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Chat interno para a equipe</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Agendamento pelo WhatsApp com a IA</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Agendamento de mensagens</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Disparos em massa</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Pagamento online por Pix e cartão na conversa</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Roteamento de leads para franquias</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Origem dos leads por canal</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Mídias e macros para respostas rápidas</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Programa de indicação com recompensas</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Integração via API com documentação completa</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> Webhooks para integrações</li>
+                </ul>
                 <p class="plan-includes-more">e muito mais...</p>
             </div>
 
             <!-- Números adicionais -->
             <div class="addons-block">
-                <div class="addons-intro">
-                    <h3>Números adicionais</h3>
-                    <p>Cada número adicional já vem com seu próprio assistente de IA. Você <strong>não paga outra assinatura</strong>.</p>
-                </div>
-                <div class="addons-grid addons-grid-single">
-                    <div class="addon-card">
-                        <span class="addon-qty">Número adicional</span>
-                        <div class="addon-price"><span class="addon-price-value">R$ 129,90</span><span class="addon-price-unit">/mês</span></div>
-                        <span class="addon-foot">por número</span>
-                    </div>
+                <h3>Números adicionais</h3>
+                <p>Cada número adicional já vem com seu próprio assistente de IA. Você <strong>não paga outra assinatura</strong>.</p>
+                <div class="addon-card">
+                    <span class="addon-qty">Número adicional</span>
+                    <div><span class="addon-price-value">R$ 129,90</span><span class="addon-price-unit">/mês</span></div>
+                    <span class="addon-foot">por número</span>
                 </div>
                 <p class="addons-note">Precisa de vários números? <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá!%20Quero%20consultar%20valores%20para%20números%20adicionais%20na%20Agzap." target="_blank" rel="noopener noreferrer">Consulte nossa equipe</a> para condições de acordo com a quantidade.</p>
+                <p class="addons-note">Os <a href="#modulos">módulos Delivery e Imobiliária</a> e a Vitrine de Produtos são opcionais e contratados à parte.</p>
             </div>
         </div>
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="faq-section">
-        <div class="faq-container">
-            <div class="faq-header">
-                <span class="section-tag">Dúvidas frequentes</span>
+    <section id="faq" class="section">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Dúvidas frequentes</span>
                 <h2>Perguntas frequentes</h2>
             </div>
             <div class="faq-list">
                 <div class="faq-item">
-                    <button class="faq-question" type="button">
+                    <button class="faq-question" type="button" aria-expanded="false">
                         Como posso conhecer a plataforma antes de assinar?
-                        <i class="fas fa-chevron-down faq-icon"></i>
+                        <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="faq-answer">
+                    <div class="faq-answer"><div class="faq-answer-inner">
                         <p>Agende uma apresentação com o nosso time. Em uma conversa rápida, mostramos a plataforma funcionando, tiramos todas as suas dúvidas e entendemos o que a sua empresa precisa. É só clicar em "Agendar Apresentação" ou falar com a gente pelo WhatsApp.</p>
-                    </div>
+                    </div></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" type="button">
+                    <button class="faq-question" type="button" aria-expanded="false">
                         Funciona com mais de um número de WhatsApp?
-                        <i class="fas fa-chevron-down faq-icon"></i>
+                        <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="faq-answer">
+                    <div class="faq-answer"><div class="faq-answer-inner">
                         <p>Sim. O plano já inclui 1 número com assistente de IA próprio, e você pode adicionar quantos números quiser. Cada número adicional tem seu próprio assistente e custa R$ 129,90/mês. Para vários números, consulte nossa equipe.</p>
-                    </div>
+                    </div></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" type="button">
+                    <button class="faq-question" type="button" aria-expanded="false">
                         Como conecto meu WhatsApp ao sistema?
-                        <i class="fas fa-chevron-down faq-icon"></i>
+                        <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="faq-answer">
+                    <div class="faq-answer"><div class="faq-answer-inner">
                         <p>É simples: dentro da plataforma você cria um canal, lê o QR Code com o WhatsApp do número que deseja conectar e coloca a instrução do agente de IA. Em poucos minutos seu número já está atendendo com IA.</p>
-                    </div>
+                    </div></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" type="button">
+                    <button class="faq-question" type="button" aria-expanded="false">
                         Os atendentes são realmente ilimitados?
-                        <i class="fas fa-chevron-down faq-icon"></i>
+                        <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="faq-answer">
+                    <div class="faq-answer"><div class="faq-answer-inner">
                         <p>Sim. Você coloca toda a sua equipe atendendo pela plataforma, sem limite de atendentes e sem cobrança por usuário adicional. Cada atendente ainda gerencia seus próprios leads no CRM Kanban.</p>
-                    </div>
+                    </div></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" type="button">
+                    <button class="faq-question" type="button" aria-expanded="false">
                         Meus dados e conversas ficam seguros?
-                        <i class="fas fa-chevron-down faq-icon"></i>
+                        <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="faq-answer">
+                    <div class="faq-answer"><div class="faq-answer-inner">
                         <p>Sim. Suas conversas e contatos ficam centralizados na sua conta, com controle de permissões por profissional — você define o que cada membro da equipe pode ver e acessar.</p>
-                    </div>
+                    </div></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" type="button">
+                    <button class="faq-question" type="button" aria-expanded="false">
                         O assistente de IA atende em quais horários?
-                        <i class="fas fa-chevron-down faq-icon"></i>
+                        <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="faq-answer">
+                    <div class="faq-answer"><div class="faq-answer-inner">
                         <p>24 horas por dia, 7 dias por semana. A IA responde, qualifica e agenda automaticamente a qualquer hora — inclusive fora do horário comercial e nos fins de semana.</p>
-                    </div>
+                    </div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        A Agzap atende restaurantes e delivery?
+                        <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer"><div class="faq-answer-inner">
+                        <p>Sim, com o módulo Delivery: cardápio digital com link próprio, pedidos pelo WhatsApp com IA, pagamento online por Pix e cartão, PDV de balcão, tela da cozinha, mesas, garçons e entregadores com rastreio. É um módulo opcional, contratado à parte — fale com nosso time para conhecer as condições.</p>
+                    </div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        Tem solução para imobiliárias e corretores?
+                        <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer"><div class="faq-answer-inner">
+                        <p>Sim, com o módulo Imobiliária: site de imóveis com filtros por cidade e bairro, corretor responsável em cada anúncio, IA que qualifica o lead (compra, locação, terreno ou captação), agenda de visitas e CRM com funis de vendas, locação e captação. É um módulo opcional, contratado à parte — fale com nosso time para conhecer as condições.</p>
+                    </div></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Programa de Parceiros -->
-    <section id="parceiros" class="partners-section">
-        <div class="partners-container">
-            <div class="partners-header">
-                <span class="section-tag">Programa de Parceiros</span>
+    <section id="parceiros" class="section section-soft">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Programa de Parceiros</span>
                 <h2>Transforme tecnologia em receita recorrente</h2>
                 <p>Revenda a Agzap para a sua carteira de clientes com liberdade total de precificação, suporte da nossa equipe em cada etapa e uma plataforma pronta para qualquer segmento.</p>
             </div>
 
             <div class="partners-audience">
-                <span class="partners-audience-label"><i class="fas fa-user-check"></i> Para quem é esse plano</span>
-                <div class="partners-audience-grid">
-                    <div class="partners-audience-item"><i class="fas fa-check"></i> Agências de marketing e automação</div>
-                    <div class="partners-audience-item"><i class="fas fa-check"></i> Consultores e implementadores de tecnologia</div>
-                    <div class="partners-audience-item"><i class="fas fa-check"></i> Desenvolvedores e integradores de sistemas</div>
-                    <div class="partners-audience-item"><i class="fas fa-check"></i> Empresas com uma carteira de clientes ativa</div>
-                </div>
+                <span class="partners-audience-label"><i class="fas fa-user-check" aria-hidden="true"></i> Para quem é esse plano</span>
+                <ul class="partners-audience-grid">
+                    <li class="partners-audience-item"><i class="fas fa-check" aria-hidden="true"></i> Agências de marketing e automação</li>
+                    <li class="partners-audience-item"><i class="fas fa-check" aria-hidden="true"></i> Consultores e implementadores de tecnologia</li>
+                    <li class="partners-audience-item"><i class="fas fa-check" aria-hidden="true"></i> Desenvolvedores e integradores de sistemas</li>
+                    <li class="partners-audience-item"><i class="fas fa-check" aria-hidden="true"></i> Empresas com uma carteira de clientes ativa</li>
+                </ul>
             </div>
 
             <div class="partners-grid">
                 <div class="partner-card">
-                    <div class="partner-icon"><i class="fas fa-sync-alt"></i></div>
+                    <div class="partner-icon"><i class="fas fa-sync-alt" aria-hidden="true"></i></div>
                     <h3>Receita recorrente</h3>
                     <p>Ganhe todos os meses com os clientes ativos na sua carteira, de forma contínua.</p>
                 </div>
                 <div class="partner-card">
-                    <div class="partner-icon"><i class="fas fa-layer-group"></i></div>
+                    <div class="partner-icon"><i class="fas fa-layer-group" aria-hidden="true"></i></div>
                     <h3>Implementações lucrativas</h3>
                     <p>Ofereça configuração e implantação como um novo serviço, com faturamento próprio.</p>
                 </div>
                 <div class="partner-card">
-                    <div class="partner-icon"><i class="fas fa-sliders-h"></i></div>
+                    <div class="partner-icon"><i class="fas fa-sliders-h" aria-hidden="true"></i></div>
                     <h3>Liberdade comercial</h3>
                     <p>Defina sua marca, sua estratégia de venda e o preço final de revenda para o cliente.</p>
                 </div>
                 <div class="partner-card">
-                    <div class="partner-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="partner-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
                     <h3>Suporte e treinamento ilimitado</h3>
                     <p>Treinamentos práticos, Universidade Agzap e base de conhecimento sempre à disposição.</p>
                 </div>
                 <div class="partner-card">
-                    <div class="partner-icon"><i class="fas fa-handshake"></i></div>
+                    <div class="partner-icon"><i class="fas fa-handshake" aria-hidden="true"></i></div>
                     <h3>Apoio comercial especializado</h3>
                     <p>Um especialista Agzap ao seu lado nas negociações mais estratégicas, sem custo adicional.</p>
                 </div>
                 <div class="partner-card">
-                    <div class="partner-icon"><i class="fas fa-cubes"></i></div>
+                    <div class="partner-icon"><i class="fas fa-cubes" aria-hidden="true"></i></div>
                     <h3>Plataforma completa e em evolução</h3>
                     <p>IA, CRM, agenda e API sempre atualizados — pronta para atender qualquer segmento.</p>
                 </div>
@@ -625,17 +883,17 @@
 
             <div class="partners-panel">
                 <div class="partners-panel-text">
-                    <span class="partners-panel-tag"><i class="fas fa-desktop"></i> Painel do Parceiro</span>
+                    <span class="partners-panel-tag"><i class="fas fa-desktop" aria-hidden="true"></i> Painel do Parceiro</span>
                     <h3>Gerencie toda a sua carteira em um só lugar</h3>
                     <p>Um painel exclusivo para acompanhar cada cliente e o progresso do seu negócio como parceiro Agzap — tudo em tempo real, sem depender de planilhas.</p>
                 </div>
-                <div class="partners-panel-features">
-                    <div class="partners-panel-feature"><i class="fas fa-users-cog"></i> Gerencie todos os seus clientes em um só lugar</div>
-                    <div class="partners-panel-feature"><i class="fas fa-chart-line"></i> Acompanhe o progresso e a evolução de cada conta</div>
-                    <div class="partners-panel-feature"><i class="fas fa-user-lock"></i> Bloqueie ou libere o acesso de clientes</div>
-                    <div class="partners-panel-feature"><i class="fas fa-rotate-right"></i> Faça renovações de licença com poucos cliques</div>
-                    <div class="partners-panel-feature"><i class="fas fa-list-check"></i> E muito mais, direto do painel</div>
-                </div>
+                <ul class="partners-panel-features">
+                    <li class="partners-panel-feature"><i class="fas fa-users-cog" aria-hidden="true"></i> Gerencie todos os seus clientes em um só lugar</li>
+                    <li class="partners-panel-feature"><i class="fas fa-chart-line" aria-hidden="true"></i> Acompanhe o progresso e a evolução de cada conta</li>
+                    <li class="partners-panel-feature"><i class="fas fa-user-lock" aria-hidden="true"></i> Bloqueie ou libere o acesso de clientes</li>
+                    <li class="partners-panel-feature"><i class="fas fa-rotate-right" aria-hidden="true"></i> Faça renovações de licença com poucos cliques</li>
+                    <li class="partners-panel-feature"><i class="fas fa-list-check" aria-hidden="true"></i> E muito mais, direto do painel</li>
+                </ul>
             </div>
 
             <div class="partners-flow">
@@ -659,104 +917,102 @@
                         <span class="flow-step-desc">contrata a solução</span>
                     </div>
                     <i class="fas fa-chevron-right flow-arrow" aria-hidden="true"></i>
-                    <div class="flow-step flow-step-highlight">
+                    <div class="flow-step is-highlight">
                         <span class="flow-step-num">4</span>
                         <strong>Parceiro fatura</strong>
                         <span class="flow-step-desc">margem + recorrência todo mês</span>
                     </div>
                 </div>
-                <p class="partners-flow-note"><i class="fas fa-info-circle"></i> A Agzap fatura o parceiro pelas licenças. O parceiro fatura o cliente final pelo valor que definir — controle comercial 100% seu.</p>
+                <p class="partners-flow-note"><i class="fas fa-info-circle" aria-hidden="true"></i> A Agzap fatura o parceiro pelas licenças. O parceiro fatura o cliente final pelo valor que definir — controle comercial 100% seu.</p>
             </div>
 
             <div class="partners-cta">
                 <h3>Tem interesse em se tornar um parceiro Agzap?</h3>
                 <p>Fale com nosso time e conheça as condições completas do Programa de Parceiros.</p>
-                <a href="https://cal.com/agzap/reuniao-agzap" target="_blank" rel="noopener noreferrer" class="cta-button partners-cta-button">
-                    <i class="fas fa-calendar-check"></i> Solicitar agendamento
+                <a href="https://cal.com/agzap/reuniao-agzap" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+                    <i class="fas fa-calendar-check" aria-hidden="true"></i> Solicitar agendamento
                 </a>
-                <span class="modal-hint">Reunião gratuita e sem compromisso</span>
+                <span class="cta-hint">Reunião gratuita e sem compromisso</span>
             </div>
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <img src="./img/logo.wrn.png" alt="Agzap" class="footer-logo">
-                <p>Inteligência que conecta sistemas</p>
-                <div class="footer-partner-badges">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="./img/logo-agzap-claro.png" alt="Agzap" width="96" height="40" loading="lazy">
+                    <p>Inteligência que conecta sistemas</p>
                     <div class="meta-partner-badge">
-                        <i class="fab fa-meta"></i> Meta Business Partner
+                        <i class="fab fa-meta" aria-hidden="true"></i> Meta Business Partner
                     </div>
                 </div>
-            </div>
-            <div class="footer-links">
-                <a href="#funcionalidades">Funcionalidades</a>
-                <a href="#vantagens">Vantagens</a>
-                <a href="#screenshots">Sistema</a>
-                <a href="#plano">Planos</a>
-                <a href="#parceiros">Seja Parceiro</a>
+                <nav class="footer-links" aria-label="Links do rodapé">
+                    <a href="#funcionalidades">Funcionalidades</a>
+                    <a href="#vantagens">Vantagens</a>
+                    <a href="#screenshots">Sistema</a>
+                    <a href="#plano">Planos</a>
+                    <a href="#parceiros">Seja Parceiro</a>
+                </nav>
             </div>
             <div class="footer-bottom">
-                <div class="footer-cnpj">CNPJ: 60.865.841/0001-93</div>
-                <div class="footer-copy">&copy; 2026 Agzap. Todos os direitos reservados.</div>
+                <div>CNPJ: 60.865.841/0001-93</div>
+                <div>&copy; 2026 Agzap. Todos os direitos reservados.</div>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp flutuante -->
-    <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá! Gostaria de conhecer a Agzap para minha empresa." target="_blank" class="link-whatsapp">
-        <img src="./img/whatsapp.png" alt="Fale conosco no WhatsApp">
+    <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá! Gostaria de conhecer a Agzap para minha empresa." target="_blank" rel="noopener noreferrer" class="link-whatsapp" aria-label="Fale conosco no WhatsApp">
+        <img src="./img/whatsapp.png" alt="">
     </a>
 
     <!-- Botão voltar ao topo -->
-    <button class="btn-back-to-top" id="btnBackToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Voltar ao topo">
-        <i class="fas fa-chevron-up"></i>
+    <button class="btn-back-to-top" id="btnBackToTop" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
     </button>
 
     <!-- Modal Como fazer o cadastro -->
-    <div class="modal-overlay" id="cadastroModal">
-        <div class="modal-card modal-card-cadastro">
-            <button class="modal-close" onclick="closeCadastroModal()">&times;</button>
+    <div class="modal-overlay" id="cadastroModal" role="dialog" aria-modal="true" aria-labelledby="cadastroTitulo">
+        <div class="modal-card">
+            <button class="modal-close" type="button" onclick="closeCadastroModal()" aria-label="Fechar">&times;</button>
             <div class="cadastro-grid">
                 <div class="cadastro-left">
-                    <div class="cadastro-head">
-                        <div class="cadastro-head-text">
-                            <h2>Crie sua conta na Agzap</h2>
-                            <p>Comece a atender com IA em 3 passos</p>
-                        </div>
-                    </div>
-                    <div class="cadastro-steps">
-                        <div class="cadastro-step">
+                    <h2 id="cadastroTitulo">Crie sua conta na Agzap</h2>
+                    <p class="cadastro-sub">Comece a atender com IA em 3 passos</p>
+                    <ol class="cadastro-steps">
+                        <li class="cadastro-step">
                             <span class="cadastro-step-num">1</span>
-                            <div class="cadastro-step-text"><strong>Crie sua conta</strong><span>Acesse o app.agzap.com.br, clique em "Cadastre-se" e informe seu email e senha.</span></div>
-                        </div>
-                        <div class="cadastro-step">
+                            <div><strong>Crie sua conta</strong><span>Acesse o app.agzap.com.br, clique em "Cadastre-se" e informe seu email e senha.</span></div>
+                        </li>
+                        <li class="cadastro-step">
                             <span class="cadastro-step-num">2</span>
-                            <div class="cadastro-step-text"><strong>Acesse a plataforma</strong><span>Faça login e explore o sistema completo da Agzap.</span></div>
-                        </div>
-                        <div class="cadastro-step">
+                            <div><strong>Acesse a plataforma</strong><span>Faça login e explore o sistema completo da Agzap.</span></div>
+                        </li>
+                        <li class="cadastro-step">
                             <span class="cadastro-step-num">3</span>
-                            <div class="cadastro-step-text"><strong>Assine um plano</strong><span>Escolha o plano ideal e libere todos os recursos para a sua equipe.</span></div>
-                        </div>
-                    </div>
+                            <div><strong>Assine um plano</strong><span>Escolha o plano ideal e libere todos os recursos para a sua equipe.</span></div>
+                        </li>
+                    </ol>
                     <div class="cadastro-help">
-                        <i class="fas fa-headset"></i>
+                        <i class="fas fa-headset" aria-hidden="true"></i>
                         <span><strong>Precisa de ajuda para configurar?</strong> Nosso time te acompanha em cada etapa.</span>
                     </div>
                     <div class="modal-cta-group">
-                        <a href="https://app.agzap.com.br" target="_blank" rel="noopener noreferrer" class="modal-cta modal-cta-go">
-                            <i class="fas fa-arrow-right"></i> Ir para cadastro
+                        <a href="https://app.agzap.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i> Ir para cadastro
                         </a>
-                        <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá!%20Preciso%20de%20ajuda%20para%20configurar%20a%20Agzap." target="_blank" rel="noopener noreferrer" class="modal-cta modal-cta-secondary">
-                            <i class="fab fa-whatsapp"></i> Falar com o time
+                        <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá!%20Preciso%20de%20ajuda%20para%20configurar%20a%20Agzap." target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i> Falar com o time
                         </a>
                     </div>
                     <span class="modal-hint">Acesso completo a todos os recursos da plataforma</span>
                 </div>
                 <div class="cadastro-right">
-                    <span class="cadastro-tip-label"><i class="fas fa-lightbulb"></i> Na tela de login, clique em "Cadastre-se"</span>
+                    <span class="cadastro-tip-label"><i class="fas fa-lightbulb" aria-hidden="true"></i> Na tela de login, clique em "Cadastre-se"</span>
                     <img src="./img/cadastro.png" alt="Onde clicar em Cadastre-se na tela de login da Agzap" loading="lazy" onclick="openLightbox(this.src, this.alt)">
                 </div>
             </div>
@@ -764,47 +1020,68 @@
     </div>
 
     <!-- Lightbox -->
-    <div class="lightbox-overlay" id="lightbox">
-        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+        <button class="lightbox-close" type="button" onclick="closeLightbox()" aria-label="Fechar">&times;</button>
         <img src="" alt="" id="lightboxImg">
     </div>
 
     <script>
         // Menu mobile
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuMobile = document.querySelector('.menu-mobile');
-            const nav = document.querySelector('nav');
-            menuMobile.addEventListener('click', function() {
-                menuMobile.classList.toggle('active');
-                nav.classList.toggle('active');
+        (function() {
+            var btn = document.querySelector('.menu-mobile');
+            var nav = document.getElementById('siteNav');
+            function setMenu(open) {
+                btn.classList.toggle('active', open);
+                nav.classList.toggle('active', open);
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                btn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+            }
+            btn.addEventListener('click', function() {
+                setMenu(!nav.classList.contains('active'));
             });
-            document.querySelectorAll('nav a').forEach(link => {
-                link.addEventListener('click', () => {
-                    menuMobile.classList.remove('active');
-                    nav.classList.remove('active');
-                });
+            nav.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() { setMenu(false); });
             });
-        });
+            window.closeMobileMenu = function() { setMenu(false); };
+        })();
 
-        // Voltar ao topo
-        window.addEventListener('scroll', function() {
-            var btn = document.getElementById('btnBackToTop');
-            if (btn) btn.classList.toggle('visible', window.scrollY > 400);
-        });
+        // Header com sombra ao rolar + botão voltar ao topo
+        (function() {
+            var header = document.getElementById('siteHeader');
+            var backTop = document.getElementById('btnBackToTop');
+            function onScroll() {
+                header.classList.toggle('scrolled', window.scrollY > 8);
+                backTop.classList.toggle('visible', window.scrollY > 400);
+            }
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+        })();
 
         // Animação de entrada nas seções
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
-                }
+        (function() {
+            var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            var alvos = document.querySelectorAll('.module, .module-feature, .feature-card, .advantage-card, .screenshot-card, .plan-card, .faq-item, .partner-card, .flow-step, .partners-panel');
+            if (reduce || !('IntersectionObserver' in window)) return;
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (!entry.isIntersecting) return;
+                    var el = entry.target;
+                    observer.unobserve(el);
+                    el.classList.add('animate-in');
+                    // Depois da entrada, devolve o hover rápido ao card
+                    setTimeout(function() {
+                        el.classList.remove('animate-target', 'animate-in');
+                        el.style.transitionDelay = '';
+                    }, 900);
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+            alvos.forEach(function(el) {
+                var irmaos = Array.prototype.indexOf.call(el.parentNode.children, el);
+                el.style.transitionDelay = ((irmaos % 4) * 60) + 'ms';
+                el.classList.add('animate-target');
+                observer.observe(el);
             });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.feature-card, .advantage-card, .screenshot-card, .plan-card, .addon-card, .faq-item, .partner-card, .partners-audience-item, .flow-step, .partners-panel-feature').forEach(el => {
-            el.classList.add('animate-target');
-            observer.observe(el);
-        });
+        })();
 
         // FAQ accordion
         document.querySelectorAll('.faq-question').forEach(function(btn) {
@@ -812,14 +1089,18 @@
                 var item = btn.parentElement;
                 var isOpen = item.classList.contains('active');
                 document.querySelectorAll('.faq-item.active').forEach(function(openItem) {
-                    if (openItem !== item) openItem.classList.remove('active');
+                    if (openItem !== item) {
+                        openItem.classList.remove('active');
+                        openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                    }
                 });
                 item.classList.toggle('active', !isOpen);
+                btn.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
             });
         });
 
         // Reflexo (shine) aleatório nos botões — cada um dispara em momento e ritmo diferentes
-        document.querySelectorAll('.cta-button, .btn-primary, .modal-cta-go').forEach(function(btn) {
+        document.querySelectorAll('.btn-primary').forEach(function(btn) {
             btn.style.setProperty('--shine-delay', (Math.random() * 7).toFixed(2) + 's');
             btn.style.setProperty('--shine-dur', (8 + Math.random() * 5).toFixed(2) + 's');
         });
@@ -848,23 +1129,26 @@
         }
         function closeLightbox() {
             document.getElementById('lightbox').classList.remove('active');
-            document.body.style.overflow = '';
+            document.body.style.overflow = document.getElementById('cadastroModal').classList.contains('active') ? 'hidden' : '';
         }
         document.getElementById('lightbox').addEventListener('click', function(e) {
             if (e.target === this) closeLightbox();
         });
-        document.querySelectorAll('.screenshot-card .screenshot-image img').forEach(function(img) {
-            img.style.cursor = 'zoom-in';
+        document.querySelectorAll('.screenshot-card .screenshot-image img, .shot img').forEach(function(img) {
             img.addEventListener('click', function() {
                 openLightbox(this.src, this.alt);
             });
         });
 
-        // ESC fecha modal e lightbox
+        // ESC fecha modal, lightbox e menu
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
+                if (document.getElementById('lightbox').classList.contains('active')) {
+                    closeLightbox();
+                    return;
+                }
                 closeCadastroModal();
-                closeLightbox();
+                window.closeMobileMenu();
             }
         });
 
@@ -893,9 +1177,9 @@
 
                 // Mensagens da IA que vão aparecer uma a uma
                 var welcomeParts = [
-                    'Olá! Sou a assistente da Agzap \ud83d\ude0a',
+                    'Olá! Sou a assistente da Agzap 😊',
                     'Tire suas dúvidas sobre nosso sistema de atendimento com IA!',
-                    '\u270d\ufe0f <strong>Digite aqui a sua dúvida</strong>'
+                    '✍️ <strong>Digite aqui a sua dúvida</strong>'
                 ];
                 var partIndex = 0;
 
@@ -990,14 +1274,14 @@
                         var fullReply = chunks.join(' ').toLowerCase();
                         var userText = (chatHistory.length > 0 ? chatHistory[chatHistory.length - 1].content : '').toLowerCase();
                         var isAnual = userText.indexOf('anual') !== -1 || fullReply.indexOf('anual') !== -1;
-                        var needsContact = fullReply.indexOf('whatsapp') !== -1 || fullReply.indexOf('agendar') !== -1 || fullReply.indexOf('nosso time') !== -1 || fullReply.indexOf('nossa equipe') !== -1 || fullReply.indexOf('entre em contato') !== -1 || fullReply.indexOf('reuni\u00e3o') !== -1;
+                        var needsContact = fullReply.indexOf('whatsapp') !== -1 || fullReply.indexOf('agendar') !== -1 || fullReply.indexOf('nosso time') !== -1 || fullReply.indexOf('nossa equipe') !== -1 || fullReply.indexOf('entre em contato') !== -1 || fullReply.indexOf('reunião') !== -1;
 
                         // CTA buttons after last bubble
                         var ctaBtn = document.createElement('div');
                         ctaBtn.className = 'chat-cta-btn chat-animate-in';
-                        var btns = '<a href="https://cal.com/agzap" target="_blank" rel="noopener noreferrer" class="chat-cta-schedule"><i class="fas fa-calendar-alt"></i> Agendar Apresenta\u00e7\u00e3o</a>';
+                        var btns = '<a href="https://cal.com/agzap" target="_blank" rel="noopener noreferrer" class="chat-cta-schedule"><i class="fas fa-calendar-alt"></i> Agendar Apresentação</a>';
                         if (needsContact || isAnual) {
-                            btns += '<a href="https://wa.me/5511914600243?text=' + encodeURIComponent('Ol\u00e1! Gostaria de saber mais sobre o plano da Agzap.') + '" target="_blank" rel="noopener noreferrer" class="chat-cta-whatsapp"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</a>';
+                            btns += '<a href="https://wa.me/5511914600243?text=' + encodeURIComponent('Olá! Gostaria de saber mais sobre o plano da Agzap.') + '" target="_blank" rel="noopener noreferrer" class="chat-cta-whatsapp"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</a>';
                         }
                         ctaBtn.innerHTML = btns;
                         chat.appendChild(ctaBtn);
@@ -1050,6 +1334,9 @@
             }
 
             sendBtn.addEventListener('click', sendMessage);
+            sendBtn.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); sendMessage(); }
+            });
             inputText.addEventListener('keydown', function(e) {
                 if (e.key === 'Enter') { e.preventDefault(); sendMessage(); }
             });
