@@ -659,17 +659,23 @@
                         <span class="plan-price-period">/mês</span>
                     </div>
                     <p class="plan-price-hint">Flexível — cancele quando quiser</p>
+                    <a href="#indicacao" class="plan-referral">
+                        <span class="plan-referral-icon"><i class="fas fa-gift" aria-hidden="true"></i></span>
+                        <span class="plan-referral-text">
+                            <strong>Sua mensalidade pode sair de graça</strong>
+                            Cada indicação vale <b>10% no 1º mês</b> e <b>5% todo mês</b>. <span class="plan-referral-more">Veja como <i class="fas fa-arrow-down" aria-hidden="true"></i></span>
+                        </span>
+                    </a>
                     <ul class="plan-mini-features">
                         <li><i class="fas fa-check" aria-hidden="true"></i> 1 número de WhatsApp com IA incluso</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Atendentes ilimitados no mesmo número</li>
                         <li><i class="fas fa-check" aria-hidden="true"></i> + Instagram ou chat do site incluso</li>
-                        <li><i class="fas fa-check" aria-hidden="true"></i> Recursos completos da plataforma</li>
                         <li><i class="fas fa-check" aria-hidden="true"></i> Implementação e suporte inclusos</li>
                     </ul>
                     <div class="plan-cta">
                         <a href="#" onclick="openCadastroModal(event)" class="btn btn-primary btn-lg btn-block">
                             <i class="fas fa-rocket" aria-hidden="true"></i> Quero começar agora
                         </a>
-                        <span class="plan-note">Sem fidelidade — cancele quando quiser</span>
                     </div>
                 </div>
                 <!-- Anual -->
@@ -680,25 +686,29 @@
                         <span class="plan-price-value"><span class="plan-price-currency">R$</span>2.897</span>
                         <span class="plan-price-period">/ano</span>
                     </div>
-                    <p class="plan-price-hint">Equivale a <strong>R$ 241,42/mês</strong></p>
+                    <p class="plan-price-hint">Pagamento único · equivale a <strong>R$ 241,42/mês</strong></p>
                     <div class="plan-save-line"><i class="fas fa-piggy-bank" aria-hidden="true"></i> Economize R$ 1.867 por ano</div>
                     <ul class="plan-mini-features">
                         <li><i class="fas fa-check" aria-hidden="true"></i> 1 número de WhatsApp com IA incluso</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Atendentes ilimitados no mesmo número</li>
                         <li><i class="fas fa-check" aria-hidden="true"></i> + Instagram ou chat do site incluso</li>
-                        <li><i class="fas fa-check" aria-hidden="true"></i> Recursos completos da plataforma</li>
                         <li><i class="fas fa-check" aria-hidden="true"></i> Implementação e suporte inclusos</li>
                     </ul>
                     <div class="plan-cta">
                         <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá!%20Quero%20solicitar%20o%20link%20de%20pagamento%20do%20plano%20anual%20da%20Agzap." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg btn-block">
                             <i class="fab fa-whatsapp" aria-hidden="true"></i> Solicitar plano anual
                         </a>
-                        <span class="plan-note">Pagamento único pelo ano todo</span>
                     </div>
                 </div>
             </div>
 
+            <a href="#planos-incluem" class="plans-more">
+                <span class="plans-more-arrow" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                <span>Veja tudo o que está incluso nos dois planos</span>
+            </a>
+
             <!-- Tudo incluso nos dois planos -->
-            <div class="plan-includes">
+            <div class="plan-includes" id="planos-incluem">
                 <h3>Os dois planos incluem</h3>
                 <ul class="plan-features-list">
                     <li><i class="fas fa-check" aria-hidden="true"></i> Agente de IA 24h (1 número de WhatsApp incluso)</li>
@@ -722,7 +732,7 @@
                     <li><i class="fas fa-check" aria-hidden="true"></i> Roteamento de leads para franquias</li>
                     <li><i class="fas fa-check" aria-hidden="true"></i> Origem dos leads por canal</li>
                     <li><i class="fas fa-check" aria-hidden="true"></i> Mídias e macros para respostas rápidas</li>
-                    <li><i class="fas fa-check" aria-hidden="true"></i> Programa de indicação com recompensas</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> <a href="#indicacao">Programa de indicação: sua mensalidade pode sair de graça</a></li>
                     <li><i class="fas fa-check" aria-hidden="true"></i> Integração via API com documentação completa</li>
                     <li><i class="fas fa-check" aria-hidden="true"></i> Webhooks para integrações</li>
                 </ul>
@@ -731,12 +741,31 @@
 
             <!-- Números adicionais -->
             <div class="addons-block">
-                <h3>Números adicionais</h3>
-                <p>Cada número adicional já vem com seu próprio assistente de IA. Você <strong>não paga outra assinatura</strong>.</p>
-                <div class="addon-card">
-                    <span class="addon-qty">Número adicional</span>
-                    <div><span class="addon-price-value">R$ 129,90</span><span class="addon-price-unit">/mês</span></div>
-                    <span class="addon-foot">por número</span>
+                <h3>Equipe ou número adicional?</h3>
+                <p>São coisas diferentes. Sua equipe já está inclusa, <strong>sem limite de atendentes</strong>. O número adicional é para quando você quer conectar outro WhatsApp.</p>
+                <div class="addons-compare">
+                    <div class="addons-compare-card">
+                        <div class="addons-compare-head">
+                            <span class="addons-compare-icon"><i class="fas fa-users" aria-hidden="true"></i></span>
+                            <div>
+                                <span class="addons-compare-tag">Incluso nos dois planos</span>
+                                <h4>Profissionais da equipe</h4>
+                            </div>
+                        </div>
+                        <p>Cada pessoa do time tem o próprio acesso e atende pelo <strong>mesmo número</strong> da empresa, dentro da plataforma. Coloque quantos atendentes quiser.</p>
+                        <div class="addons-compare-price"><strong>Ilimitados</strong> sem custo extra</div>
+                    </div>
+                    <div class="addons-compare-card is-addon">
+                        <div class="addons-compare-head">
+                            <span class="addons-compare-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></span>
+                            <div>
+                                <span class="addons-compare-tag">Opcional</span>
+                                <h4>Número adicional</h4>
+                            </div>
+                        </div>
+                        <p>Um <strong>outro número de WhatsApp</strong> conectado na plataforma, com assistente de IA próprio. Você acompanha todos os atendimentos desse número no mesmo painel, sem pagar outra assinatura. Ex.: um número para vendas e outro para o suporte.</p>
+                        <div class="addons-compare-price"><strong>R$ 129,90</strong>/mês por número</div>
+                    </div>
                 </div>
                 <p class="addons-note">Precisa de vários números? <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá!%20Quero%20consultar%20valores%20para%20números%20adicionais%20na%20Agzap." target="_blank" rel="noopener noreferrer">Consulte nossa equipe</a> para condições de acordo com a quantidade.</p>
                 <p class="addons-note">Os <a href="#modulos">módulos Delivery e Imobiliária</a> e a Vitrine de Produtos são opcionais e contratados à parte.</p>
@@ -744,8 +773,196 @@
         </div>
     </section>
 
+    <!-- Programa de Indicação -->
+    <section id="indicacao" class="section">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Programa de Indicação</span>
+                <h2>Indique a Agzap e pague menos, ou nada.</h2>
+                <p>A cada empresa que assinar pelo seu link, você ganha desconto na sua mensalidade todo mês. Com 20 indicados ativos, ela sai de graça.</p>
+            </div>
+
+            <!-- Como funciona -->
+            <ol class="ref-steps">
+                <li class="ref-step">
+                    <div class="ref-step-icon"><i class="fas fa-link" aria-hidden="true"></i></div>
+                    <span class="ref-step-label">Passo 1</span>
+                    <h3>Pegue seu link</h3>
+                    <p>Todo cliente Agzap tem um link de indicação próprio, no menu <strong>Indicação</strong> do painel.</p>
+                </li>
+                <li class="ref-step">
+                    <div class="ref-step-icon"><i class="fas fa-file-signature" aria-hidden="true"></i></div>
+                    <span class="ref-step-label">Passo 2</span>
+                    <h3>A empresa indicada assina</h3>
+                    <p>Quem assina pelo seu link fica ligado a você.</p>
+                </li>
+                <li class="ref-step">
+                    <div class="ref-step-icon"><i class="fas fa-tags" aria-hidden="true"></i></div>
+                    <span class="ref-step-label">Passo 3</span>
+                    <h3>Você paga menos todo mês</h3>
+                    <p>Você ganha <strong>10% de desconto no 1º mês</strong> pago pela indicada e <strong>5% todo mês</strong> enquanto ela continuar cliente.</p>
+                </li>
+            </ol>
+
+            <!-- A conta -->
+            <div class="ref-calc">
+                <div class="ref-calc-text">
+                    <span class="ref-calc-label">A conta</span>
+                    <h3>Cada indicação vale <span class="ref-hl-first">10% no 1º mês</span> e <span class="ref-hl-rec">5% todo mês</span> depois</h3>
+                    <p>O desconto é calculado sobre a <strong>sua</strong> mensalidade, não sobre o valor que a empresa indicada paga.</p>
+
+                    <!-- Uma indicação ao longo dos meses -->
+                    <div class="ref-tl">
+                        <div class="ref-tl-chart" role="img" aria-label="Uma indicação: 10% de desconto no primeiro mês pago por ela e 5% em cada mês seguinte, enquanto continuar ativa">
+                            <div class="ref-tl-col is-first"><span class="ref-tl-pct">10%</span><span class="ref-tl-bar"></span><span class="ref-tl-mes">1º mês</span></div>
+                            <div class="ref-tl-col"><span class="ref-tl-pct">5%</span><span class="ref-tl-bar"></span><span class="ref-tl-mes">2º</span></div>
+                            <div class="ref-tl-col"><span class="ref-tl-pct">5%</span><span class="ref-tl-bar"></span><span class="ref-tl-mes">3º</span></div>
+                            <div class="ref-tl-col"><span class="ref-tl-pct">5%</span><span class="ref-tl-bar"></span><span class="ref-tl-mes">4º</span></div>
+                            <div class="ref-tl-col"><span class="ref-tl-pct">5%</span><span class="ref-tl-bar"></span><span class="ref-tl-mes">5º</span></div>
+                            <div class="ref-tl-col is-more"><span class="ref-tl-pct">5%</span><span class="ref-tl-bar"></span><span class="ref-tl-mes">e segue</span></div>
+                        </div>
+                        <ul class="ref-tl-legend">
+                            <li><span class="ref-dot is-first" aria-hidden="true"></span> <span><strong>10%</strong> no 1º mês pago pela empresa indicada</span></li>
+                            <li><span class="ref-dot" aria-hidden="true"></span> <span><strong>5% todo mês</strong> depois, enquanto ela continuar ativa</span></li>
+                        </ul>
+                    </div>
+
+                    <ul class="ref-calc-list">
+                        <li><i class="fas fa-gift" aria-hidden="true"></i> <span><strong>20 indicados ativos = 100%:</strong> sua mensalidade sai de graça</span></li>
+                    </ul>
+                    <p class="ref-calc-tip"><i class="fas fa-bolt" aria-hidden="true"></i> No mês em que entra, cada indicado novo vale 10%. Então <strong>10 indicações novas no mesmo mês já zeram aquele mês.</strong></p>
+                </div>
+                <div>
+                    <!-- Calculadora: os valores abaixo já vêm prontos para 5 indicados (funciona sem JS) -->
+                    <div class="ref-tool" id="refCalc">
+                        <label for="refRange" class="ref-tool-label">Quantos indicados ativos você teria?</label>
+                        <div class="ref-tool-count"><strong id="refQtd">5</strong> <span id="refQtdTxt">indicados ativos</span></div>
+                        <input type="range" id="refRange" class="ref-range" min="1" max="20" step="1" value="5" aria-valuetext="5 indicados ativos, 25% de desconto">
+                        <div class="ref-range-scale" aria-hidden="true"><span>1</span><span>20</span></div>
+                        <div class="ref-chips" role="group" aria-label="Atalhos de quantidade">
+                            <button type="button" class="ref-chip" data-qtd="1" aria-pressed="false">1 indicado</button>
+                            <button type="button" class="ref-chip is-active" data-qtd="5" aria-pressed="true">5</button>
+                            <button type="button" class="ref-chip" data-qtd="10" aria-pressed="false">10</button>
+                            <button type="button" class="ref-chip ref-chip-free" data-qtd="20" aria-pressed="false"><i class="fas fa-gift" aria-hidden="true"></i> 20 = grátis</button>
+                        </div>
+                        <div class="ref-result" aria-live="polite">
+                            <div class="ref-result-box is-first">
+                                <span class="ref-result-label">1º mês · 10% cada</span>
+                                <span class="ref-result-value" id="refPct1">50%</span>
+                                <span class="ref-result-sub" id="refBrl1">R$ 198,50 de desconto</span>
+                            </div>
+                            <div class="ref-result-box">
+                                <span class="ref-result-label">Todo mês depois · 5% cada</span>
+                                <span class="ref-result-value" id="refPct">25%</span>
+                                <span class="ref-result-sub" id="refBrl">R$ 99,25 por mês</span>
+                            </div>
+                            <div class="ref-result-box ref-result-pay">
+                                <span class="ref-result-label">Sua mensalidade a partir do 2º mês</span>
+                                <div class="ref-pay-line">
+                                    <span class="ref-result-value" id="refPaga">R$ 297,75</span>
+                                    <span class="ref-result-sub" id="refDe">em vez de <s>R$ 397,00</s></span>
+                                    <span class="ref-free-badge" id="refGratis" hidden><i class="fas fa-gift" aria-hidden="true"></i> Mensalidade grátis</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="ref-result-year" id="refAno">Em 12 meses, são <strong>R$ 1.290,25 de desconto</strong> (10% no 1º mês + 5% nos outros 11), enquanto esses indicados continuarem ativos.</p>
+                    </div>
+                    <p class="ref-calc-note">Exemplo calculado sobre o plano Mensal de R$ 397, com as indicadas entrando no mesmo mês. O desconto é sempre uma porcentagem da sua mensalidade, então o valor em reais depende do seu plano.</p>
+                </div>
+            </div>
+
+            <!-- Dúvidas da indicação -->
+            <div class="ref-faq">
+                <div class="section-subhead">
+                    <h3>Dúvidas sobre a indicação</h3>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            Recebo em dinheiro?
+                            <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-answer"><div class="faq-answer-inner">
+                            <p>Não. O crédito vira desconto na sua mensalidade da Agzap, não é dinheiro nem saque. O que passar do valor da mensalidade fica guardado para os próximos meses.</p>
+                        </div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            Como uso o desconto?
+                            <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-answer"><div class="faq-answer-inner">
+                            <p>No painel, clique em "Solicitar desconto". O ideal é pedir 10 dias antes da cobrança.</p>
+                        </div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            Quando o desconto fica disponível?
+                            <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-answer"><div class="faq-answer-inner">
+                            <p>Alguns dias depois do pagamento da empresa indicada. Esse prazo é um período de segurança contra estorno.</p>
+                        </div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            E se a empresa indicada cancelar?
+                            <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-answer"><div class="faq-answer-inner">
+                            <p>Os créditos dela param a partir do cancelamento.</p>
+                        </div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            E se a empresa indicada assinar o plano anual?
+                            <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-answer"><div class="faq-answer-inner">
+                            <p>Como o plano anual é pago de uma vez, você recebe o equivalente a um ano de indicação: 10% da sua mensalidade pelo primeiro mês mais 5% por cada um dos outros 11 meses, distribuído ao longo do ano.</p>
+                        </div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            Contam as empresas que os meus indicados indicarem?
+                            <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-answer"><div class="faq-answer-inner">
+                            <p>Não. Só contam as empresas que você indicou diretamente, pelo seu link.</p>
+                        </div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            Onde encontro meu link?
+                            <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-answer"><div class="faq-answer-inner">
+                            <p>No painel da Agzap, menu "Indicação".</p>
+                        </div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ref-cta">
+                <h3>Ainda não é cliente?</h3>
+                <p>Comece a usar a Agzap e ganhe seu link de indicação.</p>
+                <div class="ref-cta-actions">
+                    <a href="#" onclick="openCadastroModal(event)" class="btn btn-primary btn-lg">
+                        <i class="fas fa-rocket" aria-hidden="true"></i> Quero começar agora
+                    </a>
+                    <a href="https://app.agzap.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg">
+                        <i class="fas fa-link" aria-hidden="true"></i> Já sou cliente
+                    </a>
+                </div>
+                <span class="cta-hint">Já é cliente? Acesse o painel, menu Indicação, e copie seu link.</span>
+            </div>
+
+            <p class="ref-legal">Regras sujeitas a alteração. Vale o que está no painel.</p>
+        </div>
+    </section>
+
     <!-- FAQ -->
-    <section id="faq" class="section">
+    <section id="faq" class="section section-soft">
         <div class="container">
             <div class="section-head">
                 <span class="eyebrow">Dúvidas frequentes</span>
@@ -768,6 +985,15 @@
                     </button>
                     <div class="faq-answer"><div class="faq-answer-inner">
                         <p>Sim. O plano já inclui 1 número com assistente de IA próprio, e você pode adicionar quantos números quiser. Cada número adicional tem seu próprio assistente e custa R$ 129,90/mês. Para vários números, consulte nossa equipe.</p>
+                    </div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        Número adicional é a mesma coisa que acesso para atendente?
+                        <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer"><div class="faq-answer-inner">
+                        <p>Não. Os atendentes (profissionais da sua equipe) são ilimitados nos dois planos: cada um tem o próprio acesso e atende pelo mesmo número, sem custo extra. O número adicional é outro número de WhatsApp conectado na plataforma, com assistente de IA próprio, por R$ 129,90/mês. Você acompanha os atendimentos de todos os números no mesmo painel.</p>
                     </div></div>
                 </div>
                 <div class="faq-item">
@@ -829,7 +1055,7 @@
     </section>
 
     <!-- Programa de Parceiros -->
-    <section id="parceiros" class="section section-soft">
+    <section id="parceiros" class="section">
         <div class="container">
             <div class="section-head">
                 <span class="eyebrow">Programa de Parceiros</span>
@@ -954,6 +1180,7 @@
                     <a href="#vantagens">Vantagens</a>
                     <a href="#screenshots">Sistema</a>
                     <a href="#plano">Planos</a>
+                    <a href="#indicacao">Indicação</a>
                     <a href="#parceiros">Seja Parceiro</a>
                 </nav>
             </div>
@@ -1059,7 +1286,7 @@
         // Animação de entrada nas seções
         (function() {
             var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            var alvos = document.querySelectorAll('.module, .module-feature, .feature-card, .advantage-card, .screenshot-card, .plan-card, .faq-item, .partner-card, .flow-step, .partners-panel');
+            var alvos = document.querySelectorAll('.module, .module-feature, .feature-card, .advantage-card, .screenshot-card, .plan-card, .faq-item, .partner-card, .flow-step, .partners-panel, .ref-step, .ref-calc');
             if (reduce || !('IntersectionObserver' in window)) return;
             var observer = new IntersectionObserver(function(entries) {
                 entries.forEach(function(entry) {
@@ -1097,6 +1324,68 @@
                 btn.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
             });
         });
+
+        // Calculadora do Programa de Indicação — 10% no 1º mês e 5% todo mês por indicado ativo
+        (function() {
+            var range = document.getElementById('refRange');
+            if (!range) return;
+            var MENSALIDADE = 397;
+            var box = document.getElementById('refCalc');
+            var chips = box.querySelectorAll('.ref-chip');
+            var moeda = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+            var el = function(id) { return document.getElementById(id); };
+
+            function atualizar() {
+                var qtd = +range.value;
+                var txtQtd = qtd === 1 ? 'indicado ativo' : 'indicados ativos';
+                // Tudo em centavos, para não acumular erro de ponto flutuante
+                var cheia = MENSALIDADE * 100;
+                var pct = Math.min(qtd * 5, 100);
+                var desconto = cheia * pct / 100;
+                var gratis = pct >= 100;
+
+                // 1º mês: 10% por indicada; o que passar da mensalidade fica guardado
+                var credito1 = cheia * qtd * 10 / 100;
+                var sobra1 = Math.max(credito1 - cheia, 0);
+
+                // 12 meses: 10% no 1º + 5% nos outros 11 = 65% por indicada
+                var credito12 = cheia * qtd * 65 / 100;
+                var sobra12 = Math.max(credito12 - cheia * 12, 0);
+
+                el('refQtd').textContent = qtd;
+                el('refQtdTxt').textContent = txtQtd;
+                el('refPct1').textContent = Math.min(qtd * 10, 100) + '%';
+                el('refBrl1').textContent = credito1 < cheia ? moeda.format(credito1 / 100) + ' de desconto'
+                    : sobra1 ? 'Zera o mês e guarda ' + moeda.format(sobra1 / 100)
+                    : 'Zera a mensalidade do mês';
+                el('refPct').textContent = pct + '%';
+                el('refBrl').textContent = moeda.format(desconto / 100) + ' por mês';
+                el('refPaga').textContent = moeda.format((cheia - desconto) / 100);
+                el('refAno').innerHTML = sobra12
+                    ? 'Em 12 meses, você não paga nenhuma mensalidade e ainda guarda <strong>' + moeda.format(sobra12 / 100) + '</strong> para os próximos meses.'
+                    : 'Em 12 meses, são <strong>' + moeda.format(credito12 / 100) + ' de desconto</strong> (10% no 1º mês + 5% nos outros 11), enquanto esses indicados continuarem ativos.';
+                el('refDe').hidden = gratis;
+                el('refGratis').hidden = !gratis;
+                box.classList.toggle('is-free', gratis);
+
+                range.style.setProperty('--p', (qtd - range.min) / (range.max - range.min));
+                range.setAttribute('aria-valuetext', qtd + ' ' + txtQtd + ', ' + pct + '% de desconto');
+                chips.forEach(function(chip) {
+                    var ativo = +chip.dataset.qtd === qtd;
+                    chip.classList.toggle('is-active', ativo);
+                    chip.setAttribute('aria-pressed', ativo ? 'true' : 'false');
+                });
+            }
+
+            range.addEventListener('input', atualizar);
+            chips.forEach(function(chip) {
+                chip.addEventListener('click', function() {
+                    range.value = chip.dataset.qtd;
+                    atualizar();
+                });
+            });
+            atualizar();
+        })();
 
         // Reflexo (shine) aleatório nos botões — cada um dispara em momento e ritmo diferentes
         document.querySelectorAll('.btn-primary').forEach(function(btn) {
