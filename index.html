@@ -672,6 +672,10 @@
                         <li><i class="fas fa-check" aria-hidden="true"></i> + Instagram ou chat do site incluso</li>
                         <li><i class="fas fa-check" aria-hidden="true"></i> Implementação e suporte inclusos</li>
                     </ul>
+                    <a href="#planos-incluem" class="plan-more-link">
+                        Veja o que mais está incluso neste plano
+                        <span class="plan-more-arrow" aria-hidden="true"><i class="fas fa-arrow-down"></i></span>
+                    </a>
                     <div class="plan-cta">
                         <a href="#" onclick="openCadastroModal(event)" class="btn btn-primary btn-lg btn-block">
                             <i class="fas fa-rocket" aria-hidden="true"></i> Quero começar agora
@@ -694,6 +698,10 @@
                         <li><i class="fas fa-check" aria-hidden="true"></i> + Instagram ou chat do site incluso</li>
                         <li><i class="fas fa-check" aria-hidden="true"></i> Implementação e suporte inclusos</li>
                     </ul>
+                    <a href="#planos-incluem" class="plan-more-link">
+                        Veja o que mais está incluso neste plano
+                        <span class="plan-more-arrow" aria-hidden="true"><i class="fas fa-arrow-down"></i></span>
+                    </a>
                     <div class="plan-cta">
                         <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá!%20Quero%20solicitar%20o%20link%20de%20pagamento%20do%20plano%20anual%20da%20Agzap." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg btn-block">
                             <i class="fab fa-whatsapp" aria-hidden="true"></i> Solicitar plano anual
@@ -701,11 +709,6 @@
                     </div>
                 </div>
             </div>
-
-            <a href="#planos-incluem" class="plans-more">
-                <span class="plans-more-arrow" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
-                <span>Veja tudo o que está incluso nos dois planos</span>
-            </a>
 
             <!-- Tudo incluso nos dois planos -->
             <div class="plan-includes" id="planos-incluem">
@@ -1324,6 +1327,51 @@
                 btn.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
             });
         });
+
+        // Link "Planos": posiciona pela altura da tela para os cards não ficarem cortados
+        (function() {
+            var secao = document.getElementById('plano');
+            if (!secao) return;
+            var titulo = secao.querySelector('.section-head');
+            var cards = secao.querySelector('.plans-grid');
+            var header = document.getElementById('siteHeader');
+
+            function topo(el) { return el.getBoundingClientRect().top + window.scrollY; }
+
+            function posicao() {
+                var menu = header.offsetHeight;
+                var livre = window.innerHeight - menu;
+                var inicioTitulo = topo(titulo);
+                var inicioCards = topo(cards) - 20; // folga para o selo "Economize 39%"
+                var fimCards = topo(cards) + cards.offsetHeight;
+                var alvo;
+                if (fimCards - inicioTitulo <= livre - 24) {
+                    // Título e cards cabem: centraliza o conjunto
+                    alvo = inicioTitulo - (livre - (fimCards - inicioTitulo)) / 2;
+                } else if (fimCards - inicioCards <= livre) {
+                    // Só os cards cabem: centraliza os cards e o título sobe
+                    alvo = inicioCards - (livre - (fimCards - inicioCards)) / 2;
+                } else {
+                    // Nem os cards cabem (celular): título logo abaixo do menu
+                    alvo = inicioTitulo - 12;
+                }
+                return Math.max(alvo - menu, 0);
+            }
+
+            document.querySelectorAll('a[href="#plano"]').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.scrollTo({ top: posicao() });
+                    history.pushState(null, '', '#plano');
+                });
+            });
+
+            if (location.hash === '#plano') {
+                window.addEventListener('load', function() {
+                    window.scrollTo({ top: posicao(), behavior: 'auto' });
+                });
+            }
+        })();
 
         // Calculadora do Programa de Indicação — 10% no 1º mês e 5% todo mês por indicado ativo
         (function() {
