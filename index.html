@@ -1194,12 +1194,7 @@
         </div>
     </footer>
 
-    <!-- WhatsApp flutuante -->
-    <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá! Gostaria de conhecer a Agzap para minha empresa." target="_blank" rel="noopener noreferrer" class="link-whatsapp" aria-label="Fale conosco no WhatsApp">
-        <img src="./img/whatsapp.png" alt="">
-    </a>
-
-    <!-- Botão voltar ao topo -->
+    <!-- Botão voltar ao topo (à esquerda: o canto direito é do balão do webchat) -->
     <button class="btn-back-to-top" id="btnBackToTop" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Voltar ao topo">
         <i class="fas fa-chevron-up" aria-hidden="true"></i>
     </button>
@@ -1693,10 +1688,8 @@
         })();
     </script>
 
-    <!-- Webchat Agzap — desativado por enquanto (fica só o botão do WhatsApp).
-         Para reativar, tire o comentário da linha abaixo. Antes, mude o chat
-         para o lado esquerdo no painel, senão o balão cobre o botão do WhatsApp.
+    <!-- Webchat Agzap (balão de conversa). Precisa ser o endereço de produção:
+         o script usa o próprio src para achar a API, então localhost só funciona na máquina de quem desenvolve. -->
     <script src="https://app.agzap.com.br/webchat.js" data-key="wc_41786cb74c5b059f4309f91a" defer></script>
-    -->
 </body>
 </html>
