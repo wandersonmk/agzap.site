@@ -584,7 +584,53 @@ p {
 .hero-visual {
     position: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+/* Abas embaixo do celular: qual exemplo está passando (e pular para outro) */
+.phone-cenarios {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-sm);
+}
+
+.phone-cenario {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 34px;
+    padding: 6px 14px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--muted);
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.phone-cenario:hover {
+    color: var(--brand-700);
+}
+
+.phone-cenario.is-active {
+    background: var(--brand-600);
+    color: #fff;
+}
+
+.phone-cenario:focus-visible {
+    outline: 2px solid var(--brand-400);
+    outline-offset: 2px;
 }
 
 .hero-visual::before {
@@ -861,6 +907,26 @@ p {
 
 .chat-who.is-ia { color: var(--brand-600); }
 .chat-who.is-cliente { color: var(--green-700); }
+.chat-who.is-atendente { color: var(--orange-700); }
+
+/* Aviso do sistema no meio da conversa (ex.: transferência para a equipe) */
+.chat-system {
+    align-self: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    background: #fdf6e3;
+    box-shadow: 0 1px 0.5px rgba(11, 20, 26, 0.13);
+    font-size: 0.64rem;
+    font-weight: 600;
+    color: #54656f;
+}
+
+.chat-system i {
+    color: var(--brand-600);
+}
 
 .chat-time .fa-check-double {
     margin-left: 2px;
@@ -1015,6 +1081,100 @@ p {
     color: #fff;
     font-size: 46px;
     text-shadow: 0 6px 14px rgba(194, 65, 12, 0.35);
+}
+
+.chat-photo.is-azul {
+    background:
+        radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.7), transparent 45%),
+        linear-gradient(140deg, #bfdbfe, #3b82f6);
+    text-shadow: 0 6px 14px rgba(29, 78, 216, 0.35);
+}
+
+/* Pix copia e cola gerado pela IA */
+.chat-bubble.is-pix { min-width: 215px; }
+
+.chat-pix {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 6px;
+    padding: 9px 10px;
+    border-radius: 8px;
+    background: #f0fdfa;
+    border: 1px solid #99f6e4;
+    font-size: 0.7rem;
+    color: #3b4a54;
+}
+
+.chat-pix-head {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 600;
+    color: #0f766e;
+}
+
+.chat-pix-head strong {
+    color: #111b21;
+}
+
+.chat-pix code {
+    display: block;
+    padding: 5px 7px;
+    border-radius: 6px;
+    background: #fff;
+    border: 1px dashed #99f6e4;
+    font-family: ui-monospace, 'SFMono-Regular', Consolas, monospace;
+    font-size: 0.6rem;
+    color: #54656f;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chat-pix-btn {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #0f766e;
+    color: #fff;
+    font-size: 0.66rem;
+    font-weight: 600;
+}
+
+/* Comprovante de Pix mandado pelo cliente */
+.chat-bubble.is-comprovante { min-width: 195px; }
+
+.chat-receipt {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    margin-bottom: 6px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid #cfe9d6;
+    font-size: 0.66rem;
+    color: #667781;
+}
+
+.chat-receipt-ok {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 3px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--green-700);
+}
+
+.chat-receipt strong {
+    font-family: var(--font-head);
+    font-size: 1.1rem;
+    color: #111b21;
 }
 
 .phone-input {

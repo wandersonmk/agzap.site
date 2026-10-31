@@ -99,7 +99,7 @@
             </div>
 
             <div class="hero-visual">
-                <p class="sr-only">Exemplo de atendimento: o cliente manda um áudio pedindo horário, a assistente de IA mostra os horários livres de cada profissional e agenda; depois o cliente manda a foto de um produto e a IA confirma que tem e separa para ele.</p>
+                <p class="sr-only">Exemplos de atendimento com a assistente de IA: numa clínica, o paciente manda um áudio, a IA mostra os horários livres dos profissionais e agenda a consulta; numa loja, o cliente manda a foto de um produto, a IA reconhece, informa o preço e gera o Pix; e num pagamento, a IA lê o comprovante de Pix de R$ 100,00 e transfere a conversa para o financeiro.</p>
                 <div class="phone-frame" aria-hidden="true">
                     <div class="phone-frame-btn phone-btn-silent"></div>
                     <div class="phone-frame-btn phone-btn-vol-up"></div>
@@ -117,9 +117,9 @@
                         </div>
                         <div class="phone-header">
                             <div class="phone-header-back"><i class="fas fa-chevron-left"></i></div>
-                            <div class="phone-header-avatar"><i class="fas fa-robot"></i></div>
+                            <div class="phone-header-avatar"><i class="fas fa-stethoscope" id="phoneBizIcon"></i></div>
                             <div class="phone-header-info">
-                                <span class="phone-header-name">Studio Bella</span>
+                                <span class="phone-header-name" id="phoneBizName">Clínica Vida</span>
                                 <span class="phone-header-status">Assistente de IA · online</span>
                             </div>
                             <div class="phone-header-actions">
@@ -138,6 +138,11 @@
                         </div>
                         <div class="phone-home-indicator"></div>
                     </div>
+                </div>
+                <div class="phone-cenarios" role="group" aria-label="Exemplos de atendimento">
+                    <button type="button" class="phone-cenario is-active" aria-pressed="true"><i class="fas fa-stethoscope" aria-hidden="true"></i> Clínica</button>
+                    <button type="button" class="phone-cenario" aria-pressed="false"><i class="fas fa-bag-shopping" aria-hidden="true"></i> Loja</button>
+                    <button type="button" class="phone-cenario" aria-pressed="false"><i class="fas fa-receipt" aria-hidden="true"></i> Pagamento</button>
                 </div>
             </div>
         </div>
@@ -1483,70 +1488,129 @@
             }
         });
 
-        // Celular do hero: conversa simulada, em loop, entre o cliente (direita, verde)
-        // e a assistente de IA (esquerda, branco). Nada aqui fala com IA de verdade.
+        // Celular do hero: três conversas simuladas que se alternam (clínica, loja, pagamento).
+        // Cliente à direita (verde), assistente de IA à esquerda (branco). Nada aqui fala com IA de verdade.
         (function() {
             var chat = document.getElementById('phoneChat');
             var campo = document.getElementById('phoneInputText');
             var iconeEnvio = document.getElementById('phoneSendIcon');
+            var nomeEmpresa = document.getElementById('phoneBizName');
+            var iconeEmpresa = document.getElementById('phoneBizIcon');
+            var abas = document.querySelectorAll('.phone-cenario');
             if (!chat) return;
             var reduzir = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-            function profissional(nome, cargo, horas) {
-                var chips = horas.map(function(h) {
-                    return '<span data-slot="' + nome.toLowerCase() + '-' + h.replace(':', '') + '">' + h + '</span>';
-                }).join('');
-                return '<div class="chat-slot-pro"><span class="chat-slot-avatar">' + nome.charAt(0) + '</span><span><strong>' + nome + '</strong> · ' + cargo + '</span></div>' +
-                    '<div class="chat-slot-times">' + chips + '</div>';
-            }
-
-            var ondas = [6, 10, 15, 8, 17, 12, 7, 14, 19, 9, 13, 6, 15, 11, 8, 13, 5, 9].map(function(h) {
-                return '<i style="height:' + h + 'px"></i>';
-            }).join('');
-
-            var MODELOS = {
-                audio: '<div class="chat-audio"><span class="chat-audio-play"><i class="fas fa-play"></i></span><span class="chat-audio-wave">' + ondas + '</span><span class="chat-audio-len">0:12</span></div>',
-                horarios: '<div class="chat-slots">' + profissional('Ana', 'cabeleireira', ['14:00', '15:30']) + profissional('Carla', 'cabeleireira', ['14:30', '16:00']) + '</div>',
-                confirmado: '<div class="chat-confirm"><div class="chat-confirm-head"><i class="fas fa-circle-check"></i> Horário agendado</div>' +
-                    '<div><i class="far fa-calendar"></i> Amanhã, 15:30</div><div><i class="fas fa-scissors"></i> Corte + escova</div><div><i class="far fa-user"></i> Com a Ana</div></div>' +
-                    '<p>Te mando um lembrete 1 hora antes 😉</p>',
-                foto: '<div class="chat-photo"><i class="fas fa-bottle-droplet"></i></div>'
-            };
-
-            var ROTEIRO = [
-                { quem: 'cliente', tipo: 'audio' },
-                { quem: 'ia', html: '<p>Ouvi seu áudio 🎧 Você quer <strong>corte + escova amanhã à tarde</strong>, certo? Estes são os horários livres:</p>' },
-                { quem: 'ia', tipo: 'horarios', pausa: 2600 },
-                { quem: 'cliente', texto: '15:30 com a Ana, por favor', marca: 'ana-1530' },
-                { quem: 'ia', tipo: 'confirmado', pausa: 2400 },
-                { quem: 'cliente', tipo: 'foto', texto: 'Vocês têm esse sérum? 😍' },
-                { quem: 'ia', html: '<p>Temos sim! É o <strong>Sérum Vitamina C 30ml</strong>, por R$ 89,90 💛</p>' },
-                { quem: 'ia', html: '<p>Quer que eu separe para você levar amanhã, no seu horário?</p>' },
-                { quem: 'cliente', texto: 'Pode separar! 🙏' },
-                { quem: 'ia', html: '<p>Separado ✅ Te espero amanhã às 15:30!</p>' }
-            ];
-
-            var ultimo = null;
+            function chave(nome, hora) { return (nome + '-' + hora).toLowerCase().replace(/[^a-z0-9]/g, ''); }
 
             function hora() {
                 var d = new Date();
                 return ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2);
             }
 
+            var ondas = [6, 10, 15, 8, 17, 12, 7, 14, 19, 9, 13, 6, 15, 11, 8, 13, 5, 9].map(function(h) {
+                return '<i style="height:' + h + 'px"></i>';
+            }).join('');
+
+            // Peças visuais que vão dentro dos balões
+            var MONTA = {
+                audio: function(p) {
+                    return '<div class="chat-audio"><span class="chat-audio-play"><i class="fas fa-play"></i></span><span class="chat-audio-wave">' + ondas + '</span><span class="chat-audio-len">' + p.duracao + '</span></div>';
+                },
+                horarios: function(p) {
+                    return '<div class="chat-slots">' + p.profissionais.map(function(pro) {
+                        var chips = pro.horas.map(function(h) {
+                            return '<span data-slot="' + chave(pro.nome, h) + '">' + h + '</span>';
+                        }).join('');
+                        return '<div class="chat-slot-pro"><span class="chat-slot-avatar">' + pro.nome.replace(/^Dra?\. /, '').charAt(0) + '</span><span><strong>' + pro.nome + '</strong> · ' + pro.cargo + '</span></div>' +
+                            '<div class="chat-slot-times">' + chips + '</div>';
+                    }).join('') + '</div>';
+                },
+                confirmado: function(p) {
+                    return '<div class="chat-confirm"><div class="chat-confirm-head"><i class="fas fa-circle-check"></i> ' + p.titulo + '</div>' +
+                        p.itens.map(function(it) { return '<div><i class="' + it[0] + '"></i> ' + it[1] + '</div>'; }).join('') + '</div>';
+                },
+                foto: function(p) {
+                    return '<div class="chat-photo is-' + p.cor + '"><i class="fas ' + p.icone + '"></i></div>';
+                },
+                pix: function(p) {
+                    return '<div class="chat-pix"><div class="chat-pix-head"><i class="fa-brands fa-pix"></i> Pix copia e cola · <strong>' + p.valor + '</strong></div>' +
+                        '<code>00020126580014br.gov.bcb.pix0136a1b2c3d4-e5f6-7890-abcd</code>' +
+                        '<span class="chat-pix-btn"><i class="far fa-copy"></i> Copiar código</span></div>';
+                },
+                comprovante: function(p) {
+                    return '<div class="chat-receipt"><span class="chat-receipt-ok"><i class="fas fa-circle-check"></i> Pix enviado</span>' +
+                        '<strong>' + p.valor + '</strong><span>Para ' + p.para + '</span><span>Hoje, ' + hora() + '</span></div>';
+                }
+            };
+
+            var CENARIOS = [
+                {
+                    nome: 'Clínica Vida', icone: 'fa-stethoscope',
+                    roteiro: [
+                        { quem: 'cliente', tipo: 'audio', duracao: '0:09' },
+                        { quem: 'ia', html: '<p>Ouvi seu áudio 🎧 Você quer marcar uma <strong>consulta esta semana</strong>, certo? Estes são os horários livres:</p>' },
+                        { quem: 'ia', tipo: 'horarios', pausa: 2600, profissionais: [
+                            { nome: 'Dra. Marina', cargo: 'clínica geral', horas: ['Qui 09:00', 'Qui 14:30'] },
+                            { nome: 'Dr. Paulo', cargo: 'cardiologista', horas: ['Sex 10:00', 'Sex 16:00'] }
+                        ] },
+                        { quem: 'cliente', texto: 'Quinta 14:30 com a Dra. Marina', marca: chave('Dra. Marina', 'Qui 14:30') },
+                        { quem: 'ia', tipo: 'confirmado', pausa: 2600, titulo: 'Consulta agendada',
+                            itens: [['far fa-calendar', 'Quinta, 14:30'], ['fas fa-user-doctor', 'Dra. Marina · clínica geral'], ['fas fa-location-dot', 'Clínica Vida']],
+                            html: '<p>Te mando um lembrete na véspera 😉</p>' }
+                    ]
+                },
+                {
+                    nome: 'Loja Urbana', icone: 'fa-bag-shopping',
+                    roteiro: [
+                        { quem: 'cliente', tipo: 'foto', icone: 'fa-shirt', cor: 'azul', texto: 'Vocês têm essa no tamanho M?' },
+                        { quem: 'ia', html: '<p>Tem sim! 😍 É a <strong>Camiseta Oversized Preta</strong>, tamanho M, por R$ 79,90.</p>' },
+                        { quem: 'ia', html: '<p>Quer que eu gere o Pix para garantir a sua?</p>' },
+                        { quem: 'cliente', texto: 'Quero! Pode gerar' },
+                        { quem: 'ia', tipo: 'pix', valor: 'R$ 79,90', pausa: 2600, html: '<p>É só copiar e pagar no app do seu banco 👆</p>' }
+                    ]
+                },
+                {
+                    nome: 'Academia Fit', icone: 'fa-dumbbell',
+                    roteiro: [
+                        { quem: 'cliente', tipo: 'comprovante', valor: 'R$ 100,00', para: 'Academia Fit', texto: 'Oi! Segue o comprovante da mensalidade 🙂' },
+                        { quem: 'ia', html: '<p>Recebi seu comprovante 🧾 Pix no valor de <strong>R$ 100,00</strong> ✅</p>' },
+                        { quem: 'ia', html: '<p>Vou te transferir para o nosso financeiro dar a baixa, tá bom?</p>' },
+                        { quem: 'sistema', texto: 'Conversa transferida para o Financeiro' },
+                        { quem: 'atendente', nome: 'Paula · Financeiro', pausa: 2400, html: '<p>Oi! Aqui é a Paula 👋 Baixa feita, obrigada!</p>' }
+                    ]
+                }
+            ];
+
+            var atual = 0;   // cenário na tela
+            var rodada = 0;  // muda a cada troca: passos de uma rodada antiga param sozinhos
+            var ultimo = null;
+
             function rolar() {
                 chat.scrollTo({ top: chat.scrollHeight, behavior: reduzir ? 'auto' : 'smooth' });
             }
 
             function bolha(p) {
-                var ia = p.quem === 'ia';
+                if (p.quem === 'sistema') {
+                    var aviso = document.createElement('div');
+                    aviso.className = 'chat-system' + (reduzir ? '' : ' chat-animate-in');
+                    aviso.innerHTML = '<i class="fas fa-right-left"></i> ' + p.texto;
+                    chat.appendChild(aviso);
+                    ultimo = 'sistema';
+                    rolar();
+                    return;
+                }
+                var daEmpresa = p.quem !== 'cliente'; // IA e atendente ficam à esquerda
                 var el = document.createElement('div');
-                el.className = 'chat-bubble ' + (ia ? 'chat-incoming' : 'chat-outgoing') + (p.tipo ? ' is-' + p.tipo : '') + (reduzir ? '' : ' chat-animate-in');
+                el.className = 'chat-bubble ' + (daEmpresa ? 'chat-incoming' : 'chat-outgoing') + (p.tipo ? ' is-' + p.tipo : '') + (reduzir ? '' : ' chat-animate-in');
                 // Etiqueta só na primeira mensagem de cada sequência, como nome em grupo
-                var rotulo = p.quem === ultimo ? '' : ia
-                    ? '<span class="chat-who is-ia"><i class="fas fa-robot"></i> Assistente IA</span>'
-                    : '<span class="chat-who is-cliente">Cliente</span>';
-                var corpo = (p.tipo ? MODELOS[p.tipo] : '') + (p.html || '') + (p.texto ? '<p>' + p.texto + '</p>' : '');
-                el.innerHTML = rotulo + corpo + '<span class="chat-time">' + hora() + (ia ? '' : ' <i class="fas fa-check-double"></i>') + '</span>';
+                var rotulo = '';
+                if (p.quem !== ultimo) {
+                    rotulo = p.quem === 'ia' ? '<span class="chat-who is-ia"><i class="fas fa-robot"></i> Assistente IA</span>'
+                        : p.quem === 'atendente' ? '<span class="chat-who is-atendente"><i class="fas fa-headset"></i> ' + p.nome + '</span>'
+                        : '<span class="chat-who is-cliente">Cliente</span>';
+                }
+                var corpo = (p.tipo ? MONTA[p.tipo](p) : '') + (p.html || '') + (p.texto ? '<p>' + p.texto + '</p>' : '');
+                el.innerHTML = rotulo + corpo + '<span class="chat-time">' + hora() + (daEmpresa ? '' : ' <i class="fas fa-check-double"></i>') + '</span>';
                 chat.appendChild(el);
                 ultimo = p.quem;
                 if (p.marca) {
@@ -1556,9 +1620,37 @@
                 rolar();
             }
 
-            if (reduzir) {
-                ROTEIRO.forEach(bolha);
+            function campoNormal() {
+                campo.className = 'phone-input-text';
+                campo.textContent = 'Mensagem';
+                iconeEnvio.className = 'fas fa-microphone';
+            }
+
+            // Prepara a tela do cenário i: empresa no topo, aba ativa, chat vazio
+            function mostrar(i) {
+                atual = i;
+                nomeEmpresa.textContent = CENARIOS[i].nome;
+                iconeEmpresa.className = 'fas ' + CENARIOS[i].icone;
+                abas.forEach(function(aba, n) {
+                    aba.classList.toggle('is-active', n === i);
+                    aba.setAttribute('aria-pressed', n === i ? 'true' : 'false');
+                });
+                chat.innerHTML = '';
                 chat.scrollTop = 0;
+                ultimo = null;
+                campoNormal();
+            }
+
+            if (reduzir) {
+                var estatico = function(i) {
+                    mostrar(i);
+                    CENARIOS[i].roteiro.forEach(bolha);
+                    chat.scrollTop = 0;
+                };
+                abas.forEach(function(aba, n) {
+                    aba.addEventListener('click', function() { estatico(n); });
+                });
+                estatico(0);
                 return;
             }
 
@@ -1568,15 +1660,11 @@
                 new IntersectionObserver(function(e) { visivel = e[0].isIntersecting; }).observe(chat);
             }
             function esperar(ms, fn) {
+                var minha = rodada;
                 setTimeout(function tenta() {
+                    if (minha !== rodada) return;
                     if (visivel && !document.hidden) fn(); else setTimeout(tenta, 400);
                 }, ms);
-            }
-
-            function campoNormal() {
-                campo.className = 'phone-input-text';
-                campo.textContent = 'Mensagem';
-                iconeEnvio.className = 'fas fa-microphone';
             }
 
             // O cliente "digita" na barra antes de enviar
@@ -1593,47 +1681,61 @@
             }
 
             // ...ou grava o áudio
-            function gravar(fim) {
+            function gravar(duracao, fim) {
+                var total = +duracao.split(':')[1];
                 var s = 0;
                 campo.className = 'phone-input-text is-recording';
                 (function tique() {
                     campo.innerHTML = '<span class="phone-rec-dot"></span>Gravando 0:' + ('0' + s).slice(-2);
-                    if (s++ < 12) esperar(140, tique);
+                    if (s++ < total) esperar(140, tique);
                     else esperar(300, function() { campoNormal(); fim(); });
                 })();
             }
 
-            function passo(i) {
-                if (i >= ROTEIRO.length) { esperar(6000, recomecar); return; }
-                var p = ROTEIRO[i];
-                function seguir() {
-                    esperar(p.pausa || (p.quem === 'ia' ? 1600 : 900), function() { passo(i + 1); });
+            function passo(n) {
+                var roteiro = CENARIOS[atual].roteiro;
+                if (n >= roteiro.length) {
+                    esperar(4500, function() { trocar((atual + 1) % CENARIOS.length); });
+                    return;
                 }
-                if (p.quem === 'ia') {
+                var p = roteiro[n];
+                function seguir() {
+                    esperar(p.pausa || (p.quem === 'cliente' ? 900 : 1600), function() { passo(n + 1); });
+                }
+                if (p.quem === 'ia' || p.quem === 'atendente') {
                     var digitando = document.createElement('div');
                     digitando.className = 'chat-bubble chat-incoming chat-typing';
                     digitando.innerHTML = '<div class="typing-dots"><span></span><span></span><span></span></div>';
                     chat.appendChild(digitando);
                     rolar();
                     esperar(1200, function() { chat.removeChild(digitando); bolha(p); seguir(); });
+                } else if (p.quem === 'sistema') {
+                    bolha(p);
+                    seguir();
                 } else if (p.tipo === 'audio') {
-                    gravar(function() { bolha(p); seguir(); });
+                    gravar(p.duracao, function() { bolha(p); seguir(); });
                 } else {
                     digitar(p.texto, function() { bolha(p); seguir(); });
                 }
             }
 
-            function recomecar() {
+            // Some, troca de cenário e recomeça
+            function trocar(i) {
+                var minha = ++rodada;
                 chat.classList.add('is-fading');
                 setTimeout(function() {
-                    chat.innerHTML = '';
-                    chat.scrollTop = 0;
-                    ultimo = null;
+                    if (minha !== rodada) return;
+                    mostrar(i);
                     chat.classList.remove('is-fading');
-                    esperar(500, function() { passo(0); });
+                    esperar(600, function() { passo(0); });
                 }, 400);
             }
 
+            abas.forEach(function(aba, n) {
+                aba.addEventListener('click', function() { trocar(n); });
+            });
+
+            mostrar(0);
             esperar(800, function() { passo(0); });
         })();
 
