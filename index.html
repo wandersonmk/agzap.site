@@ -99,7 +99,7 @@
             </div>
 
             <div class="hero-visual">
-                <p class="sr-only">Exemplos de atendimento com a assistente de IA: numa clínica, o paciente manda um áudio, a IA mostra os horários livres dos profissionais e agenda a consulta; numa loja, o cliente manda a foto de um produto, a IA reconhece, informa o preço e gera o Pix; e num pagamento, a IA lê o comprovante de Pix de R$ 100,00 e transfere a conversa para o financeiro.</p>
+                <p class="sr-only">Exemplos de atendimento com a assistente de IA: numa clínica, o paciente manda um áudio, a IA mostra os horários livres dos profissionais e agenda a consulta; numa loja, o cliente manda a foto de um produto, a IA reconhece, informa o preço, mostra outras cores e manda o link da vitrine; e num pagamento, a IA lê o comprovante de Pix de R$ 100,00 e transfere a conversa para o financeiro.</p>
                 <div class="phone-frame" aria-hidden="true">
                     <div class="phone-frame-btn phone-btn-silent"></div>
                     <div class="phone-frame-btn phone-btn-vol-up"></div>
@@ -1532,10 +1532,13 @@
                 foto: function(p) {
                     return '<div class="chat-photo is-' + p.cor + '"><i class="fas ' + p.icone + '"></i></div>';
                 },
-                pix: function(p) {
-                    return '<div class="chat-pix"><div class="chat-pix-head"><i class="fa-brands fa-pix"></i> Pix copia e cola · <strong>' + p.valor + '</strong></div>' +
-                        '<code>00020126580014br.gov.bcb.pix0136a1b2c3d4-e5f6-7890-abcd</code>' +
-                        '<span class="chat-pix-btn"><i class="far fa-copy"></i> Copiar código</span></div>';
+                cores: function(p) {
+                    return '<div class="chat-colors">' + p.cores.map(function(c) {
+                        return '<figure data-slot="' + chave('cor', c.nome) + '"><span class="chat-color-photo" style="background:' + c.fundo + ';color:' + c.peca + '"><i class="fas fa-shirt"></i></span><figcaption>' + c.nome + '</figcaption></figure>';
+                    }).join('') + '</div>';
+                },
+                vitrine: function(p) {
+                    return '<div class="chat-link"><span class="chat-link-icon"><i class="fas fa-store"></i></span><span><strong>' + p.titulo + '</strong><small>' + p.url + '</small></span></div>';
                 },
                 comprovante: function(p) {
                     return '<div class="chat-receipt"><span class="chat-receipt-ok"><i class="fas fa-circle-check"></i> Pix enviado</span>' +
@@ -1562,11 +1565,17 @@
                 {
                     nome: 'Loja Urbana', icone: 'fa-bag-shopping',
                     roteiro: [
-                        { quem: 'cliente', tipo: 'foto', icone: 'fa-shirt', cor: 'azul', texto: 'Vocês têm essa no tamanho M?' },
+                        { quem: 'cliente', tipo: 'foto', icone: 'fa-shirt', cor: 'cinza', texto: 'Vocês têm essa no tamanho M?' },
                         { quem: 'ia', html: '<p>Tem sim! 😍 É a <strong>Camiseta Oversized Preta</strong>, tamanho M, por R$ 79,90.</p>' },
-                        { quem: 'ia', html: '<p>Quer que eu gere o Pix para garantir a sua?</p>' },
-                        { quem: 'cliente', texto: 'Quero! Pode gerar' },
-                        { quem: 'ia', tipo: 'pix', valor: 'R$ 79,90', pausa: 2600, html: '<p>É só copiar e pagar no app do seu banco 👆</p>' }
+                        { quem: 'cliente', texto: 'Tem em outras cores?' },
+                        { quem: 'ia', tipo: 'cores', pausa: 2400, antes: '<p>Tem sim, olha só 👇</p>', cores: [
+                            { nome: 'Branca', fundo: '#e7e5e4', peca: '#fafaf9' },
+                            { nome: 'Verde', fundo: '#d1fae5', peca: '#15803d' },
+                            { nome: 'Areia', fundo: '#f5ead9', peca: '#c4a07a' }
+                        ] },
+                        { quem: 'cliente', texto: 'Amei a verde! 💚', marca: chave('cor', 'Verde') },
+                        { quem: 'ia', tipo: 'vitrine', pausa: 2600, titulo: 'Loja Urbana · Vitrine', url: 'app.agzap.com.br/vitrine/loja-urbana',
+                            antes: '<p>Ótima escolha! Na nossa vitrine você vê todos os modelos e tamanhos:</p>' }
                     ]
                 },
                 {
@@ -1609,7 +1618,7 @@
                         : p.quem === 'atendente' ? '<span class="chat-who is-atendente"><i class="fas fa-headset"></i> ' + p.nome + '</span>'
                         : '<span class="chat-who is-cliente">Cliente</span>';
                 }
-                var corpo = (p.tipo ? MONTA[p.tipo](p) : '') + (p.html || '') + (p.texto ? '<p>' + p.texto + '</p>' : '');
+                var corpo = (p.antes || '') + (p.tipo ? MONTA[p.tipo](p) : '') + (p.html || '') + (p.texto ? '<p>' + p.texto + '</p>' : '');
                 el.innerHTML = rotulo + corpo + '<span class="chat-time">' + hora() + (daEmpresa ? '' : ' <i class="fas fa-check-double"></i>') + '</span>';
                 chat.appendChild(el);
                 ultimo = p.quem;

@@ -1083,66 +1083,87 @@ p {
     text-shadow: 0 6px 14px rgba(194, 65, 12, 0.35);
 }
 
-.chat-photo.is-azul {
+.chat-photo.is-cinza {
     background:
-        radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.7), transparent 45%),
-        linear-gradient(140deg, #bfdbfe, #3b82f6);
-    text-shadow: 0 6px 14px rgba(29, 78, 216, 0.35);
+        radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.8), transparent 45%),
+        linear-gradient(140deg, #f4f4f5, #d4d4d8);
+    color: #18181b;
+    text-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
 
-/* Pix copia e cola gerado pela IA */
-.chat-bubble.is-pix { min-width: 215px; }
+/* Fotos do mesmo produto em outras cores, mandadas pela IA */
+.chat-bubble.is-cores { min-width: 210px; }
 
-.chat-pix {
+.chat-colors {
+    display: flex;
+    gap: 6px;
+    margin: 6px 0 4px;
+}
+
+.chat-colors figure {
+    margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    margin-bottom: 6px;
-    padding: 9px 10px;
-    border-radius: 8px;
-    background: #f0fdfa;
-    border: 1px solid #99f6e4;
-    font-size: 0.7rem;
-    color: #3b4a54;
+    align-items: center;
+    gap: 3px;
+    font-size: 0.6rem;
+    color: #54656f;
 }
 
-.chat-pix-head {
+.chat-color-photo {
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    font-size: 28px;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s;
+}
+
+.chat-colors figure.is-picked .chat-color-photo {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--green-700);
+}
+
+.chat-colors figure.is-picked figcaption {
+    font-weight: 700;
+    color: var(--green-700);
+}
+
+/* Link da vitrine de produtos */
+.chat-link {
     display: flex;
     align-items: center;
-    gap: 5px;
-    font-weight: 600;
-    color: #0f766e;
+    gap: 8px;
+    margin: 6px 0 4px;
+    padding: 8px;
+    border-radius: 8px;
+    background: var(--brand-50);
+    border: 1px solid var(--brand-100);
 }
 
-.chat-pix-head strong {
+.chat-link-icon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 7px;
+    background: linear-gradient(135deg, var(--brand-500), var(--brand-700));
+    color: #fff;
+    font-size: 0.75rem;
+}
+
+.chat-link strong {
+    display: block;
+    font-size: 0.7rem;
     color: #111b21;
 }
 
-.chat-pix code {
+.chat-link small {
     display: block;
-    padding: 5px 7px;
-    border-radius: 6px;
-    background: #fff;
-    border: 1px dashed #99f6e4;
-    font-family: ui-monospace, 'SFMono-Regular', Consolas, monospace;
     font-size: 0.6rem;
-    color: #54656f;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.chat-pix-btn {
-    align-self: flex-start;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    padding: 4px 10px;
-    border-radius: 999px;
-    background: #0f766e;
-    color: #fff;
-    font-size: 0.66rem;
-    font-weight: 600;
+    color: var(--brand-700);
 }
 
 /* Comprovante de Pix mandado pelo cliente */
