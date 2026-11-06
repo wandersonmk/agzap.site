@@ -659,6 +659,24 @@
             <!-- Mensal x Anual: os rádios vêm antes dos cards para o CSS trocar os valores sem JS -->
             <input type="radio" name="cobrancaPlano" id="cobMensal" class="plan-switch-input" checked>
             <input type="radio" name="cobrancaPlano" id="cobAnual" class="plan-switch-input">
+            <!-- Destaque no topo: indicação no mensal, implementação no anual, no mesmo espaço -->
+            <div class="plans-highlight">
+                <a href="#indicacao" class="plan-referral c-mensal">
+                    <span class="plan-referral-icon"><i class="fas fa-gift" aria-hidden="true"></i></span>
+                    <span class="plan-referral-text">
+                        <strong>Sua mensalidade pode sair de graça</strong>
+                        Cada indicação vale <b>10% no 1º mês</b> e <b>5% todo mês</b>. <span class="plan-referral-more">Veja como <i class="fas fa-arrow-down" aria-hidden="true"></i></span>
+                    </span>
+                </a>
+                <div class="plan-referral is-annual c-anual">
+                    <span class="plan-referral-icon"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i></span>
+                    <span class="plan-referral-text">
+                        <strong>No plano anual, a implementação vem inclusa</strong>
+                        Pagamento único e <b>economia de até 39%</b>.
+                    </span>
+                </div>
+            </div>
+
             <div class="plans-billing" role="group" aria-label="Forma de pagamento">
                 <label for="cobMensal">Mensal</label>
                 <label for="cobAnual">Anual <span class="plans-billing-tag">Economize até 39%</span></label>
@@ -878,14 +896,6 @@
                     </div>
                 </div>
             </div>
-
-            <a href="#indicacao" class="plan-referral">
-                <span class="plan-referral-icon"><i class="fas fa-gift" aria-hidden="true"></i></span>
-                <span class="plan-referral-text">
-                    <strong>Sua mensalidade pode sair de graça</strong>
-                    Cada indicação vale <b>10% no 1º mês</b> e <b>5% todo mês</b>. <span class="plan-referral-more">Veja como <i class="fas fa-arrow-down" aria-hidden="true"></i></span>
-                </span>
-            </a>
 
             <!-- Recursos de todos os planos -->
             <div class="plan-includes">
@@ -1486,7 +1496,7 @@
             var secao = document.getElementById('plano');
             if (!secao) return;
             var titulo = secao.querySelector('.section-head');
-            var seletor = secao.querySelector('.plans-billing');
+            var destaque = secao.querySelector('.plans-highlight');
             var cards = secao.querySelector('.plans-grid');
             var header = document.getElementById('siteHeader');
 
@@ -1496,7 +1506,7 @@
                 var menu = header.offsetHeight;
                 var livre = window.innerHeight - menu;
                 var inicioTitulo = topo(titulo);
-                var inicioCards = topo(seletor) - 12; // o seletor Mensal/Anual aparece junto com os cards
+                var inicioCards = topo(destaque) - 12; // a faixa e o seletor Mensal/Anual aparecem junto com os cards
                 var fimCards = topo(cards) + cards.offsetHeight;
                 var alvo;
                 if (fimCards - inicioTitulo <= livre - 24) {
@@ -1506,7 +1516,7 @@
                     // Só os cards cabem: centraliza os cards e o título sobe
                     alvo = inicioCards - (livre - (fimCards - inicioCards)) / 2;
                 } else if (window.innerWidth > 760) {
-                    // Notebook: os cards não cabem inteiros, então o seletor Mensal/Anual sobe para logo abaixo do menu
+                    // Notebook: os cards não cabem inteiros, então a faixa de destaque sobe para logo abaixo do menu
                     alvo = inicioCards;
                 } else {
                     // Celular: título logo abaixo do menu
