@@ -2186,20 +2186,28 @@ p {
     display: none;
 }
 
-/* Destaque acima do seletor: a indicação só vale para quem paga por mês, então no
-   anual o mesmo espaço mostra a implementação e os cards não pulam ao trocar */
-.plans-highlight {
+/* Linha do seletor: Mensal/Anual no centro e, à direita, o selo discreto.
+   A indicação só vale para quem paga por mês, então no anual o selo mostra a implementação */
+.plans-bar {
     display: grid;
-    max-width: 640px;
-    margin: 0 auto 18px;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 36px;
+}
+
+.plans-highlight {
+    grid-column: 3;
+    justify-self: start;
+    display: grid;
 }
 
 .plans-highlight > * {
     grid-area: 1 / 1;
 }
 
-#cobMensal:checked ~ .plans-highlight > .c-anual,
-#cobAnual:checked ~ .plans-highlight > .c-mensal {
+#cobMensal:checked ~ .plans-bar .plans-highlight > .c-anual,
+#cobAnual:checked ~ .plans-bar .plans-highlight > .c-mensal {
     display: flex;
     visibility: hidden;
 }
@@ -2244,11 +2252,11 @@ p {
 }
 
 .plans-billing {
+    grid-column: 2;
     display: flex;
     gap: 4px;
     width: fit-content;
     max-width: 100%;
-    margin: 0 auto 36px;
     padding: 4px;
     border-radius: 999px;
     background: #fff;
@@ -2271,14 +2279,14 @@ p {
     transition: background-color 0.2s, color 0.2s;
 }
 
-#cobMensal:checked ~ .plans-billing label[for="cobMensal"],
-#cobAnual:checked ~ .plans-billing label[for="cobAnual"] {
+#cobMensal:checked ~ .plans-bar label[for="cobMensal"],
+#cobAnual:checked ~ .plans-bar label[for="cobAnual"] {
     background: var(--brand-600);
     color: #fff;
 }
 
-#cobMensal:focus-visible ~ .plans-billing label[for="cobMensal"],
-#cobAnual:focus-visible ~ .plans-billing label[for="cobAnual"],
+#cobMensal:focus-visible ~ .plans-bar label[for="cobMensal"],
+#cobAnual:focus-visible ~ .plans-bar label[for="cobAnual"],
 #dlvAte500:focus-visible ~ .plan-switch label[for="dlvAte500"],
 #dlvAcima500:focus-visible ~ .plan-switch label[for="dlvAcima500"] {
     outline: 2px solid var(--brand-500);
@@ -2440,23 +2448,20 @@ p {
 .plan-referral {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 12px 16px;
-    border-radius: 14px;
-    background: linear-gradient(135deg, var(--orange-50), var(--brand-50));
+    gap: 9px;
+    padding: 5px 16px 5px 6px;
+    border-radius: 999px;
+    background: var(--orange-50);
     border: 1px solid var(--orange-100);
     color: var(--muted);
-    font-size: 0.86rem;
-    line-height: 1.5;
+    font-size: 0.74rem;
+    line-height: 1.3;
     text-decoration: none;
-    transition: border-color 0.2s, transform 0.2s var(--ease);
-    animation: crossPulse 2.2s ease-out infinite;
+    transition: border-color 0.2s;
 }
 
 .plan-referral:hover {
-    animation-play-state: paused;
     border-color: #fdba74;
-    transform: translateY(-1px);
 }
 
 .plan-referral b {
@@ -2464,15 +2469,10 @@ p {
     color: var(--orange-700);
 }
 
-.plan-referral.is-annual {
+.plan-referral.is-annual,
+.plan-referral.is-annual:hover {
     background: #f0fdf4;
     border-color: #bbf7d0;
-    animation: none;
-}
-
-.plan-referral.is-annual:hover {
-    border-color: #bbf7d0;
-    transform: none;
 }
 
 .plan-referral.is-annual b {
@@ -2481,38 +2481,26 @@ p {
 
 .plan-referral-icon {
     flex-shrink: 0;
-    width: 34px;
-    height: 34px;
+    width: 28px;
+    height: 28px;
     display: grid;
     place-items: center;
-    border-radius: 10px;
+    border-radius: 50%;
     background: linear-gradient(135deg, var(--orange-500), var(--orange-600));
     color: #fff;
-    box-shadow: 0 6px 14px -6px rgba(234, 88, 12, 0.6);
+    font-size: 0.75rem;
 }
 
 .plan-referral.is-annual .plan-referral-icon {
     background: linear-gradient(135deg, #22c55e, #16a34a);
-    box-shadow: none;
 }
 
 .plan-referral strong {
     display: block;
-    font-size: 0.95rem;
-    color: var(--ink);
-}
-
-.plan-referral-more {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
+    font-size: 0.8rem;
     font-weight: 600;
-    color: var(--brand-700);
+    color: var(--ink);
     white-space: nowrap;
-}
-
-.plan-referral-more i {
-    font-size: 0.75rem;
 }
 
 .plan-mini-features {
@@ -4169,6 +4157,20 @@ p {
     .cadastro-right {
         border-left: none;
         border-top: 1px solid var(--line);
+    }
+}
+
+@media (max-width: 1020px) {
+    .plans-bar {
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        gap: 12px;
+    }
+
+    .plans-billing,
+    .plans-highlight {
+        grid-column: 1;
+        justify-self: center;
     }
 }
 
