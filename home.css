@@ -2449,7 +2449,7 @@ p {
     display: flex;
     align-items: center;
     gap: 9px;
-    padding: 5px 16px 5px 6px;
+    padding: 5px 14px 5px 6px;
     border-radius: 999px;
     background: var(--orange-50);
     border: 1px solid var(--orange-100);
@@ -2467,6 +2467,20 @@ p {
 .plan-referral b {
     font-weight: 700;
     color: var(--orange-700);
+}
+
+/* Mãozinha de clique: convida a abrir o Programa de Indicação */
+.plan-referral-click {
+    flex-shrink: 0;
+    margin-left: 2px;
+    color: var(--orange-600);
+    font-size: 1rem;
+    animation: planTap 1.6s ease-in-out infinite;
+}
+
+@keyframes planTap {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(2px) scale(0.86); }
 }
 
 .plan-referral.is-annual,
@@ -2518,18 +2532,29 @@ p {
     color: var(--text);
 }
 
+/* Fora do plano: check cinza e texto apagado */
 .plan-mini-features .is-off {
     color: var(--muted);
+    opacity: 0.6;
 }
 
 .plan-mini-features .is-off i {
-    color: var(--line-strong);
+    color: #9a95a8;
+}
+
+/* Exemplo em letra menor, abaixo do item */
+.plan-row-hint {
+    display: block;
+    color: var(--muted);
+    font-size: 0.74rem;
+    line-height: 1.35;
+    white-space: nowrap;
 }
 
 .plan-mini-features i {
     margin-top: 5px;
     font-size: 0.8rem;
-    color: var(--brand-600);
+    color: #16a34a;
 }
 
 /* Delivery: mesmo card, com a cor laranja para marcar que é outro público */
@@ -2537,7 +2562,7 @@ p {
     color: var(--orange-700);
 }
 
-.is-delivery .plan-mini-features .fa-check {
+.is-delivery .plan-mini-features :not(.is-off) > .fa-check {
     color: var(--orange-600);
 }
 
@@ -4160,7 +4185,7 @@ p {
     }
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1060px) {
     .plans-bar {
         grid-template-columns: minmax(0, 1fr);
         justify-items: center;
