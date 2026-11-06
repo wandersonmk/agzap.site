@@ -2664,7 +2664,7 @@ p {
 }
 
 .ref-calc-text > p {
-    margin-bottom: 22px;
+    margin-bottom: 16px;
     color: var(--muted);
 }
 
@@ -2703,18 +2703,7 @@ p {
     padding-top: 3px;
 }
 
-.ref-calc-text .ref-calc-tip {
-    margin: 22px 0 0;
-    padding: 14px 16px;
-    border-radius: 12px;
-    background: var(--orange-50);
-    border: 1px solid var(--orange-100);
-    font-size: 0.92rem;
-    color: var(--text);
-}
-
-.ref-calc-tip i {
-    margin-right: 6px;
+.ref-calc-list .fa-bolt {
     color: var(--orange-600);
 }
 
@@ -2728,8 +2717,8 @@ p {
 
 /* Uma indicação ao longo dos meses: 10% no 1º, 5% nos seguintes */
 .ref-tl {
-    margin-bottom: 20px;
-    padding: 20px 20px 16px;
+    margin-bottom: 16px;
+    padding: 16px 18px 14px;
     border-radius: 16px;
     background: #fff;
     border: 1px solid var(--line);
@@ -2739,7 +2728,7 @@ p {
     display: flex;
     align-items: flex-end;
     gap: 10px;
-    height: 130px;
+    height: 104px;
 }
 
 .ref-tl-col {
@@ -2763,7 +2752,7 @@ p {
 .ref-tl-bar {
     width: 100%;
     max-width: 46px;
-    height: 38px;
+    height: 28px;
     border-radius: 8px 8px 4px 4px;
     background: linear-gradient(180deg, var(--brand-400), var(--brand-600));
 }
@@ -2781,7 +2770,7 @@ p {
 }
 
 .ref-tl-col.is-first .ref-tl-bar {
-    height: 76px;
+    height: 56px;
     background: linear-gradient(180deg, var(--orange-500), var(--orange-600));
     box-shadow: 0 8px 18px -10px rgba(234, 88, 12, 0.7);
 }
@@ -2801,9 +2790,9 @@ p {
 .ref-tl-legend {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    margin-top: 16px;
-    padding-top: 14px;
+    gap: 6px;
+    margin-top: 12px;
+    padding-top: 12px;
     border-top: 1px solid var(--line);
     list-style: none;
     font-size: 0.9rem;
@@ -2830,7 +2819,7 @@ p {
 
 /* Calculadora — borda roxa pulsando para puxar o olho para os valores */
 .ref-tool {
-    padding: 28px;
+    padding: 24px;
     border-radius: var(--radius-lg);
     background: #fff;
     border: 1.5px solid var(--brand-400);
@@ -2853,23 +2842,31 @@ p {
     display: none !important;
 }
 
+.ref-tool-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0 12px;
+    margin-bottom: 14px;
+}
+
 .ref-tool-label {
     display: block;
-    margin-bottom: 4px;
     font-size: 0.92rem;
     font-weight: 600;
     color: var(--ink);
 }
 
 .ref-tool-count {
-    margin-bottom: 16px;
     color: var(--muted);
+    font-size: 0.9rem;
 }
 
 .ref-tool-count strong {
     margin-right: 2px;
     font-family: var(--font-head);
-    font-size: 2.5rem;
+    font-size: 1.9rem;
     font-weight: 800;
     line-height: 1.1;
     color: var(--ink);
@@ -2929,15 +2926,6 @@ p {
     background: transparent;
 }
 
-.ref-range-scale {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    padding: 0 8px;
-    font-size: 0.78rem;
-    color: var(--muted);
-}
-
 .ref-chips {
     display: flex;
     flex-wrap: wrap;
@@ -2980,12 +2968,29 @@ p {
 .ref-result {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-    margin-top: 24px;
+    gap: 10px 12px;
+    margin-top: 18px;
+}
+
+.ref-result-lead {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px 10px;
+    min-height: 28px;
+    margin: 0;
+    font-size: 0.92rem;
+    color: var(--text);
+}
+
+.ref-result-lead strong {
+    color: var(--ink);
 }
 
 .ref-result-box {
-    padding: 16px 18px;
+    padding: 14px 16px;
     border-radius: 14px;
     background: var(--brand-50);
     border: 1px solid var(--brand-100);
@@ -3013,15 +3018,22 @@ p {
     white-space: nowrap;
 }
 
+.ref-result-conta {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
 .ref-result-sub {
     display: block;
-    margin-top: 2px;
     font-size: 0.86rem;
     color: var(--text);
 }
 
-.ref-result-sub s {
-    color: var(--muted);
+.ref-result-sub strong {
+    font-weight: 700;
+    color: var(--brand-700);
 }
 
 .ref-result-box.is-first {
@@ -3033,32 +3045,23 @@ p {
     color: var(--orange-600);
 }
 
-.ref-result-pay {
-    grid-column: 1 / -1;
+.ref-result-box.is-first .ref-result-sub strong {
+    color: var(--orange-700);
 }
 
-.ref-pay-line {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 4px 12px;
-}
-
-.ref-pay-line .ref-result-sub,
-.ref-pay-line .ref-free-badge {
-    margin-top: 0;
-}
-
-.ref-tool.is-free .ref-result-pay {
+.ref-tool.is-free .ref-result-box {
     background: var(--brand-600);
     border-color: var(--brand-600);
 }
 
-.ref-tool.is-free .ref-result-pay .ref-result-label {
-    color: rgba(255, 255, 255, 0.8);
+.ref-tool.is-free .ref-result-box .ref-result-label,
+.ref-tool.is-free .ref-result-box .ref-result-conta,
+.ref-tool.is-free .ref-result-box .ref-result-sub {
+    color: rgba(255, 255, 255, 0.85);
 }
 
-.ref-tool.is-free .ref-result-pay .ref-result-value {
+.ref-tool.is-free .ref-result-box .ref-result-value,
+.ref-tool.is-free .ref-result-box .ref-result-sub strong {
     color: #fff;
 }
 
@@ -3066,17 +3069,12 @@ p {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    margin-top: 6px;
     padding: 4px 10px;
     border-radius: 999px;
-    background: #fff;
-    color: var(--brand-700);
+    background: var(--brand-600);
+    color: #fff;
     font-size: 0.78rem;
     font-weight: 700;
-}
-
-.ref-free-badge i {
-    color: var(--orange-600);
 }
 
 .ref-result-year {
