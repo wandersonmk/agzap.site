@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="img/ico.png" type="image/png">
+    <link rel="shortcut icon" href="img/ico.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+    <title>Parceiros Oficiais | Agzap</title>
+    <meta name="description" content="Conheça os parceiros oficiais da Agzap: empresas homologadas para vender, implementar e dar suporte ao atendimento com IA no WhatsApp. Fale direto com o responsável.">
+    <link rel="canonical" href="https://www.agzap.com.br/parceiros-oficiais.html">
+
+    <!-- Open Graph / WhatsApp, Facebook, Instagram -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.agzap.com.br/parceiros-oficiais.html">
+    <meta property="og:title" content="Parceiros Oficiais | Agzap">
+    <meta property="og:description" content="Empresas homologadas pela Agzap para vender, implementar e dar suporte à plataforma. Fale direto com o responsável.">
+    <meta property="og:image" content="https://www.agzap.com.br/img/og-image.png">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Agzap">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Parceiros Oficiais | Agzap">
+    <meta name="twitter:description" content="Empresas homologadas pela Agzap para vender, implementar e dar suporte à plataforma. Fale direto com o responsável.">
+    <meta name="twitter:image" content="https://www.agzap.com.br/img/og-image.png">
+</head>
+<body>
+    <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+
+    <!-- Header (mesmo da home, com os links apontando para index.html) -->
+    <header class="header" id="siteHeader">
+        <div class="header-inner">
+            <a href="index.html" class="header-logo" aria-label="Agzap — página inicial">
+                <img src="./img/logo-agzap-escuro.png" alt="Agzap" width="91" height="38">
+            </a>
+            <nav class="nav" id="siteNav" aria-label="Navegação principal">
+                <a href="index.html#funcionalidades">Funcionalidades</a>
+                <a href="index.html#vantagens">Vantagens</a>
+                <a href="index.html#screenshots">Conheça o Sistema</a>
+                <a href="index.html#plano">Planos</a>
+                <div class="nav-drop">
+                    <button class="nav-drop-btn is-current" type="button" aria-expanded="false" aria-controls="navParceirosMenu">
+                        Parceiros <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="nav-drop-menu" id="navParceirosMenu">
+                        <a href="parceiros-oficiais.html" aria-current="page">
+                            <span class="nav-drop-ico" aria-hidden="true"><i class="fas fa-shield-halved"></i></span>
+                            <span><strong>Parceiros Oficiais</strong><small>Empresas homologadas que vendem, implementam e dão suporte</small></span>
+                        </a>
+                        <a href="index.html#parceiros">
+                            <span class="nav-drop-ico" aria-hidden="true"><i class="fas fa-handshake"></i></span>
+                            <span><strong>Seja Parceiro</strong><small>Revenda a Agzap para a sua carteira de clientes</small></span>
+                        </a>
+                    </div>
+                </div>
+                <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá! Gostaria de conhecer a Agzap para minha empresa." target="_blank" rel="noopener noreferrer">Contato</a>
+                <a href="https://cal.com/agzap" target="_blank" rel="noopener noreferrer" class="btn btn-primary nav-cta-mobile">Agendar Apresentação</a>
+            </nav>
+            <div class="header-actions">
+                <a href="https://app.agzap.com.br/login" target="_blank" rel="noopener noreferrer" class="btn btn-outline header-login">
+                    <i class="fas fa-right-to-bracket" aria-hidden="true"></i> Login
+                </a>
+                <a href="https://cal.com/agzap" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Agendar Apresentação</a>
+                <button class="menu-mobile" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="siteNav">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="conteudo">
+
+    <!-- Topo da página -->
+    <section class="pdir-hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="container pdir-hero-inner">
+            <p class="pdir-overline">Rede de parceiros</p>
+            <h1>Parceiros Oficiais <span class="text-gradient">Agzap</span></h1>
+            <p class="pdir-lead">Empresas homologadas pela Agzap para vender, implementar e dar suporte à plataforma. Escolha um parceiro e fale direto com o responsável.</p>
+        </div>
+    </section>
+
+    <!-- Lista de parceiros -->
+    <section class="pdir-section" aria-labelledby="listaTitulo">
+        <div class="container">
+            <h2 id="listaTitulo" class="sr-only">Lista de parceiros oficiais</h2>
+
+            <div class="pdir-grid">
+                <!--
+                    ===== COMO ADICIONAR UM PARCEIRO =====
+                    1. Salve o logo em img/parceiros/ (PNG com fundo transparente, de preferência).
+                    2. Copie o modelo abaixo para cá (fora deste comentário) e troque os dados em MAIÚSCULAS.
+                    3. Sem logo? Troque a linha da <div class="pdir-logo"> por:
+                       <div class="pdir-logo pdir-logo-text" aria-hidden="true">AB</div>   (iniciais da empresa)
+                    4. WhatsApp: no link, use 55 + DDD + número, só com dígitos (ex.: 5511999999999).
+                    5. Serviços: tire da linha "Venda · Implementação · Suporte" o que o parceiro não fizer.
+                    6. Sem WhatsApp? Apague a linha do WhatsApp e use só o botão de e-mail (como no card do Grupo Espresso).
+                    7. A linha do CNPJ é opcional (veja o card do Grupo Espresso).
+                    8. Os dados ficam em duas colunas; o e-mail (class="pdir-info-wide") ocupa a linha inteira.
+                    O aviso de "lista vazia" some sozinho quando o primeiro card entra.
+
+                <article class="pdir-card">
+                    <div class="pdir-side">
+                        <div class="pdir-logo"><img src="img/parceiros/ARQUIVO-DO-LOGO.png" alt="Logo da NOME DA EMPRESA" loading="lazy"></div>
+                        <p class="pdir-seal"><i class="fas fa-shield-halved" aria-hidden="true"></i> Parceiro oficial</p>
+                    </div>
+                    <div class="pdir-body">
+                        <h3 class="pdir-name">NOME DA EMPRESA <i class="fas fa-circle-check pdir-verified" aria-hidden="true"></i></h3>
+                        <p class="pdir-loc"><i class="fas fa-location-dot" aria-hidden="true"></i> CIDADE, UF</p>
+                        <p class="pdir-services">Venda · Implementação · Suporte</p>
+                        <dl class="pdir-info">
+                            <div><dt>Responsável</dt><dd>NOME DO RESPONSÁVEL</dd></div>
+                            <div><dt>WhatsApp</dt><dd><a href="https://wa.me/55DDDNUMERO" target="_blank" rel="noopener noreferrer">(DDD) 9 0000-0000</a></dd></div>
+                            <div class="pdir-info-wide"><dt>E-mail</dt><dd><a href="mailto:EMAIL">EMAIL</a></dd></div>
+                        </dl>
+                        <div class="pdir-actions">
+                            <a href="https://wa.me/55DDDNUMERO?text=Olá!%20Vi%20vocês%20na%20lista%20de%20parceiros%20oficiais%20da%20Agzap%20e%20quero%20saber%20mais." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                <i class="fab fa-whatsapp" aria-hidden="true"></i> Falar no WhatsApp
+                            </a>
+                            <a href="mailto:EMAIL" class="btn btn-outline" aria-label="Enviar e-mail para NOME DA EMPRESA">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                -->
+
+                <!-- Grupo Espresso (dados recebidos em 09/11/2026). O endereço completo ficou de fora de propósito: só cidade/UF. -->
+                <article class="pdir-card">
+                    <div class="pdir-side">
+                        <div class="pdir-logo pdir-logo-text" aria-hidden="true">GE</div>
+                        <p class="pdir-seal"><i class="fas fa-shield-halved" aria-hidden="true"></i> Parceiro oficial</p>
+                    </div>
+                    <div class="pdir-body">
+                        <h3 class="pdir-name">Grupo Espresso <i class="fas fa-circle-check pdir-verified" aria-hidden="true"></i></h3>
+                        <p class="pdir-loc"><i class="fas fa-location-dot" aria-hidden="true"></i> Campo Grande, MS</p>
+                        <p class="pdir-services">Venda · Implementação · Suporte</p>
+                        <dl class="pdir-info">
+                            <div><dt>Responsável</dt><dd>José Victor Garcia Araujo</dd></div>
+                            <div><dt>CNPJ</dt><dd>50.191.810/0001-40</dd></div>
+                            <div class="pdir-info-wide"><dt>E-mail</dt><dd><a href="mailto:espressoagenciadigital@gmail.com">espressoagenciadigital@gmail.com</a></dd></div>
+                        </dl>
+                        <div class="pdir-actions">
+                            <!-- TROCAR "55NUMERO" pelo WhatsApp do Grupo Espresso: 55 + DDD + número, só dígitos (ex.: 5567999999999) -->
+                            <a href="https://wa.me/55NUMERO?text=Olá!%20Vi%20vocês%20na%20lista%20de%20parceiros%20oficiais%20da%20Agzap%20e%20quero%20saber%20mais." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                <i class="fab fa-whatsapp" aria-hidden="true"></i> Falar no WhatsApp
+                            </a>
+                            <a href="mailto:espressoagenciadigital@gmail.com?subject=Contato%20pela%20lista%20de%20parceiros%20oficiais%20da%20Agzap" class="btn btn-outline" aria-label="Enviar e-mail para o Grupo Espresso">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Aparece só enquanto não houver nenhum card na lista -->
+            <div class="pdir-empty">
+                <span class="pdir-empty-ico" aria-hidden="true"><i class="fas fa-shield-halved"></i></span>
+                <h2>Os primeiros parceiros oficiais estão chegando</h2>
+                <p>Estamos homologando as empresas da nossa rede. Enquanto isso, o time da Agzap atende você direto.</p>
+                <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá!%20Vim%20pela%20página%20de%20parceiros%20oficiais%20da%20Agzap." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i> Falar com a Agzap
+                </a>
+            </div>
+
+            <p class="pdir-notice">
+                <i class="fas fa-shield-halved" aria-hidden="true"></i>
+                Só as empresas listadas aqui são parceiras oficiais da Agzap. Se alguém se apresentar como parceiro e não estiver na lista,
+                <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá!%20Quero%20confirmar%20se%20uma%20empresa%20é%20parceira%20oficial%20da%20Agzap." target="_blank" rel="noopener noreferrer">fale com o nosso time</a> antes de contratar.
+            </p>
+
+            <div class="pdir-cta">
+                <div>
+                    <h2>Quer ser um parceiro oficial?</h2>
+                    <p>Revenda, implemente e dê suporte à Agzap para a sua carteira de clientes, com o apoio do nosso time.</p>
+                </div>
+                <a href="index.html#parceiros" class="btn btn-white btn-lg">
+                    Conhecer o Programa de Parceiros <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="./img/logo-agzap-claro.png" alt="Agzap" width="96" height="40" loading="lazy">
+                    <p>Inteligência que conecta sistemas</p>
+                    <div class="meta-partner-badge">
+                        <i class="fab fa-meta" aria-hidden="true"></i> Meta Business Partner
+                    </div>
+                </div>
+                <nav class="footer-links" aria-label="Links do rodapé">
+                    <a href="index.html#funcionalidades">Funcionalidades</a>
+                    <a href="index.html#vantagens">Vantagens</a>
+                    <a href="index.html#screenshots">Sistema</a>
+                    <a href="index.html#plano">Planos</a>
+                    <a href="index.html#indicacao">Indicação</a>
+                    <a href="index.html#parceiros">Seja Parceiro</a>
+                    <a href="parceiros-oficiais.html" aria-current="page">Parceiros Oficiais</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <div>CNPJ: 60.865.841/0001-93</div>
+                <div>&copy; 2026 Agzap. Todos os direitos reservados.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão voltar ao topo (à esquerda: o canto direito é do balão do webchat) -->
+    <button class="btn-back-to-top" id="btnBackToTop" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <script>
+        // Menu mobile
+        (function() {
+            var btn = document.querySelector('.menu-mobile');
+            var nav = document.getElementById('siteNav');
+            function setMenu(open) {
+                btn.classList.toggle('active', open);
+                nav.classList.toggle('active', open);
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                btn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+            }
+            btn.addEventListener('click', function() {
+                setMenu(!nav.classList.contains('active'));
+            });
+            nav.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() { setMenu(false); });
+            });
+        })();
+
+        // Submenu "Parceiros": abre ao passar o mouse ou ao clicar; Esc e clique fora fecham
+        (function() {
+            var desktop = window.matchMedia('(min-width: 1081px)');
+            document.querySelectorAll('.nav-drop').forEach(function(drop) {
+                var btn = drop.querySelector('.nav-drop-btn');
+                var timer, ponteiro = '';
+                function setDrop(open) {
+                    clearTimeout(timer);
+                    drop.classList.toggle('open', open);
+                    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                }
+                btn.addEventListener('pointerdown', function(e) { ponteiro = e.pointerType; });
+                btn.addEventListener('click', function() {
+                    // Com mouse o menu já abriu no hover: o clique só confirma, não fecha
+                    if (ponteiro === 'mouse' && desktop.matches) setDrop(true);
+                    else setDrop(!drop.classList.contains('open'));
+                    ponteiro = '';
+                });
+                drop.addEventListener('pointerenter', function(e) {
+                    if (e.pointerType === 'mouse' && desktop.matches) setDrop(true);
+                });
+                drop.addEventListener('pointerleave', function(e) {
+                    if (e.pointerType !== 'mouse') return;
+                    timer = setTimeout(function() { setDrop(false); }, 150);
+                });
+                drop.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && drop.classList.contains('open')) {
+                        setDrop(false);
+                        btn.focus();
+                    }
+                });
+                drop.addEventListener('focusout', function(e) {
+                    if (!drop.contains(e.relatedTarget)) setDrop(false);
+                });
+                document.addEventListener('click', function(e) {
+                    if (!drop.contains(e.target)) setDrop(false);
+                });
+                drop.querySelectorAll('a').forEach(function(link) {
+                    link.addEventListener('click', function() { setDrop(false); });
+                });
+            });
+        })();
+
+        // Header com sombra ao rolar + botão voltar ao topo
+        (function() {
+            var header = document.getElementById('siteHeader');
+            var backTop = document.getElementById('btnBackToTop');
+            function onScroll() {
+                header.classList.toggle('scrolled', window.scrollY > 8);
+                backTop.classList.toggle('visible', window.scrollY > 400);
+            }
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+        })();
+
+        // Entrada suave dos cards
+        (function() {
+            var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            var alvos = document.querySelectorAll('.pdir-card, .pdir-cta');
+            if (reduce || !('IntersectionObserver' in window)) return;
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (!entry.isIntersecting) return;
+                    var el = entry.target;
+                    observer.unobserve(el);
+                    el.classList.add('animate-in');
+                    // Depois da entrada, devolve o hover rápido ao card
+                    setTimeout(function() {
+                        el.classList.remove('animate-target', 'animate-in');
+                        el.style.transitionDelay = '';
+                    }, 900);
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+            alvos.forEach(function(el) {
+                var irmaos = Array.prototype.indexOf.call(el.parentNode.children, el);
+                el.style.transitionDelay = ((irmaos % 3) * 70) + 'ms';
+                el.classList.add('animate-target');
+                observer.observe(el);
+            });
+        })();
+    </script>
+
+    <!-- Webchat Agzap (balão de conversa). Precisa ser o endereço de produção:
+         o script usa o próprio src para achar a API, então localhost só funciona na máquina de quem desenvolve. -->
+    <script src="https://app.agzap.com.br/webchat.js" data-key="wc_41786cb74c5b059f4309f91a" defer></script>
+</body>
+</html>

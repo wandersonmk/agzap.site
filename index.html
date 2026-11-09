@@ -46,7 +46,21 @@
                 <a href="#vantagens">Vantagens</a>
                 <a href="#screenshots">Conheça o Sistema</a>
                 <a href="#plano">Planos</a>
-                <a href="#parceiros">Seja Parceiro</a>
+                <div class="nav-drop">
+                    <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="navParceirosMenu">
+                        Parceiros <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="nav-drop-menu" id="navParceirosMenu">
+                        <a href="parceiros-oficiais.html">
+                            <span class="nav-drop-ico" aria-hidden="true"><i class="fas fa-shield-halved"></i></span>
+                            <span><strong>Parceiros Oficiais</strong><small>Empresas homologadas que vendem, implementam e dão suporte</small></span>
+                        </a>
+                        <a href="#parceiros">
+                            <span class="nav-drop-ico" aria-hidden="true"><i class="fas fa-handshake"></i></span>
+                            <span><strong>Seja Parceiro</strong><small>Revenda a Agzap para a sua carteira de clientes</small></span>
+                        </a>
+                    </div>
+                </div>
                 <a href="https://api.whatsapp.com/send/?phone=5511914600243&text=Olá! Gostaria de conhecer a Agzap para minha empresa." target="_blank" rel="noopener noreferrer">Contato</a>
                 <a href="https://cal.com/agzap" target="_blank" rel="noopener noreferrer" class="btn btn-primary nav-cta-mobile">Agendar Apresentação</a>
             </nav>
@@ -1359,6 +1373,7 @@
                     <a href="#plano">Planos</a>
                     <a href="#indicacao">Indicação</a>
                     <a href="#parceiros">Seja Parceiro</a>
+                    <a href="parceiros-oficiais.html">Parceiros Oficiais</a>
                 </nav>
             </div>
             <div class="footer-bottom">
@@ -1441,6 +1456,49 @@
                 link.addEventListener('click', function() { setMenu(false); });
             });
             window.closeMobileMenu = function() { setMenu(false); };
+        })();
+
+        // Submenu "Parceiros": abre ao passar o mouse ou ao clicar; Esc e clique fora fecham
+        (function() {
+            var desktop = window.matchMedia('(min-width: 1081px)');
+            document.querySelectorAll('.nav-drop').forEach(function(drop) {
+                var btn = drop.querySelector('.nav-drop-btn');
+                var timer, ponteiro = '';
+                function setDrop(open) {
+                    clearTimeout(timer);
+                    drop.classList.toggle('open', open);
+                    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                }
+                btn.addEventListener('pointerdown', function(e) { ponteiro = e.pointerType; });
+                btn.addEventListener('click', function() {
+                    // Com mouse o menu já abriu no hover: o clique só confirma, não fecha
+                    if (ponteiro === 'mouse' && desktop.matches) setDrop(true);
+                    else setDrop(!drop.classList.contains('open'));
+                    ponteiro = '';
+                });
+                drop.addEventListener('pointerenter', function(e) {
+                    if (e.pointerType === 'mouse' && desktop.matches) setDrop(true);
+                });
+                drop.addEventListener('pointerleave', function(e) {
+                    if (e.pointerType !== 'mouse') return;
+                    timer = setTimeout(function() { setDrop(false); }, 150);
+                });
+                drop.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && drop.classList.contains('open')) {
+                        setDrop(false);
+                        btn.focus();
+                    }
+                });
+                drop.addEventListener('focusout', function(e) {
+                    if (!drop.contains(e.relatedTarget)) setDrop(false);
+                });
+                document.addEventListener('click', function(e) {
+                    if (!drop.contains(e.target)) setDrop(false);
+                });
+                drop.querySelectorAll('a').forEach(function(link) {
+                    link.addEventListener('click', function() { setDrop(false); });
+                });
+            });
         })();
 
         // Header com sombra ao rolar + botão voltar ao topo
